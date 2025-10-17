@@ -4,9 +4,6 @@
 @font-face {
   font-family: 'integral-cf-bold';
   src: url('/fonts/integral-cf-bold.woff2') format('woff2');
-  font-weight:bold;
-  font-style:normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -48,6 +45,7 @@ body {
 
 h1, h2, h3 {
   font-family: 'integral-cf-bold';
+  font-size: 54px;
 }
 
 #__next {
