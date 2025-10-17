@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'integral-cf-bold';
+  src: url('/fonts/integral-cf-bold.woff2') format('woff2');
+  font-weight:bold;
+  font-style:normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'tt-firs';
+  src: url('/fonts/tt.ttf') format('ttf');
+  font-weight:300;
+  font-style:normal;
+  font-display: swap;
+}
+
+:root {
+  --color-background: #09183E;
+  --color-primary: #00FFFF;
+  --color-text-light: #E2E8F0;
+  --color-text-dark: #94A3B8;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  /* font-family: 'tt-firs'; */
+ 
+  background-color: var(--color-background);
+  color: var(--color-text-light);
+
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image:
+    linear-gradient(rgba(0, 224, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to right, rgba(0, 224, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+h1, h2, h3 {
+  font-family: 'integral-cf-bold';
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
