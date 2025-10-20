@@ -166,6 +166,8 @@
     --text-7xl--line-height: 1;
     --text-8xl: 6rem;
     --text-8xl--line-height: 1;
+    --text-9xl: 8rem;
+    --text-9xl--line-height: 1;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -643,40 +645,6 @@
     grid-row-start: 1;
   }
 
-  .container {
-    width: 100%;
-  }
-
-  @media (min-width: 40rem) {
-    .container {
-      max-width: 40rem;
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .container {
-      max-width: 48rem;
-    }
-  }
-
-  @media (min-width: 64rem) {
-    .container {
-      max-width: 64rem;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .container {
-      max-width: 80rem;
-    }
-  }
-
-  @media (min-width: 96rem) {
-    .container {
-      max-width: 96rem;
-    }
-  }
-
   .mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -720,6 +688,11 @@
 
   .inline-flex {
     display: inline-flex;
+  }
+
+  .size-\[1200px\] {
+    width: 1200px;
+    height: 1200px;
   }
 
   .h-3 {
@@ -832,6 +805,22 @@
 
   .w-60 {
     width: calc(var(--spacing) * 60);
+  }
+
+  .w-\[280px\] {
+    width: 280px;
+  }
+
+  .w-\[350px\] {
+    width: 350px;
+  }
+
+  .w-\[380px\] {
+    width: 380px;
+  }
+
+  .w-\[450px\] {
+    width: 450px;
   }
 
   .w-full {
@@ -1496,6 +1485,24 @@
   }
 
   @media (min-width: 40rem) {
+    .sm\:w-\[400px\] {
+      width: 400px;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:w-\[500px\] {
+      width: 500px;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:w-\[600px\] {
+      width: 600px;
+    }
+  }
+
+  @media (min-width: 40rem) {
     .sm\:gap-6 {
       gap: calc(var(--spacing) * 6);
     }
@@ -1504,6 +1511,18 @@
   @media (min-width: 48rem) {
     .md\:flex {
       display: flex;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:w-\[600px\] {
+      width: 600px;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:w-\[900px\] {
+      width: 900px;
     }
   }
 
@@ -1526,10 +1545,41 @@
     }
   }
 
+  @media (min-width: 48rem) {
+    .md\:text-9xl {
+      font-size: var(--text-9xl);
+      line-height: var(--tw-leading, var(--text-9xl--line-height));
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:text-\[56px\] {
+      font-size: 56px;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:w-\[800px\] {
+      width: 800px;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:w-\[1200px\] {
+      width: 1200px;
+    }
+  }
+
   @media (min-width: 64rem) {
     .lg\:text-6xl {
       font-size: var(--text-6xl);
       line-height: var(--tw-leading, var(--text-6xl--line-height));
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:text-\[56px\] {
+      font-size: 56px;
     }
   }
 
@@ -1570,8 +1620,8 @@ html {
 body {
   background-color: var(--color-background);
   color: var(--color-text-light);
-  background-image: linear-gradient(rgba(0, 224, 255, .03) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(to right, rgba(0, 224, 255, .03) 1px, rgba(0, 0, 0, 0) 1px);
-  background-size: 40px 40px;
+  background-image: linear-gradient(rgba(0, 224, 255, .08) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(to right, rgba(0, 224, 255, .08) 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: 100px 100px;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -1581,7 +1631,7 @@ body {
 h1, h2, h3 {
   letter-spacing: 5px;
   font-family: integral-cf-bold;
-  font-size: 54px;
+  font-size: 36px;
 }
 
 #__next {

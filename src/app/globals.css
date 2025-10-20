@@ -43,15 +43,15 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background-image:
-    linear-gradient(rgba(0, 224, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to right, rgba(0, 224, 255, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(rgba(0, 224, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to right, rgba(0, 224, 255, 0.08) 1px, transparent 1px);
+  background-size: 100px 100px;
 }
 
 h1, h2, h3 {
   font-family: 'integral-cf-bold';
   /* font-family: 'integral-cf-regular'; */
-  font-size: 54px;
+  font-size: 36px;
   letter-spacing: 5px;
 }
 

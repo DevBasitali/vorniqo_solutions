@@ -58,73 +58,70 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 ;
 ;
 ;
-// --- Helper Component for the Octagon Shape ---
-// This uses an inline SVG to draw the octagonal border.
-const OctagonButton = ({ children, href, ariaLabel })=>{
+// --- THIS IS THE BULLETPROOF VERSION ---
+// Notice the 'href = ""' in the function signature.
+const OctagonButton = ({ children, href = "", ariaLabel })=>{
+    // We can also add a console.log to help you debug if you want.
+    // console.log('Rendering OctagonButton with href:', href);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+        // The 'href' passed here will now always be a string, never undefined.
         href: href,
-        legacyBehavior: true,
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-            "aria-label": ariaLabel,
-            // This is the container for the shape and icon
-            className: "relative flex h-14 w-14 items-center justify-center text-white transition-transform duration-200 hover:scale-110",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                    viewBox: "0 0 24 24",
-                    className: "absolute h-full w-full",
-                    fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                        d: "M7.025 2.154L16.975 2.154L21.846 7.025V16.975L16.975 21.846H7.025L2.154 16.975V7.025L7.025 2.154Z",
-                        stroke: "currentColor",
-                        strokeWidth: "1"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/ui/VerticalSocialBar.jsx",
-                        lineNumber: 23,
-                        columnNumber: 11
-                    }, ("TURBOPACK compile-time value", void 0))
+        "aria-label": ariaLabel,
+        target: "_blank",
+        rel: "noopener noreferrer",
+        className: "relative flex h-10 w-10 items-center justify-center text-white transition-transform duration-200 hover:scale-110",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                viewBox: "0 0 24 24",
+                className: "absolute h-full w-full",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    d: "M7.025 2.154L16.975 2.154L21.846 7.025V16.975L16.975 21.846H7.025L2.154 16.975V7.025L7.025 2.154Z",
+                    stroke: "currentColor",
+                    strokeWidth: "1"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/VerticalSocialBar.jsx",
-                    lineNumber: 17,
-                    columnNumber: 9
-                }, ("TURBOPACK compile-time value", void 0)),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "z-10",
-                    children: children
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ui/VerticalSocialBar.jsx",
-                    lineNumber: 30,
+                    lineNumber: 27,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/components/ui/VerticalSocialBar.jsx",
-            lineNumber: 11,
-            columnNumber: 7
-        }, ("TURBOPACK compile-time value", void 0))
-    }, void 0, false, {
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/VerticalSocialBar.jsx",
+                lineNumber: 21,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "z-10",
+                children: children
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/VerticalSocialBar.jsx",
+                lineNumber: 33,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        ]
+    }, void 0, true, {
         fileName: "[project]/src/components/ui/VerticalSocialBar.jsx",
-        lineNumber: 10,
+        lineNumber: 13,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-// --- Main Vertical Social Bar Component ---
 const VerticalSocialBar = ()=>{
+    // Ensure this array is correct and doesn't contain null or undefined hrefs.
     const socialLinks = [
         {
-            href: '#',
+            href: "https://twitter.com",
             icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$twitter$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Twitter$3e$__["Twitter"],
-            label: 'Twitter'
+            label: "Twitter"
         },
         {
-            href: '#',
+            href: "https://telegram.org",
             icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__["Send"],
-            label: 'Telegram'
+            label: "Telegram"
         },
         {
-            href: '#',
+            href: "https://facebook.com",
             icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$facebook$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Facebook$3e$__["Facebook"],
-            label: 'Facebook'
+            label: "Facebook"
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -134,7 +131,7 @@ const VerticalSocialBar = ()=>{
                 className: "h-24 w-px bg-white/40"
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/VerticalSocialBar.jsx",
-                lineNumber: 47,
+                lineNumber: 49,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -143,34 +140,34 @@ const VerticalSocialBar = ()=>{
                         href: href,
                         ariaLabel: label,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
-                            size: 22,
+                            size: 16,
                             className: "fill-current"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/VerticalSocialBar.jsx",
-                            lineNumber: 53,
+                            lineNumber: 55,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, label, false, {
                         fileName: "[project]/src/components/ui/VerticalSocialBar.jsx",
-                        lineNumber: 52,
+                        lineNumber: 54,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)))
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/VerticalSocialBar.jsx",
-                lineNumber: 50,
+                lineNumber: 52,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "h-24 w-px bg-white/40"
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/VerticalSocialBar.jsx",
-                lineNumber: 59,
+                lineNumber: 61,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ui/VerticalSocialBar.jsx",
-        lineNumber: 45,
+        lineNumber: 47,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -179,6 +176,102 @@ const __TURBOPACK__default__export__ = VerticalSocialBar;
 "[project]/src/components/sections/hero.jsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+// // components/HeroContent.jsx
+// import Image from "next/image";
+// import { Diamond, Send } from "lucide-react";
+// import PillBtn from "../ui/buttonPill";
+// import VerticalSocialBar from "../ui/VerticalSocialBar";
+// const Hero = () => {
+//   return (
+//     <>
+//       <div className="relative w-full">
+//         <div className="absolute left-24 top-1/2 hidden -translate-y-1/2 md:flex">
+//           <VerticalSocialBar />
+//         </div>
+//         <div className="flex flex-col items-center text-center mt-16 ">
+//           <div className="relative mb- flex items-center">
+//             <div className="flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 py-2 px-5 text-sm backdrop-blur-sm">
+//               <Diamond size={12} className="fill-[#01FEFF] text-[#01FEFF]" />
+//               <span className="tracking-wide  text-[#01FEFF]">
+//                 Empowering the Future
+//               </span>
+//             </div>
+//             <div className="absolute -right-20 -top- sm:-right-24">
+//               <Image
+//                 src="/images/robots/robo.png"
+//                 alt="Robot Head"
+//                 width={72}
+//                 height={72}
+//               />
+//             </div>
+//           </div>
+//           <div className="flex items-center justify-center p-8">
+//             <h1 className="text-4xl uppercase tracking-wider text-white md:text-5xl lg:text-6xl xl:text-7xl font-bold">
+//               <div className=" flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+//                 <span className="relative inline-flex items-center gap-3">
+//                   <div className="bg-[#0a1628] rounded-full p-1.5">
+//                     <PillBtn />
+//                   </div>
+//                   <span className="">WE ARE AN</span>
+//                 </span>
+//                 <span>AWARD</span>
+//               </div>
+//               <div className="mt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+//                 <span>WINNING DIGITAL</span>
+//                 <span
+//                   className="relative inline-block px-8 py-2 md:px-10 md:py-3 text-[#0a1628] bg-cyan-400"
+//                   style={{
+//                     clipPath:
+//                       "polygon(0% 0%, 92% 0%, 100% 8%, 100% 100%, 0% 100%)",
+//                   }}
+//                 >
+//                   <span className="relative z-10 font-bold">AGENCY</span>
+//                   {/* Top-right corner fold/peel effect */}
+//                   <div
+//                     className="absolute -top-16.5 -right-15 w-60 h-60 bg-white rounded-bl-2xl"
+//                     style={{
+//                       clipPath:
+//                         "polygon(57.17% 45.4%, 57.27% 27.46%, 66.08% 36.53%, 75% 45.5%, 75% 45.4%)",
+//                       //   clipPath: "polygon(0 0, 100% 0, 100% 100%)",
+//                     }}
+//                   ></div>
+//                 </span>
+//               </div>
+//             </h1>
+//           </div>
+//           <p className=" text-lg tracking-wide text-white">
+//             Lets Start Discussing Your Project
+//           </p>
+//         </div>
+//       </div>
+//       {/* The parent container is now a grid that centers its items. */}
+//       <div className="relative grid place-items-center">
+//         {/* 1. Background Image */}
+//         {/* It occupies the first grid cell. */}
+//         <div className="col-start-1 row-start-1">
+//           <Image
+//             src="/images/hero/heroProjects.png"
+//             alt="Project showcase background"
+//             width={1200}
+//             height={1200}
+//             className=""
+//           />
+//         </div>
+//         <div className="col-start-1 row-start-1 bottom-0">
+//           <Image
+//             src="/images/robots/main_robo.png"
+//             alt="Main robot mascot"
+//             width={800}
+//             height={800}
+//             className=""
+//           />
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+// export default Hero;
+// components/Hero.jsx
 __turbopack_context__.s([
     "default",
     ()=>__TURBOPACK__default__export__
@@ -186,39 +279,39 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$diamond$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Diamond$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/diamond.js [app-rsc] (ecmascript) <export default as Diamond>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$VerticalSocialBar$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/VerticalSocialBar.jsx [app-rsc] (ecmascript)");
 (()=>{
     const e = new Error("Cannot find module '../ui/StaticPill'");
     e.code = 'MODULE_NOT_FOUND';
     throw e;
 })();
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$VerticalSocialBar$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/VerticalSocialBar.jsx [app-rsc] (ecmascript)");
 ;
 ;
 ;
 ;
 ;
-const HeroSection = ()=>{
-    return(// 1. The main wrapper must be 'relative' to contain the absolutely positioned sidebar.
-    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "relative w-full bg-[#021639] py-20",
+const Hero = ()=>{
+    return(// Main section container with relative positioning for the social bar
+    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: "relative w-full overflow-hidden bg-[#021639] py-16 sm:py-24",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute left-4 top-1/2 hidden -translate-y-1/2 md:flex",
+                className: "absolute left-4 top-1/2 z-20 hidden -translate-y-1/2 md:flex lg:left-12 xl:left-24",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$VerticalSocialBar$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/components/sections/hero.jsx",
-                    lineNumber: 15,
+                    lineNumber: 119,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/hero.jsx",
-                lineNumber: 14,
+                lineNumber: 118,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex flex-col items-center text-center",
+                className: "container mx-auto flex flex-col items-center px-4 text-center",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative mb-12 flex items-center",
+                        className: "relative mb-8 flex items-center md:mb-12",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 py-2 px-5 text-sm backdrop-blur-sm",
@@ -228,7 +321,7 @@ const HeroSection = ()=>{
                                         className: "fill-[#01FEFF] text-[#01FEFF]"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/hero.jsx",
-                                        lineNumber: 24,
+                                        lineNumber: 128,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -236,72 +329,73 @@ const HeroSection = ()=>{
                                         children: "Empowering the Future"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/hero.jsx",
-                                        lineNumber: 25,
+                                        lineNumber: 129,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/sections/hero.jsx",
-                                lineNumber: 23,
+                                lineNumber: 127,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute -right-20 -top-6 sm:-right-24",
+                                className: "absolute -right-16 -top-6 sm:-right-20",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                    src: "/robots/robo.png",
-                                    alt: "Robot Head",
+                                    src: "/images/robots/robo.png",
+                                    alt: "Small robot head",
                                     width: 72,
                                     height: 72
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/hero.jsx",
-                                    lineNumber: 30,
+                                    lineNumber: 134,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/sections/hero.jsx",
-                                lineNumber: 29,
+                                lineNumber: 133,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/sections/hero.jsx",
-                        lineNumber: 22,
+                        lineNumber: 126,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-4xl font-bold uppercase tracking-wider text-white md:text-5xl lg:text-6xl xl:text-7xl",
+                        className: "text-3xl font-bold uppercase tracking-wider text-white sm:text-4xl md:text-5xl lg:text-6xl",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "mb-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6",
+                                className: "mb-2 flex flex-wrap items-center justify-center gap-2 sm:gap-4",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(StaticPill, {
                                         children: "WE ARE AN"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/hero.jsx",
-                                        lineNumber: 43,
+                                        lineNumber: 147,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
+                                    " ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "AWARD"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/hero.jsx",
-                                        lineNumber: 44,
+                                        lineNumber: 148,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/sections/hero.jsx",
-                                lineNumber: 42,
+                                lineNumber: 146,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "mt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6",
+                                className: "mt-2 flex flex-wrap items-center justify-center gap-2 sm:gap-4",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "WINNING DIGITAL"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/hero.jsx",
-                                        lineNumber: 48,
+                                        lineNumber: 152,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -315,57 +409,120 @@ const HeroSection = ()=>{
                                                 className: "z-0"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/sections/hero.jsx",
-                                                lineNumber: 51,
+                                                lineNumber: 155,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "relative z-10",
+                                                className: "relative z-10 text-[#0a1628]",
                                                 children: "AGENCY"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/sections/hero.jsx",
-                                                lineNumber: 58,
+                                                lineNumber: 162,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/sections/hero.jsx",
-                                        lineNumber: 50,
+                                        lineNumber: 153,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/sections/hero.jsx",
-                                lineNumber: 47,
+                                lineNumber: 151,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/sections/hero.jsx",
-                        lineNumber: 40,
+                        lineNumber: 144,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "mt-8 text-lg tracking-wide text-white",
+                        className: "mt-6 text-base tracking-wide text-white md:mt-8 md:text-lg",
                         children: "Lets Start Discussing Your Project"
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/hero.jsx",
-                        lineNumber: 64,
+                        lineNumber: 168,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "relative mt-12 grid place-items-center md:mt-16",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "col-start-1 row-start-1",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                    src: "/images/hero/heroProjects.png",
+                                    alt: "Project showcase background",
+                                    width: 1000,
+                                    height: 500,
+                                    className: "w-[350px] object-contain sm:w-[500px] md:w-[900px] lg:w-[1200px]"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/sections/hero.jsx",
+                                    lineNumber: 176,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/sections/hero.jsx",
+                                lineNumber: 175,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "col-start-1 row-start-1",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                    src: "/images/robots/main_robo.png",
+                                    alt: "Main robot mascot",
+                                    width: 700,
+                                    height: 700,
+                                    className: "w-[280px] object-contain sm:w-[400px] md:w-[600px] lg:w-[700px]"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/sections/hero.jsx",
+                                    lineNumber: 187,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/sections/hero.jsx",
+                                lineNumber: 186,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute bottom-0 right-0 col-start-1 row-start-1 sm:bottom-4 sm:right-4 md:bottom-8 md:right-8",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                    src: "/images/hero/satisfied-clients.png",
+                                    alt: "240+ Satisfied Clients",
+                                    width: 200,
+                                    height: 55,
+                                    className: "w-[150px] md:w-[200px]"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/sections/hero.jsx",
+                                    lineNumber: 198,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/sections/hero.jsx",
+                                lineNumber: 197,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/sections/hero.jsx",
+                        lineNumber: 173,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/sections/hero.jsx",
-                lineNumber: 19,
+                lineNumber: 123,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/sections/hero.jsx",
-        lineNumber: 9,
+        lineNumber: 115,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0)));
 };
-const __TURBOPACK__default__export__ = HeroSection;
+const __TURBOPACK__default__export__ = Hero;
 }),
 "[project]/src/app/page.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
@@ -385,12 +542,12 @@ function Home() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$sections$2f$hero$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/page.tsx",
-                lineNumber: 8,
-                columnNumber: 5
+                lineNumber: 7,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$sections$2f$about$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/page.tsx",
-                lineNumber: 9,
+                lineNumber: 8,
                 columnNumber: 7
             }, this)
         ]

@@ -37,12 +37,14 @@ const Hero = () => {
                   <div className="bg-[#0a1628] rounded-full p-1.5">
                     <PillBtn />
                   </div>
-                  <span className="">WE ARE AN</span>
+                  <span className="md:text-[56px] lg:text-[56px]">
+                    WE ARE AN
+                  </span>
                 </span>
-                <span>AWARD</span>
+                <span className="md:text-[56px] lg:text-[56px]">AWARD</span>
               </div>
 
-              <div className="mt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+              <div className="mt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:text-[56px] lg:text-[56px]">
                 <span>WINNING DIGITAL</span>
 
                 <span
@@ -73,27 +75,37 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      {/* The parent container is now a grid that centers its items. */}
+
       <div className="relative grid place-items-center">
-        {/* 1. Background Image */}
-        {/* It occupies the first grid cell. */}
         <div className="col-start-1 row-start-1">
           <Image
             src="/images/hero/heroProjects.png"
             alt="Project showcase background"
             width={1200}
             height={1200}
-            className=""
+            className="
+        w-[450px]  /* Default size for mobile */
+        sm:w-[500px] /* Size for 'sm' screens and up */
+        md:w-[900px] /* Optional: Size for medium screens */
+        lg:w-[1200px] /* Optional: Size for large screens */
+        object-contain
+      "
           />
         </div>
 
-        <div className="col-start-1 row-start-1 bottom-0">
+        <div className="col-start-1 row-start-1">
           <Image
             src="/images/robots/main_robo.png"
             alt="Main robot mascot"
             width={800}
             height={800}
-            className=""
+            className="
+        w-[380px]  /* Default size for mobile */
+        sm:w-[400px] /* Size for 'sm' screens and up */
+        md:w-[600px] /* Optional: Size for medium screens */
+        lg:w-[800px] /* Optional: Size for large screens */
+        object-contain
+      "
           />
         </div>
       </div>
