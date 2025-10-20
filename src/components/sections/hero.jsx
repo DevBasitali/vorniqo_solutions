@@ -22,7 +22,7 @@ const Hero = () => {
 
             <div className="absolute -right-20 -top- sm:-right-24">
               <Image
-                src="/robots/robo.png"
+                src="/images/robots/robo.png"
                 alt="Robot Head"
                 width={72}
                 height={72}
@@ -73,16 +73,28 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <div>
-        <div className="relative flex justify-center ">
+      {/* The parent container is now a grid that centers its items. */}
+      <div className="relative grid place-items-center">
+        {/* 1. Background Image */}
+        {/* It occupies the first grid cell. */}
+        <div className="col-start-1 row-start-1">
           <Image
-            src="/hero/heroProjects.png"
-            alt="Robot Head"
+            src="/images/hero/heroProjects.png"
+            alt="Project showcase background"
             width={1200}
             height={1200}
             className=""
           />
+        </div>
 
+        <div className="col-start-1 row-start-1 bottom-0">
+          <Image
+            src="/images/robots/main_robo.png"
+            alt="Main robot mascot"
+            width={800}
+            height={800}
+            className=""
+          />
         </div>
       </div>
     </>
