@@ -41,13 +41,12 @@ const Hero = () => {
                     WE ARE AN
                   </span>
                 </span>
-                <span className="md:text-[56px] lg:text-[56px]">
-                  AWARD WINNING{" "}
+                <span className="sm:text-[56px] border border-red-600">
+                  AWARD{" "}
                 </span>
               </div>
-
               <div className="mt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:text-[56px] lg:text-[56px]">
-                <span> DIGITAL</span>
+                <span>WINNING DIGITAL</span>
 
                 <span
                   className="relative inline-block px-8 py-2 md:px-10 md:py-3 text-[#0a1628] bg-cyan-400"
