@@ -44,7 +44,6 @@ const Hero = () => {
 
               <div className="mt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                 <span>WINNING DIGITAL</span>
-                {/* <span className="relative inline-block px-8 py-2 md:px-10 md:py-3 text-[#0a1628] bg-cyan-400  border border-red-600"> */}
 
                 <span
                   className="relative inline-block px-8 py-2 md:px-10 md:py-3 text-[#0a1628] bg-cyan-400"
@@ -75,15 +74,16 @@ const Hero = () => {
         </div>
       </div>
       <div>
-<div className="flex justify-center">
-  <Image
-    src="/hero/heroProjects.png"
-    alt="Robot Head"
-    width={192}
-    height={192}
-    className=""
-  />
-</div>
+        <div className="relative flex justify-center ">
+          <Image
+            src="/hero/heroProjects.png"
+            alt="Robot Head"
+            width={1200}
+            height={1200}
+            className=""
+          />
+
+        </div>
       </div>
     </>
   );
