@@ -75,15 +75,15 @@ const Hero = () => {
         </div>
       </div>
       <div>
-        <div className="flex justify-center">
-          <Image
-            src="/hero/heroProjects.png"
-            alt="Robot Head"
-            width={192}
-            height={192}
-            className=""
-          />
-        </div>
+<div className="flex justify-center">
+  <Image
+    src="/hero/heroProjects.png"
+    alt="Robot Head"
+    width={192}
+    height={192}
+    className=""
+  />
+</div>
       </div>
     </>
   );

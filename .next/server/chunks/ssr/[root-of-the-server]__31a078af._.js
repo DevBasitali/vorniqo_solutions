@@ -443,12 +443,12 @@ const Hero = ()=>{
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/hero.jsx",
                         lineNumber: 79,
-                        columnNumber: 11
+                        columnNumber: 3
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/components/sections/hero.jsx",
                     lineNumber: 78,
-                    columnNumber: 9
+                    columnNumber: 1
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/hero.jsx",
