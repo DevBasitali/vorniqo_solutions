@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/layout/navbar"
 import Footer from "../components/layout/footer"
-import About from '@/components/sections/about';
+
 
 
 export const metadata: Metadata = {
@@ -20,9 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body
       >
-        <Navbar/>
+        {/* <Navbar/> */}
         {children}
-        <Footer/>
+        {/* <Footer/> */}
       </body>
     </html>
   );

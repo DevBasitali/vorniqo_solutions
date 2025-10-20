@@ -30,22 +30,24 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center p-8">
-            <h1 className="text-4xl uppercase tracking-wider text-white md:text-5xl lg:text-6xl xl:text-7xl font-bold">
-              <div className=" flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-                <span className="relative inline-flex items-center gap-3">
-                  <div className="bg-[#0a1628] rounded-full p-1.5">
+          <div className="flex items-center justify-center mt-8 mb-8 p-8 sm:p-8">
+            <h1 className="relative text-4xl uppercase tracking-wider text-white md:text-5xl lg:text-6xl xl:text-7xl font-bold ">
+              <div className="flex flex-wrap  items-center justify-center gap-6">
+                <span className="relative inline-flex items-center">
+                  <div className=" bg-[#0a1628] rounded-full p-1.5">
                     <PillBtn />
                   </div>
                   <span className="md:text-[56px] lg:text-[56px]">
                     WE ARE AN
                   </span>
                 </span>
-                <span className="md:text-[56px] lg:text-[56px]">AWARD</span>
+                <span className="md:text-[56px] lg:text-[56px]">
+                  AWARD WINNING{" "}
+                </span>
               </div>
 
               <div className="mt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:text-[56px] lg:text-[56px]">
-                <span>WINNING DIGITAL</span>
+                <span> DIGITAL</span>
 
                 <span
                   className="relative inline-block px-8 py-2 md:px-10 md:py-3 text-[#0a1628] bg-cyan-400"
@@ -84,7 +86,7 @@ const Hero = () => {
             width={1200}
             height={1200}
             className="
-        w-[450px]  /* Default size for mobile */
+        w-[400px]  /* Default size for mobile */
         sm:w-[500px] /* Size for 'sm' screens and up */
         md:w-[900px] /* Optional: Size for medium screens */
         lg:w-[1200px] /* Optional: Size for large screens */
@@ -96,11 +98,12 @@ const Hero = () => {
         <div className="col-start-1 row-start-1">
           <Image
             src="/images/robots/main_robo.png"
+            // src="/images/robots/robot.png"
             alt="Main robot mascot"
             width={800}
             height={800}
             className="
-        w-[380px]  /* Default size for mobile */
+        w-[150px]  /* Default size for mobile */
         sm:w-[400px] /* Size for 'sm' screens and up */
         md:w-[600px] /* Optional: Size for medium screens */
         lg:w-[800px] /* Optional: Size for large screens */
