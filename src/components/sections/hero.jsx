@@ -1,6 +1,6 @@
 // components/HeroContent.jsx
 import Image from "next/image";
-import { Diamond, Send } from "lucide-react";
+import { Diamond, Send, Zap } from "lucide-react";
 import PillBtn from "../ui/buttonPill";
 import VerticalSocialBar from "../ui/VerticalSocialBar";
 
@@ -12,7 +12,7 @@ const Hero = () => {
           <VerticalSocialBar />
         </div>
         <div className="flex flex-col items-center text-center mt-16 ">
-          <div className="relative mb- flex items-center">
+          <div className="relative flex items-center">
             <div className="flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 py-2 px-5 text-sm backdrop-blur-sm">
               <Diamond size={12} className="fill-[#01FEFF] text-[#01FEFF]" />
               <span className="tracking-wide  text-[#01FEFF]">
@@ -20,54 +20,81 @@ const Hero = () => {
               </span>
             </div>
 
-            <div className="absolute -right-20 -top- sm:-right-24">
+            <div className="absolute -right-17 sm:-right-17">
               <Image
                 src="/images/robots/robo.png"
                 alt="Robot Head"
                 width={72}
                 height={72}
+                className=""
               />
             </div>
           </div>
 
-          <div className="flex items-center justify-center mt-8 mb-8 p-8 sm:p-8">
-            <h1 className="relative text-4xl uppercase tracking-wider text-white md:text-5xl lg:text-6xl xl:text-7xl font-bold ">
-              <div className="flex flex-wrap  items-center justify-center gap-6">
-                <span className="relative inline-flex items-center">
-                  <div className=" bg-[#0a1628] rounded-full p-1.5">
-                    <PillBtn />
-                  </div>
-                  <span className="md:text-[56px] lg:text-[56px]">
-                    WE ARE AN AWARD
+          <div className="flex items-center justify-center mt-2 mb-2 px-4">
+            <h1 className="relative font-bold uppercase tracking-wider text-white text-3xl sm:text-4xl md:text-[56px] leading-tight text-center">
+
+              {/* Mobile: 3 lines */}
+              <div className="md:hidden space-y-2">
+                {/* Line 1 */}
+                <div className="flex items-center justify-center gap-3">
+                  {/* Show pill from sm and up on mobile block (hide on xs) */}
+                  <span className="hidden sm:inline-flex">
+                    <PillBtn className="text-3xl">WE ARE AN</PillBtn>
                   </span>
-                </span>
-                {/* <span className="sm:text-[56px]">
-                  {" "}
-                </span> */}
+                  <span className="whitespace-nowrap sm:hidden">WE ARE AN</span>
+                </div>
+                {/* Line 2 */}
+                <div className="whitespace-nowrap">AWARD WINNING</div>
+                {/* Line 3 */}
+                <div className="flex items-center justify-center gap-2">
+                  <span className="whitespace-nowrap">DIGITAL</span>
+                  {/* AGENCY sticker (mobile size) */}
+                  <span
+                    className="relative inline-flex items-center whitespace-nowrap font-bold text-[#0A1628]
+                         px-6 py-2 rounded-lg
+                         bg-gradient-to-r from-[#00F6FF] to-[#0A84FF]
+                         shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
+                  >
+                    <span className="relative z-10">AGENCY</span>
+                    <span
+                      className="absolute top-0 right-0 h-4 w-4 bg-white rounded-bl-[6px]"
+                      style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }}
+                    />
+                    <Zap className="absolute -right-5 -top-2 h-5 w-5 text-[#00F6FF]" />
+                  </span>
+                </div>
               </div>
-              <div className="mt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:text-[56px] lg:text-[56px]">
-                <span>WINNING DIGITAL</span>
 
-                <span
-                  className="relative inline-block px-8 py-2 md:px-10 md:py-3 text-[#0a1628] bg-cyan-400"
-                  style={{
-                    clipPath:
-                      "polygon(0% 0%, 92% 0%, 100% 8%, 100% 100%, 0% 100%)",
-                  }}
-                >
-                  <span className="relative z-10 font-bold">AGENCY</span>
-
-                  {/* Top-right corner fold/peel effect */}
-                  <div
-                    className="absolute -top-16.5 -right-15 w-60 h-60 bg-white rounded-bl-2xl"
-                    style={{
-                      clipPath:
-                        "polygon(57.17% 45.4%, 57.27% 27.46%, 66.08% 36.53%, 75% 45.5%, 75% 45.4%)",
-                      //   clipPath: "polygon(0 0, 100% 0, 100% 100%)",
-                    }}
-                  ></div>
-                </span>
+              {/* Desktop (md+): 2 lines */}
+              <div className="hidden md:flex md:flex-col md:items-center md:gap-3">
+                {/* Line 1 */}
+                <div className="flex items-center justify-center gap-6">
+                  <PillBtn/>
+                  <span className="whitespace-nowrap text-5xl">WE ARE AN</span>
+                  <span className="whitespace-nowrap text-5xl">AWARD</span>
+                </div>
+                {/* Line 2 */}
+                <div className="flex items-center justify-center gap-6">
+                  <span className="whitespace-nowrap text-5xl">WINNING DIGITAL</span>
+                  {/* AGENCY sticker (desktop size) */}
+                  <span
+                    className="relative inline-flex items-center whitespace-nowrap font-bold text-[#0A1628]
+                         px-10 py-4 rounded-xl
+                         bg-gradient-to-r from-[#00F6FF] to-[#0A84FF]
+                         shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
+                  >
+                    <span className="relative z-10 text-5xl">AGENCY</span>
+                    <span
+                      className="absolute top-0 right-0 h-6 w-6 bg-white rounded-bl-md"
+                      style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }}
+                    />
+                    <Zap className="absolute -right-6 -top-3 h-7 w-7 text-[#00F6FF]" />
+                    <Zap className="absolute -right-6 -top-3 h-7 w-7 text-[#00F6FF]" />
+                  </span>
+                </div>
               </div>
+
             </h1>
           </div>
 
