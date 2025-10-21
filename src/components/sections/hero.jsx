@@ -11,31 +11,30 @@ const Hero = () => {
         <div className="absolute left-24 top-1/2 hidden -translate-y-1/2 md:flex">
           <VerticalSocialBar />
         </div>
-        <div className="flex flex-col items-center text-center mt-16 ">
+        <div className="flex flex-col items-center text-center mt-4 ">
           <div className="relative flex items-center">
             <div className="flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 py-2 px-5 text-sm backdrop-blur-sm">
               <Diamond size={12} className="fill-[#01FEFF] text-[#01FEFF]" />
-              <span className="tracking-wide  text-[#01FEFF]">
+              <p className="tracking-wide  text-[#01FEFF]">
                 Empowering the Future
-              </span>
+              </p>
             </div>
 
-            <div className="absolute -right-17 sm:-right-17">
+            <div className="absolute -right-12 sm:-right-22 -top-0 sm:-top-7">
               <Image
                 src="/images/robots/robo.png"
                 alt="Robot Head"
-                width={72}
-                height={72}
-                className=""
+                width={96} // intrinsic size for optimization
+                height={96}
+                className="w-10 h-10 sm:w-18 sm:h-18"
               />
             </div>
           </div>
 
-          <div className="flex items-center justify-center mt-2 mb-2 px-4">
+          <div className="flex items-center justify-center mt-4 mb-4 px-4">
             <h1 className="relative font-bold uppercase tracking-wider text-white text-3xl sm:text-4xl md:text-[56px] leading-tight text-center">
-
               {/* Mobile: 3 lines */}
-              <div className="md:hidden space-y-2">
+              <div className="md:hidden -space-y-0">
                 {/* Line 1 */}
                 <div className="flex items-center justify-center gap-3">
                   {/* Show pill from sm and up on mobile block (hide on xs) */}
@@ -52,16 +51,16 @@ const Hero = () => {
                   {/* AGENCY sticker (mobile size) */}
                   <span
                     className="relative inline-flex items-center whitespace-nowrap font-bold text-[#0A1628]
-                         px-6 py-2 rounded-lg
+                         px-4 py-1 rounded-lg
                          bg-gradient-to-r from-[#00F6FF] to-[#0A84FF]
                          shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
                   >
                     <span className="relative z-10">AGENCY</span>
                     <span
                       className="absolute top-0 right-0 h-4 w-4 bg-white rounded-bl-[6px]"
-                      style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }}
+                      // style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }}
                     />
-                    <Zap className="absolute -right-5 -top-2 h-5 w-5 text-[#00F6FF]" />
+                    {/* <Zap className="absolute -right-5 -top-2 h-5 w-5 text-[#00F6FF]" /> */}
                   </span>
                 </div>
               </div>
@@ -70,13 +69,15 @@ const Hero = () => {
               <div className="hidden md:flex md:flex-col md:items-center md:gap-3">
                 {/* Line 1 */}
                 <div className="flex items-center justify-center gap-6">
-                  <PillBtn/>
+                  <PillBtn />
                   <span className="whitespace-nowrap text-5xl">WE ARE AN</span>
                   <span className="whitespace-nowrap text-5xl">AWARD</span>
                 </div>
                 {/* Line 2 */}
                 <div className="flex items-center justify-center gap-6">
-                  <span className="whitespace-nowrap text-5xl">WINNING DIGITAL</span>
+                  <span className="whitespace-nowrap text-5xl">
+                    WINNING DIGITAL
+                  </span>
                   {/* AGENCY sticker (desktop size) */}
                   <span
                     className="relative inline-flex items-center whitespace-nowrap font-bold text-[#0A1628]
@@ -85,26 +86,20 @@ const Hero = () => {
                          shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
                   >
                     <span className="relative z-10 text-5xl">AGENCY</span>
-                    <span
-                      className="absolute top-0 right-0 h-6 w-6 bg-white rounded-bl-md"
-                      style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }}
-                    />
-                    <Zap className="absolute -right-6 -top-3 h-7 w-7 text-[#00F6FF]" />
-                    <Zap className="absolute -right-6 -top-3 h-7 w-7 text-[#00F6FF]" />
+                    <span className="absolute top-0 right-0 h-6 w-6 bg-white rounded-bl-lg rounded-tr-" />
                   </span>
                 </div>
               </div>
-
             </h1>
           </div>
 
-          <p className=" text-lg tracking-wide text-white">
+          <p className=" text-xs sm:text-sm tracking-wide text-white">
             Lets Start Discussing Your Project
           </p>
         </div>
       </div>
 
-      <div className="relative grid place-items-center">
+      <div className="relative grid place-items-center ">
         <div className="col-start-1 row-start-1">
           <Image
             src="/images/hero/heroProjects.png"
@@ -124,15 +119,12 @@ const Hero = () => {
         <div className="col-start-1 row-start-1">
           <Image
             src="/images/robots/main_robo.png"
-            // src="/images/robots/robot.png"
             alt="Main robot mascot"
             width={800}
             height={800}
             className="
-        w-[150px]  /* Default size for mobile */
-        sm:w-[400px] /* Size for 'sm' screens and up */
-        md:w-[600px] /* Optional: Size for medium screens */
-        lg:w-[800px] /* Optional: Size for large screens */
+        w-[300px]  
+        sm:w-[700px]
         object-contain
       "
           />
