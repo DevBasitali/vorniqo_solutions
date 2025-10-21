@@ -38,12 +38,12 @@ const Hero = () => {
                     <PillBtn />
                   </div>
                   <span className="md:text-[56px] lg:text-[56px]">
-                    WE ARE AN
+                    WE ARE AN AWARD
                   </span>
                 </span>
-                <span className="sm:text-[56px] border border-red-600">
-                  AWARD{" "}
-                </span>
+                {/* <span className="sm:text-[56px]">
+                  {" "}
+                </span> */}
               </div>
               <div className="mt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:text-[56px] lg:text-[56px]">
                 <span>WINNING DIGITAL</span>
