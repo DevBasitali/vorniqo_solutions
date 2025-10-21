@@ -50,9 +50,8 @@ body {
 
 h1, h2, h3 {
   font-family: 'integral-cf-bold';
-  /* font-family: 'integral-cf-regular'; */
-  font-size: 2  6px;
-  letter-spacing: 5px;
+  font-size: 26px;
+  letter-spacing: 3px;
 }
 
 #__next {
