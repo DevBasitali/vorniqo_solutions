@@ -34,12 +34,12 @@ html {
 
 body {
   /* font-family: 'tt-firs'; */
- 
+  /* font-size: 5px; */
   background-color: var(--color-background);
   color: var(--color-text-light);
-
   margin: 0;
-  padding: 0;
+  padding-left: 13px;
+  padding-right: 13px;
   min-height: 100vh;
   overflow-x: hidden;
   background-image:
@@ -50,9 +50,9 @@ body {
 
 h1, h2, h3 {
   font-family: 'integral-cf-bold';
-  font-size: 26px;
-  letter-spacing: 3px;
+  font-size: 24px;
 }
+
 
 #__next {
   display: flex;
