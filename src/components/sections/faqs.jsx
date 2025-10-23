@@ -1,9 +1,13 @@
 import React from 'react'
 import Faqcard from '../ui/faqcard'
+import Contactbtn from '../ui/faqcontactbtn'
 
 function faqs() {
   return (
-   <Faqcard/>
+   <section>
+    <Faqcard />
+    <Contactbtn />
+  </section>
   )
 }
 
