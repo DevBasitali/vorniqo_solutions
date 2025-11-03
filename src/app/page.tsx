@@ -7,11 +7,11 @@ import Project from "../components/sections/projects";
 export default function Home() {
   return (
     <>
-      <Hero />
-      <About />
+       <Hero />
+      {/*<About />
       <Whyus />
       <Project />
-      <Faq />
+      <Faq /> */}
     </>
   );
 }

@@ -1,58 +1,113 @@
 @import "tailwindcss";
 
-
 @font-face {
   font-family: 'integral-cf-bold';
   src: url('/fonts/integral-cf-bold.woff2') format('woff2');
 }
 
-/* @font-face {
-  font-family: 'integral-cf-regular';
-  src: url('/fonts/regular.woff2') format('woff2');
-} */
-
 @font-face {
   font-family: 'tt-firs';
   src: url('/fonts/tt.ttf') format('ttf');
-  font-weight:300;
-  font-style:normal;
+  font-weight: 300;
+  font-style: normal;
   font-display: swap;
 }
 
-:root {
-  --color-background: #09183E;
-  --color-primary: #00FFFF;
+@theme {
+  --font-heading: 'integral-cf-bold', sans-serif;
+  --font-body: 'tt-firs', sans-serif;
+
+  --color-background: #081840;
+  --color-primary: #FFFFFF;
   --color-text-light: #E2E8F0;
-  --color-text-dark: #94A3B8;
+  --color-text-dark: #01FEFF;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.625rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3rem;
+
+  /* BREAKPOINTS */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
 }
 
-html {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
 body {
-  /* font-family: 'tt-firs'; */
-  /* font-size: 5px; */
-  background-color: var(--color-background);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
   color: var(--color-text-light);
-  margin: 0;
-  padding-left: 13px;
-  padding-right: 13px;
-  min-height: 100vh;
-  overflow-x: hidden;
+  background-color: var(--color-background);
   background-image:
-    linear-gradient(rgba(0, 224, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(to right, rgba(0, 224, 255, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(0, 224, 255, 0.05) 1px, transparent 0.5px),
+    linear-gradient(to right, rgba(0, 224, 255, 0.05) 1px, transparent 0.5px);
   background-size: 100px 100px;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+:root {
+  --h1-size: var(--text-5xl);
+  --h2-size: var(--text-4xl);
+  --h3-size: var(--text-4xl);
+   --p-size: var(--text-base);
+  --color-text-dark: #01FEFF;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --h1-size: var(--text-5xl);
+    --h2-size: var(--text-4xl);
+    --p-size: var(--text-xl);
+    --color-text-dark: #01FEFF;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --h1-size: var(--text-2xl);
+    --h2-size: var(--text-lg);
+    --p-size: var(--text-xs);
+    --color-text-dark: #01FEFF;
+  }
 }
 
 h1, h2, h3 {
-  font-family: 'integral-cf-bold';
-  font-size: 24px;
+  font-family: var(--font-heading);
+  color: var(--color-text-light);
 }
 
+h1 { font-size: var(--h1-size); }
+h2 { font-size: var(--h2-size); }
+h3 { font-size: var(--h3-size); }
+
+p {
+  font-family: var(--font-body);
+  font-size: var(--p-size);
+  color: var(--color-text-dark);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #7ffcff;
+}
 
 #__next {
   display: flex;
@@ -63,3 +118,144 @@ h1, h2, h3 {
 footer {
   margin-top: auto;
 }
+
+/* @layer utilities {
+  .heading {
+    @apply font-heading font-bold text-white;
+  }
+  .subheading {
+    @apply font-body text-lg text-gray-300;
+  }
+  .paragraph {
+    @apply font-body text-base text-gray-400 leading-relaxed;
+  } */
+/* } */
+
+
+
+
+/* @import "tailwindcss";
+
+@font-face {
+  font-family: 'integral-cf-bold';
+  src: url('/fonts/integral-cf-bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'tt-firs';
+  src: url('/fonts/tt.ttf') format('ttf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-heading: 'integral-cf-bold', sans-serif;
+  --font-body: 'tt-firs', sans-serif;
+
+  --color-background: #081840;
+  --color-primary: #FFFFFF;
+  --color-text-light: #E2E8F0;
+  --color-text-dark: #01FEFF;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.625rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3rem;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text-light);
+  background-color: var(--color-background);
+  background-image:
+    linear-gradient(rgba(0, 224, 255, 0.05) 1px, transparent 0.5px),
+    linear-gradient(to right, rgba(0, 224, 255, 0.05) 1px, transparent 0.5px);
+  background-size: 100px 100px;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-light);
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+h1 { font-size: var(--text-5xl); }
+h2 { font-size: var(--text-4xl); }
+h3 { font-size: var(--text-3xl); }
+h4 { font-size: var(--text-2xl); }
+h5 { font-size: var(--text-xl); }
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  h1 { font-size: var(--text-4xl); }
+  h2 { font-size: var(--text-3xl); }
+  h3 { font-size: var(--text-2xl); }
+  h4 { font-size: var(--text-xl); }
+  h5 { font-size: var(--text-lg); }
+}
+
+@media (max-width: 640px) {
+  h1 { font-size: var(--text-2xl); }
+  h2 { font-size: var(--text-xl); }
+  h3 { font-size: var(--text-lg); }
+  h4 { font-size: var(--text-base); }
+  h5 { font-size: var(--text-sm); }
+}
+
+p {
+  color: var(--color-text-dark);
+  line-height: 1.75;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #7ffcff;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+
+@layer utilities {
+  .heading {
+    @apply font-heading font-bold text-white;
+  }
+  .subheading {
+    @apply font-body text-lg text-gray-300;
+  }
+  .paragraph {
+    @apply font-body text-base text-gray-400 leading-relaxed;
+  }
+} */

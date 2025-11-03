@@ -1,17 +1,9 @@
-// components/VerticalSocialBar.jsx
-
 import Link from "next/link";
-import { Twitter, Send, Facebook } from "lucide-react";
+import { Linkedin, Send, Facebook } from "lucide-react";
 
-// --- THIS IS THE BULLETPROOF VERSION ---
-// Notice the 'href = ""' in the function signature.
 const OctagonButton = ({ children, href = "", ariaLabel }) => {
-  // We can also add a console.log to help you debug if you want.
-  // console.log('Rendering OctagonButton with href:', href);
-
   return (
     <Link
-      // The 'href' passed here will now always be a string, never undefined.
       href={href}
       aria-label={ariaLabel}
       target="_blank"
@@ -20,7 +12,7 @@ const OctagonButton = ({ children, href = "", ariaLabel }) => {
     >
       <svg
         viewBox="0 0 24 24"
-        className="absolute h-full w-full"
+        className="absolute h-8 w-8"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -36,29 +28,23 @@ const OctagonButton = ({ children, href = "", ariaLabel }) => {
 };
 
 const VerticalSocialBar = () => {
-  // Ensure this array is correct and doesn't contain null or undefined hrefs.
   const socialLinks = [
-    { href: "https://twitter.com", icon: Twitter, label: "Twitter" },
+    { href: "https://twitter.com", icon: Linkedin, label: "Twitter" },
     { href: "https://telegram.org", icon: Send, label: "Telegram" },
     { href: "https://facebook.com", icon: Facebook, label: "Facebook" },
   ];
 
   return (
     <div className="flex flex-col items-center">
-      {/* Top vertical line */}
-      <div className="h-24 w-px bg-white/40" />
-
-      {/* Container for the icons */}
+      <div className="h-20 w-px bg-white/60" />
       <div className="flex flex-col gap-4 py-4">
         {socialLinks.map(({ href, icon: Icon, label }) => (
           <OctagonButton key={label} href={href} ariaLabel={label}>
-            <Icon size={16} className="fill-current" />
+            <Icon size={13} className="fill-current" />
           </OctagonButton>
         ))}
       </div>
-
-      {/* Bottom vertical line */}
-      <div className="h-24 w-px bg-white/40" />
+      <div className="h-20 w-px bg-white/60" />
     </div>
   );
 };
