@@ -1,26 +1,26 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'integral-cf-bold';
-  src: url('/fonts/integral-cf-bold.woff2') format('woff2');
+  font-family: "integral-cf-bold";
+  src: url("/fonts/integral-cf-bold.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'tt-firs';
-  src: url('/fonts/tt.ttf') format('ttf');
+  font-family: "tt-firs";
+  src: url("/fonts/tt.ttf") format("ttf");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @theme {
-  --font-heading: 'integral-cf-bold', sans-serif;
-  --font-body: 'tt-firs', sans-serif;
+  --font-heading: "integral-cf-bold", sans-serif;
+  --font-body: "tt-firs", sans-serif;
 
   --color-background: #081840;
-  --color-primary: #FFFFFF;
-  --color-text-light: #E2E8F0;
-  --color-text-dark: #01FEFF;
+  --color-primary: #ffffff;
+  --color-text-light: #e2e8f0;
+  --color-text-dark: #01feff;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
@@ -39,7 +39,8 @@
   --breakpoint-xl: 1280px;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -61,17 +62,18 @@ body {
 :root {
   --h1-size: var(--text-5xl);
   --h2-size: var(--text-4xl);
-  --h3-size: var(--text-4xl);
-   --p-size: var(--text-base);
-  --color-text-dark: #01FEFF;
+  --h3-size: var(--text-sm);
+  --p-size: var(--text-base); 
+  --color-text-dark: #01feff;
 }
 
 @media (max-width: 1024px) {
   :root {
     --h1-size: var(--text-5xl);
     --h2-size: var(--text-4xl);
+    --h3-size: var(--text-md);
     --p-size: var(--text-xl);
-    --color-text-dark: #01FEFF;
+    --color-text-dark: #01feff;
   }
 }
 
@@ -79,19 +81,28 @@ body {
   :root {
     --h1-size: var(--text-2xl);
     --h2-size: var(--text-lg);
+    --h3-size: var(--text-xs);
     --p-size: var(--text-xs);
-    --color-text-dark: #01FEFF;
+    --color-text-dark: #01feff;
   }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-heading);
   color: var(--color-text-light);
 }
 
-h1 { font-size: var(--h1-size); }
-h2 { font-size: var(--h2-size); }
-h3 { font-size: var(--h3-size); }
+h1 {
+  font-size: var(--h1-size);
+}
+h2 {
+  font-size: var(--h2-size);
+}
+h3 {
+  font-size: var(--h3-size);
+}
 
 p {
   font-family: var(--font-body);
@@ -130,9 +141,6 @@ footer {
     @apply font-body text-base text-gray-400 leading-relaxed;
   } */
 /* } */
-
-
-
 
 /* @import "tailwindcss";
 
