@@ -10,8 +10,8 @@ export default function Home() {
     <>
        <Hero />
        <CompanyLogos/>
-      {/* <About />
-      <Whyus />
+       <About />
+      {/*<Whyus />
       <Project />
       <Faq /> */}
     </>

@@ -15,7 +15,7 @@ type BrandMarqueeProps = {
 }
 
 export const BrandMarquee: React.FC<BrandMarqueeProps> = ({
-  title = 'More than 10,000 world‑class brands trust us',
+  title = 'More than 10000 world class brands trust Us',
   logos,
   speed = 26,
   direction = 'ltr',
