@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Linkedin, Send, Facebook } from "lucide-react";
+import { Linkedin, TwitterIcon, Facebook } from "lucide-react";
 
 const OctagonButton = ({ children, href = "", ariaLabel }) => {
   return (
@@ -29,8 +29,8 @@ const OctagonButton = ({ children, href = "", ariaLabel }) => {
 
 const VerticalSocialBar = () => {
   const socialLinks = [
-    { href: "https://twitter.com", icon: Linkedin, label: "Twitter" },
-    { href: "https://telegram.org", icon: Send, label: "Telegram" },
+    { href: "https://linkedin.com", icon: Linkedin, label: "Linkedin" },
+    { href: "https://twitter.com", icon: TwitterIcon, label: "X" },
     { href: "https://facebook.com", icon: Facebook, label: "Facebook" },
   ];
 

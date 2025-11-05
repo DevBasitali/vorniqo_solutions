@@ -7,9 +7,10 @@ import PrimaryBtn from "../ui/primaryBtn";
 import ArtShowcaseCard from "../ui/ArtShowcaseCard";
 import React, { useState, useEffect } from "react";
 
+
 const showcaseProjects = [
-  { id: 1, image: "/images/project_Images/project1.webp" },
-  { id: 2, image: "/images/project_Images/project2.png" },
+  { id: 1, image: "/images/project_Images/project3.webp" },
+  { id: 2, image: "/images/project_Images/project4.webp" },
   { id: 3, image: "/images/project_Images/project3.webp" },
   { id: 4, image: "/images/project_Images/project4.webp" },
 ];
@@ -120,8 +121,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative flex flex-col items-center justify-center align-middle mt-7 mb-1 md:my-25 lg:my-25">
-        <div className="relative flex justify-center py-15 px-4 md:px-10 lg:px-24">
+      <div className="relative flex flex-col items-center justify-center align-middle mt-4 mb-1 md:my-25 lg:my-25">
+        <div className="flex justify-center py-15 px-4 md:px-10 lg:px-24 ">
           <div className="flex items-center justify-center align-middle">
             {showcaseProjects.slice(0, visibleCount).map((project, index) => (
               <div
@@ -130,7 +131,7 @@ const Hero = () => {
                   index % 2 === 0
                     ? "translate-y-[-12px] hover:-translate-y-[20px]" // up for even items
                     : "translate-y-[12px] hover:-translate-y-[20px]" // down for odd items
-                } ${index !== 0 ? "-ml-4 md:-ml-10 lg:-ml-6" : ""}`}
+                } ${index !== 0 ? "-ml-4 md:-ml-1 lg:-ml-6" : ""}`}
                 style={{ zIndex: visibleCount - index }}
               >
                 <ArtShowcaseCard image={project.image} />
@@ -152,7 +153,7 @@ const Hero = () => {
         sm:w-[700px]
         object-contain
       "
-          />
+          /> 
         </div>
       </div>
       <div className="w-full h-px bg-gray-100/30"></div>
