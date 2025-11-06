@@ -55,7 +55,7 @@ const Hero = () => {
           <div className="relative flex items-center -left-4 my-4 ">
             <div className="flex items-center gap-2 rounded-full border border-[#01FEFF] py-1.5 px-5 backdrop-blur-sm">
               <Diamond size={12} className="fill-[#01FEFF] text-[#01FEFF]" />
-              <p>Empowering the Future</p>
+              <span>Empowering the Future</span>
             </div>
 
             <div className="absolute right-[-52px] sm:right-[-68px]">
