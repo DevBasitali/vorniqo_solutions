@@ -13,9 +13,9 @@ export default function Home() {
        <CompanyLogos/>
        <About />
        <Services/>
-      {/*<Whyus />
-      <Project />
-      <Faq /> */}
+      {/* <Whyus /> */}
+      {/* <Project /> */}
+      {/* <Faq /> */}
     </>
   );
 }

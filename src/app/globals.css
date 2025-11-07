@@ -66,15 +66,16 @@ body {
 
 @media (min-width: 1536px) {
   body {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
 :root {
   --h1-size: var(--text-5xl);
   --h2-size: var(--text-4xl);
-  --h3-size: var(--text-sm);
+  --h3-size: var(--text-2xl);
+  --h4-size: var(--text-sm);
   --p-size: var(--text-md);
   --color-text-dark: #01feff;
 }
@@ -84,6 +85,7 @@ body {
     --h1-size: var(--text-7xl);
     --h2-size: var(--text-4xl);
     --h3-size: var(--text-md);
+    --h4-size: var(--text-xs);
     --p-size: var(--text-xl);
     --color-text-dark: #01feff;
   }
@@ -94,6 +96,7 @@ body {
     --h1-size: var(--text-2xl);
     --h2-size: var(--text-lg);
     --h3-size: var(--text-xs);
+    --h4-size: var(--text-sm);
     --p-size: var(--text-xs);
     --color-text-dark: #01feff;
   }
@@ -101,7 +104,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--font-heading);
   color: var(--color-text-light);
 }
@@ -114,6 +118,9 @@ h2 {
 }
 h3 {
   font-size: var(--h3-size);
+}
+h4 {
+  --h4-size: var(--h4-size);
 }
 
 p {

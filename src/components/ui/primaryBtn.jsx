@@ -11,7 +11,7 @@ function primaryBtn() {
     px-3 py-2.5 text-[#061A36] transition hover:brightness-110
   "
 >
-  <h3>Contact Us</h3>
+  <h4>Contact Us</h4>
   <ArrowRight size={16} color="black" />
  
 </button>

@@ -3,7 +3,9 @@ import Projectcard from "../ui/porjectcard"
 
 function projects() {
   return (
-    <Projectcard />
+    <>
+<Projectcard/>
+    </>
   )
 }
 
