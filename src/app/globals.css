@@ -37,10 +37,10 @@
   --text-9xl: 6rem;
   --text-10xl: 7rem;
 
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
+  --breakpoint-sm: 640px;   
+  --breakpoint-md: 768px;   
+  --breakpoint-lg: 1024px;  
+  --breakpoint-xl: 1280px;  
   --breakpoint-2xl: 1536px;
 }
 
@@ -64,14 +64,15 @@ body {
   min-height: 100vh;
 }
 
-@media (min-width: 1536px) {
+ @media (max-width: 1536px) {
   body {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 }
 
-:root {
+
+ :root {
   --h1-size: var(--text-5xl);
   --h2-size: var(--text-4xl);
   --h3-size: var(--text-2xl);
@@ -80,11 +81,31 @@ body {
   --color-text-dark: #01feff;
 }
 
+@media (max-width: 1536px) {
+  :root {
+    --h1-size: var(--text-6xl);
+    --h2-size: var(--text-4xl);
+    --h3-size: var(--text-2xl);
+    --h4-size: var(--text-lg);
+    --p-size: var(--text-md);
+  }
+}
+
+@media (max-width: 1280px) {
+  :root {
+    --h1-size: var(--text-5xl);
+    --h2-size: var(--text-3xl);
+    --h3-size: var(--text-xl);
+    --h4-size: var(--text-base);
+    --p-size: var(--text-lg);
+  }
+}
+
 @media (max-width: 1024px) {
   :root {
     --h1-size: var(--text-7xl);
     --h2-size: var(--text-4xl);
-    --h3-size: var(--text-md);
+    --h3-size: var(--text-2xl);
     --h4-size: var(--text-xs);
     --p-size: var(--text-xl);
     --color-text-dark: #01feff;
@@ -95,9 +116,9 @@ body {
   :root {
     --h1-size: var(--text-2xl);
     --h2-size: var(--text-lg);
-    --h3-size: var(--text-xs);
-    --h4-size: var(--text-sm);
-    --p-size: var(--text-xs);
+    --h3-size: var(--text-2xl);
+    --h4-size: var(--text-xs);
+    --p-size: var(--text-sm);
     --color-text-dark: #01feff;
   }
 }

@@ -21,6 +21,12 @@ export const servicesData = [
     title: "Web Development",
     subtitle: "Building modern and scalable digital experiences.",
   },
+  {
+    id: 4,
+    icon: "/icons/development.svg",
+    title: "Web Development",
+    subtitle: "Building modern and scalable digital experiences.",
+  },
 ];
 
 export default function services() {
@@ -44,8 +50,8 @@ export default function services() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-3 px-40 py-10 gap-20">
-          {servicesData.map((service) => (
+        <div className="flex flex-wrap justify-center items-center gap-10 py-10">
+          {servicesData.map((service) => ( 
             <ServiceCard
               key={service.id}
               icon={service.icon}
