@@ -46,7 +46,7 @@ export default function services() {
               alt="flashes"
               width={80}
               height={80}
-              className=" absolute hidden sm:hidden md:hidden lg:block 2xl:block lg:top-10 lg:right-180 2xl:top-10 2xl:right-330 w-[80px] object-contain"
+              className=" absolute hidden sm:hidden md:hidden lg:block 2xl:block lg:top-10 lg:right-180 2xl:top-10 2xl:right-295 w-[80px] object-contain"
             />
           </div>
         </div>
