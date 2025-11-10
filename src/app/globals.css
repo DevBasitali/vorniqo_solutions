@@ -76,32 +76,32 @@ body {
   --h1-size: var(--text-lg);
   --h2-size: var(--text-md);
   --h3-size: var(--text-sm);
-  --h4-size: var(--text-base);
+  --h4-size: var(--text-xs);
   --p-size: var(--text-xs);
-  --span-size: var(--text-sm)
+  --span-size: var(--text-sm);
 }
 
 /* 400px AND UP (Extra-Small Phones, e.g., iPhone/Android) */
 @media (min-width: 400px) {
   :root {
-        --h1-size: var(--text-3xl);
+    --h1-size: var(--text-3xl);
     --h2-size: var(--text-2xl);
     --h3-size: var(--text-lg);
-    --h4-size: var(--text-sm);
+    --h4-size: var(--text-xs);
     --p-size: var(--text-base);
-    --span-size: var(--text-sm)
+    --span-size: var(--text-sm);
   }
 }
 
 /* 640px AND UP (Small Screens / Large Phones / Vertical Tablets) */
 @media (min-width: 640px) {
   :root {
-        --h1-size: var(--text-3xl);
+    --h1-size: var(--text-3xl);
     --h2-size: var(--text-2xl);
     --h3-size: var(--text-lg);
-    --h4-size: var(--text-sm);
+    --h4-size: var(--text-xs);
     --p-size: var(--text-base);
-    --span-size: var(--text-sm)
+    --span-size: var(--text-sm);
   }
 }
 
@@ -113,7 +113,7 @@ body {
     --h3-size: var(--text-lg);
     --h4-size: var(--text-sm);
     --p-size: var(--text-base);
-    --span-size: var(--text-sm)
+    --span-size: var(--text-sm);
   }
 }
 
@@ -123,9 +123,9 @@ body {
     --h1-size: var(--text-4xl);
     --h2-size: var(--text-2xl);
     --h3-size: var(--text-xl);
-    --h4-size: var(--text-lg);
+    --h4-size: var(--text-xs);
     --p-size: var(--text-base);
-    --span-size: var(--text-sm)
+    --span-size: var(--text-sm);
   }
 }
 
@@ -135,9 +135,9 @@ body {
     --h1-size: var(--text-5xl);
     --h2-size: var(--text-4xl);
     --h3-size: var(--text-2xl);
-    --h4-size: var(--text-lg);
+    --h4-size: var(--text-xs);
     --p-size: var(--text-base);
-    --span-size: var(--text-sm)
+    --span-size: var(--text-sm);
   }
 }
 
@@ -147,9 +147,9 @@ body {
     --h1-size: var(--text-5xl);
     --h2-size: var(--text-4xl);
     --h3-size: var(--text-2xl);
-    --h4-size: var(--text-lg);
+    --h4-size: var(--text-sm);
     --p-size: var(--text-base);
-    --span-size: var(--text-sm)
+    --span-size: var(--text-sm);
   }
 }
 
@@ -171,7 +171,9 @@ h3 {
   font-family: var(--font-heading);
   color: var(--color-text-light);
 }
-
+h4 {
+  font-family: var(--font-heading);
+}
 h1 {
   font-size: var(--h1-size);
 }
@@ -192,6 +194,11 @@ p {
   color: var(--color-text-light);
 }
 
+button {
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: var(--text-lg);
+}
 span {
   font-family: var(--font-body);
   font-size: var(--span-size);
