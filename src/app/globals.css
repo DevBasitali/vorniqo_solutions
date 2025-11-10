@@ -75,9 +75,9 @@ body {
 :root {
   --h1-size: var(--text-lg);
   --h2-size: var(--text-md);
-  --h3-size: var(--text-sm);
+  --h3-size: var(--text-lg);
   --h4-size: var(--text-xs);
-  --p-size: var(--text-xs);
+  --p-size: var(--text-md);
   --span-size: var(--text-sm);
 }
 
