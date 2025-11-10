@@ -18,6 +18,7 @@
   --color-primary: #ffffff;
   --color-text-light: #e2e8f0;
   --color-text-dark: #01feff;
+  --color-text-black: #000000;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
@@ -62,11 +63,15 @@ body {
   min-height: 100vh;
 }
 
-/* ... (Imports, @font-face, and @theme definitions remain the same) ... */
+/* ADDED: Margin/Padding for ultra-wide screens (1920px and above) */
+/* @media (min-width: 1920px) {
+  body {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    border: 2px solid red;
+  }
+} */
 
-/* --------------------------------------------------------------------- */
-/* BASE STYLES & DEFAULT (MOBILE-FIRST: 0px and up) */
-/* This defines the default size for the smallest screens (0px to 400px) */
 :root {
   --h1-size: var(--text-lg);
   --h2-size: var(--text-md);
@@ -75,7 +80,6 @@ body {
   --p-size: var(--text-xs);
 }
 
-/* --------------------------------------------------------------------- */
 /* 400px AND UP (Extra-Small Phones, e.g., iPhone/Android) */
 @media (min-width: 400px) {
   :root {
@@ -87,7 +91,6 @@ body {
   }
 }
 
-/* --------------------------------------------------------------------- */
 /* 640px AND UP (Small Screens / Large Phones / Vertical Tablets) */
 @media (min-width: 640px) {
   :root {
@@ -99,7 +102,6 @@ body {
   }
 }
 
-/* --------------------------------------------------------------------- */
 /* 768px AND UP (Medium Screens / Horizontal Tablets) */
 @media (min-width: 768px) {
   :root {
@@ -111,7 +113,6 @@ body {
   }
 }
 
-/* --------------------------------------------------------------------- */
 /* 1024px AND UP (Large Screens / Small Laptops, e.g., MacBook Air) */
 @media (min-width: 1024px) {
   :root {
@@ -123,100 +124,38 @@ body {
   }
 }
 
-/* --------------------------------------------------------------------- */
 /* 1280px AND UP (XL Screens / Mid-size Laptops, e.g., Dell Latitude) */
 @media (min-width: 1280px) {
   :root {
-    --h1-size: var(--text-9xl);
-    --h2-size: var(--text-7xl);
-    --h3-size: var(--text-6xl);
-    --h4-size: var(--text-4xl);
-    --p-size: var(--text-3xl);
-  }
-}
-
-/* --------------------------------------------------------------------- */
-/* 1536px AND UP (2XL Screens / Large Desktops) */
-@media (min-width: 1536px) {
-  :root {
-    --h1-size: var(--text-10xl);
-    --h2-size: var(--text-8xl);
-    --h3-size: var(--text-7xl);
-    --h4-size: var(--text-5xl);
-    --p-size: var(--text-4xl);
-  }
-}
-
-/* --------------------------------------------------------------------- */
-/* 1920px AND UP (Ultra-Wide/Highest Resolution) */
-/* This will serve as the final, largest size using the available variables */
-@media (min-width: 1920px) {
-  :root {
-    --h1-size: 8rem;
-    --h2-size: 6rem;
-    --h3-size: 5rem;
-    --h4-size: 3rem;
-    --p-size: 2rem;
-  }
-}
-
-/* :root {
-  --h1-size: var(--text-5xl);
-  --h2-size: var(--text-4xl);
-  --h3-size: var(--text-2xl);
-  --h4-size: var(--text-sm);
-  --p-size: var(--text-lg);
-}
-
-@media (max-width: 1536px) {
-  :root {
-    --h1-size: var(--text-6xl);
+    --h1-size: var(--text-5xl);
     --h2-size: var(--text-4xl);
     --h3-size: var(--text-2xl);
     --h4-size: var(--text-lg);
-    --p-size: var(--text-md);
+    --p-size: var(--text-base);
   }
 }
 
-@media (max-width: 1280px) {
+/* 1536px AND UP (2XL Screens / Large Desktops) */
+@media (min-width: 1536px) {
   :root {
     --h1-size: var(--text-5xl);
     --h2-size: var(--text-3xl);
-    --h3-size: var(--text-xl);
-    --h4-size: var(--text-base);
-    --p-size: var(--text-lg);
-  }
-}
-
-@media (max-width: 1024px) {
-  :root {
-    --h1-size: var(--text-7xl);
-    --h2-size: var(--text-4xl);
     --h3-size: var(--text-2xl);
-    --h4-size: var(--text-xs);
-    --p-size: var(--text-xl);
+    --h4-size: var(--text-lg);
+    --p-size: var(--text-base);
   }
 }
 
-@media (max-width: 640px) {
+/* 1920px AND UP ( Wider Desktops) */
+@media (min-width: 1920px) {
   :root {
-    --h1-size: var(--text-7xl);
-    --h2-size: var(--text-lg);
-    --h3-size: var(--text-2xl);
-    --h4-size: var(--text-xs);
-    --p-size: var(--text-sm);
+    --h1-size: 4rem;
+    --h2-size: 32px;
+    --h3-size: 26px;
+    --h4-size: 22px;
+    --p-size: 16px;
   }
 }
-
-@media (max-width: 400px) {
-  :root {
-    --h1-size: var(--text-lg);
-    --h2-size: var(--text-md);
-    --h3-size: var(--text-sm);
-    --h4-size: var(--text-xs);
-    --p-size: var(--text-sm);
-  }
-} */
 
 h1,
 h2,
