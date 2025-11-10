@@ -34,10 +34,11 @@
   --text-9xl: 6rem;
   --text-10xl: 7rem;
 
-  --breakpoint-sm: 640px;   
-  --breakpoint-md: 768px;   
-  --breakpoint-lg: 1024px;  
-  --breakpoint-xl: 1280px;  
+  --breakpoint-xs: 400px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
 }
 
@@ -61,23 +62,110 @@ body {
   min-height: 100vh;
 }
 
- /* @media (max-width: 1536px) {
-  body {
-    padding-left: 10rem;
-    padding-right: 10rem;
+/* ... (Imports, @font-face, and @theme definitions remain the same) ... */
+
+/* --------------------------------------------------------------------- */
+/* BASE STYLES & DEFAULT (MOBILE-FIRST: 0px and up) */
+/* This defines the default size for the smallest screens (0px to 400px) */
+:root {
+  --h1-size: var(--text-5xl); /* Adjusting h1 size to be smaller on tiny mobile */
+  --h2-size: var(--text-xl);
+  --h3-size: var(--text-lg);
+  --h4-size: var(--text-base);
+  --p-size: var(--text-sm);
+}
+
+/* --------------------------------------------------------------------- */
+/* 400px AND UP (Extra-Small Phones, e.g., iPhone/Android) */
+@media (min-width: 400px) {
+  :root {
+    --h1-size: var(--text-xl);
+    --h2-size: var(--text-3xl);
+    --h3-size: var(--text-2xl);
+    --h4-size: var(--text-lg);
+    --p-size: var(--text-base);
   }
-} */
+}
 
+/* --------------------------------------------------------------------- */
+/* 640px AND UP (Small Screens / Large Phones / Vertical Tablets) */
+@media (min-width: 640px) {
+  :root {
+    --h1-size: var(--text-6xl);
+    --h2-size: var(--text-4xl);
+    --h3-size: var(--text-3xl);
+    --h4-size: var(--text-xl);
+    --p-size: var(--text-lg);
+  }
+}
 
- :root {
+/* --------------------------------------------------------------------- */
+/* 768px AND UP (Medium Screens / Horizontal Tablets) */
+@media (min-width: 768px) {
+  :root {
+    --h1-size: var(--text-7xl);
+    --h2-size: var(--text-5xl);
+    --h3-size: var(--text-4xl);
+    --h4-size: var(--text-2xl);
+    --p-size: var(--text-xl);
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* 1024px AND UP (Large Screens / Small Laptops, e.g., MacBook Air) */
+@media (min-width: 1024px) {
+  :root {
+    --h1-size: var(--text-8xl);
+    --h2-size: var(--text-6xl);
+    --h3-size: var(--text-5xl);
+    --h4-size: var(--text-3xl);
+    --p-size: var(--text-2xl);
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* 1280px AND UP (XL Screens / Mid-size Laptops, e.g., Dell Latitude) */
+@media (min-width: 1280px) {
+  :root {
+    --h1-size: var(--text-9xl);
+    --h2-size: var(--text-7xl);
+    --h3-size: var(--text-6xl);
+    --h4-size: var(--text-4xl);
+    --p-size: var(--text-3xl);
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* 1536px AND UP (2XL Screens / Large Desktops) */
+@media (min-width: 1536px) {
+  :root {
+    --h1-size: var(--text-10xl);
+    --h2-size: var(--text-8xl);
+    --h3-size: var(--text-7xl);
+    --h4-size: var(--text-5xl);
+    --p-size: var(--text-4xl);
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* 1920px AND UP (Ultra-Wide/Highest Resolution) */
+/* This will serve as the final, largest size using the available variables */
+@media (min-width: 1920px) {
+  :root {
+    --h1-size: 8rem;
+    --h2-size: 6rem; 
+    --h3-size: 5rem;
+    --h4-size: 3rem;
+    --p-size: 2rem;
+  }
+}
+
+/* :root {
   --h1-size: var(--text-5xl);
   --h2-size: var(--text-4xl);
   --h3-size: var(--text-2xl);
   --h4-size: var(--text-sm);
   --p-size: var(--text-lg);
-  /* Removed redundant definition. 
-  --color-text-dark is already defined in the @theme block above. 
-  */
 }
 
 @media (max-width: 1536px) {
@@ -87,7 +175,6 @@ body {
     --h3-size: var(--text-2xl);
     --h4-size: var(--text-lg);
     --p-size: var(--text-md);
-    /* Removed redundant --color-text-dark */
   }
 }
 
@@ -108,24 +195,32 @@ body {
     --h3-size: var(--text-2xl);
     --h4-size: var(--text-xs);
     --p-size: var(--text-xl);
-    /* Removed redundant --color-text-dark */
   }
 }
 
 @media (max-width: 640px) {
   :root {
-    --h1-size: var(--text-2xl);
+    --h1-size: var(--text-7xl);
     --h2-size: var(--text-lg);
     --h3-size: var(--text-2xl);
     --h4-size: var(--text-xs);
     --p-size: var(--text-sm);
-    /* Removed redundant --color-text-dark */
   }
 }
 
+@media (max-width: 400px) {
+  :root {
+    --h1-size: var(--text-lg);
+    --h2-size: var(--text-md);
+    --h3-size: var(--text-sm);
+    --h4-size: var(--text-xs);
+    --p-size: var(--text-sm);
+  }
+} */
+
 h1,
 h2,
-h3{
+h3 {
   font-family: var(--font-heading);
   color: var(--color-text-light);
 }
@@ -140,7 +235,6 @@ h3 {
   font-size: var(--h3-size);
 }
 h4 {
-  /* FIX: Changed assignment to font-size definition */
   font-size: var(--h4-size);
 }
 
