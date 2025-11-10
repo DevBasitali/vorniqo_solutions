@@ -28,9 +28,6 @@ const ServiceCard = ({ icon, title, subtitle }) => {
 export default ServiceCard;
 
 {
-  /* Icon */
-}
-{
   /* <div className="flex items-center justify-start mb-4 border">
         
           <Image
