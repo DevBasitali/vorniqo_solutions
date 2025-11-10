@@ -78,53 +78,58 @@ body {
   --h3-size: var(--text-sm);
   --h4-size: var(--text-base);
   --p-size: var(--text-xs);
+  --span-size: var(--text-sm)
 }
 
 /* 400px AND UP (Extra-Small Phones, e.g., iPhone/Android) */
 @media (min-width: 400px) {
   :root {
-    --h1-size: var(--text-2xl);
-    --h2-size: var(--text-xl);
+        --h1-size: var(--text-3xl);
+    --h2-size: var(--text-2xl);
     --h3-size: var(--text-lg);
     --h4-size: var(--text-sm);
     --p-size: var(--text-base);
+    --span-size: var(--text-sm)
   }
 }
 
 /* 640px AND UP (Small Screens / Large Phones / Vertical Tablets) */
 @media (min-width: 640px) {
   :root {
+        --h1-size: var(--text-3xl);
+    --h2-size: var(--text-2xl);
+    --h3-size: var(--text-lg);
+    --h4-size: var(--text-sm);
+    --p-size: var(--text-base);
+    --span-size: var(--text-sm)
+  }
+}
+
+/* 768px AND UP (Medium Screens / Horizontal Tablets) done*/
+@media (min-width: 768px) {
+  :root {
+    --h1-size: var(--text-5xl);
+    --h2-size: var(--text-3xl);
+    --h3-size: var(--text-lg);
+    --h4-size: var(--text-sm);
+    --p-size: var(--text-base);
+    --span-size: var(--text-sm)
+  }
+}
+
+/* 1024px AND UP (Large Screens / Small Laptops, e.g., MacBook Air) done*/
+@media (min-width: 1024px) {
+  :root {
     --h1-size: var(--text-4xl);
     --h2-size: var(--text-2xl);
     --h3-size: var(--text-xl);
     --h4-size: var(--text-lg);
-    --p-size: var(--text-md);
+    --p-size: var(--text-base);
+    --span-size: var(--text-sm)
   }
 }
 
-/* 768px AND UP (Medium Screens / Horizontal Tablets) */
-@media (min-width: 768px) {
-  :root {
-    --h1-size: var(--text-5xl);
-    --h2-size: var(--text-4xl);
-    --h3-size: var(--text-2xl);
-    --h4-size: var(--text-lg);
-    --p-size: var(--text-md);
-  }
-}
-
-/* 1024px AND UP (Large Screens / Small Laptops, e.g., MacBook Air) */
-@media (min-width: 1024px) {
-  :root {
-    --h1-size: var(--text-5xl);
-    --h2-size: var(--text-4xl);
-    --h3-size: var(--text-2xl);
-    --h4-size: var(--text-lg);
-    --p-size: var(--text-md);
-  }
-}
-
-/* 1280px AND UP (XL Screens / Mid-size Laptops, e.g., Dell Latitude) */
+/* 1280px AND UP (XL Screens / Mid-size Laptops, e.g., Dell Latitude) Done*/
 @media (min-width: 1280px) {
   :root {
     --h1-size: var(--text-5xl);
@@ -132,21 +137,23 @@ body {
     --h3-size: var(--text-2xl);
     --h4-size: var(--text-lg);
     --p-size: var(--text-base);
+    --span-size: var(--text-sm)
   }
 }
 
-/* 1536px AND UP (2XL Screens / Large Desktops) */
+/* 1536px AND UP (2XL Screens / Large Desktops) Done*/
 @media (min-width: 1536px) {
   :root {
     --h1-size: var(--text-5xl);
-    --h2-size: var(--text-3xl);
+    --h2-size: var(--text-4xl);
     --h3-size: var(--text-2xl);
     --h4-size: var(--text-lg);
     --p-size: var(--text-base);
+    --span-size: var(--text-sm)
   }
 }
 
-/* 1920px AND UP ( Wider Desktops) */
+/* 1920px AND UP ( Wider Desktops) Done*/
 @media (min-width: 1920px) {
   :root {
     --h1-size: 4rem;
@@ -154,6 +161,7 @@ body {
     --h3-size: 26px;
     --h4-size: 22px;
     --p-size: 16px;
+    --span-size: 14px;
   }
 }
 
@@ -186,7 +194,7 @@ p {
 
 span {
   font-family: var(--font-body);
-  font-size: var(--p-size);
+  font-size: var(--span-size);
   font-weight: 600;
   color: var(--color-text-dark);
 }

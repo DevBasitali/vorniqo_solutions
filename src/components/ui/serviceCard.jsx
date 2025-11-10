@@ -14,10 +14,6 @@ const ServiceCard = ({ icon, title, subtitle }) => {
         <h3 className="text-white">{title}</h3>
         <p className="text-slate-300">{subtitle}</p>
       </div>
-      <div className="absolute">
-        
-      </div>
-
       <div className="mt- z-10">
         <PrimaryButton />
       </div>
