@@ -68,21 +68,21 @@ body {
 /* BASE STYLES & DEFAULT (MOBILE-FIRST: 0px and up) */
 /* This defines the default size for the smallest screens (0px to 400px) */
 :root {
-  --h1-size: var(--text-5xl); /* Adjusting h1 size to be smaller on tiny mobile */
-  --h2-size: var(--text-xl);
-  --h3-size: var(--text-lg);
+  --h1-size: var(--text-lg);
+  --h2-size: var(--text-md);
+  --h3-size: var(--text-sm);
   --h4-size: var(--text-base);
-  --p-size: var(--text-sm);
+  --p-size: var(--text-xs);
 }
 
 /* --------------------------------------------------------------------- */
 /* 400px AND UP (Extra-Small Phones, e.g., iPhone/Android) */
 @media (min-width: 400px) {
   :root {
-    --h1-size: var(--text-xl);
-    --h2-size: var(--text-3xl);
-    --h3-size: var(--text-2xl);
-    --h4-size: var(--text-lg);
+    --h1-size: var(--text-2xl);
+    --h2-size: var(--text-xl);
+    --h3-size: var(--text-lg);
+    --h4-size: var(--text-sm);
     --p-size: var(--text-base);
   }
 }
@@ -91,11 +91,11 @@ body {
 /* 640px AND UP (Small Screens / Large Phones / Vertical Tablets) */
 @media (min-width: 640px) {
   :root {
-    --h1-size: var(--text-6xl);
-    --h2-size: var(--text-4xl);
-    --h3-size: var(--text-3xl);
-    --h4-size: var(--text-xl);
-    --p-size: var(--text-lg);
+    --h1-size: var(--text-4xl);
+    --h2-size: var(--text-2xl);
+    --h3-size: var(--text-xl);
+    --h4-size: var(--text-lg);
+    --p-size: var(--text-md);
   }
 }
 
@@ -103,11 +103,11 @@ body {
 /* 768px AND UP (Medium Screens / Horizontal Tablets) */
 @media (min-width: 768px) {
   :root {
-    --h1-size: var(--text-7xl);
-    --h2-size: var(--text-5xl);
-    --h3-size: var(--text-4xl);
-    --h4-size: var(--text-2xl);
-    --p-size: var(--text-xl);
+    --h1-size: var(--text-5xl);
+    --h2-size: var(--text-4xl);
+    --h3-size: var(--text-2xl);
+    --h4-size: var(--text-lg);
+    --p-size: var(--text-md);
   }
 }
 
@@ -115,11 +115,11 @@ body {
 /* 1024px AND UP (Large Screens / Small Laptops, e.g., MacBook Air) */
 @media (min-width: 1024px) {
   :root {
-    --h1-size: var(--text-8xl);
-    --h2-size: var(--text-6xl);
-    --h3-size: var(--text-5xl);
-    --h4-size: var(--text-3xl);
-    --p-size: var(--text-2xl);
+    --h1-size: var(--text-5xl);
+    --h2-size: var(--text-4xl);
+    --h3-size: var(--text-2xl);
+    --h4-size: var(--text-lg);
+    --p-size: var(--text-md);
   }
 }
 
@@ -153,7 +153,7 @@ body {
 @media (min-width: 1920px) {
   :root {
     --h1-size: 8rem;
-    --h2-size: 6rem; 
+    --h2-size: 6rem;
     --h3-size: 5rem;
     --h4-size: 3rem;
     --p-size: 2rem;
