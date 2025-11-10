@@ -197,7 +197,7 @@ p {
 button {
   font-family: var(--font-body);
   font-weight: bold;
-  font-size: var(--text-lg);
+  font-size: var(--text-md);
 }
 span {
   font-family: var(--font-body);
