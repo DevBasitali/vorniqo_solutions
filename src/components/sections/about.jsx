@@ -6,7 +6,7 @@ import PrimaryBtn from "../ui/primaryBtn";
 
 const VorniqoAboutSection = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-2 border-b border-white/30">
+    <section className="grid grid-cols-1 md:grid-cols-1  lg:grid-cols-2 2xl:grid-cols-2 2xl:px-64 border-b border-white/30">
       <div className="flex items-start justify-start pt-7 border-r border-white/30">
         <div className="md:flex md:flex-col px-4 md:px-15 lg:px-16 max-w-prose text-center">
           <span className="flex items-start sm:text-center mt-4 pl-10 sm:pl-0 text-pretty tracking-[2px] my-1">
