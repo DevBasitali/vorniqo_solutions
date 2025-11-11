@@ -242,9 +242,8 @@ export default function WhyUs() {
   ];
 
   return (
-    <section className="w-full bg-[#09183E] text-white" style={{ padding: "64px 0" }}>
+    <section className="w-full p-[64px]" style={{ padding: "64px 0" }}>
       <div className="mx-auto" style={{ width: CONTAINER_W }}>
-        {/* Row 1 band: full-bleed top/bottom + centered vertical divider */}
         <div className="relative mb-12">
           <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-px w-screen bg-white/10" />
           <div className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 h-px w-screen bg-white/10" />
