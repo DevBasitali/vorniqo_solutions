@@ -35,7 +35,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="relative xl:px-64 border-b border-white/30">
+      <section className="relative border-b border-white/30">
         <div className="relative">
           <div className="absolute hidden lg:block left-10 top-30 ">
             <VerticalSocialBar />
@@ -142,7 +142,7 @@ const Hero = () => {
               ))}
             </div>
           </div>
-          <div className="absolute z-10 border">
+          <div className="absolute z-10">
             <Image
               src="/images/robots/robot.webp"
               alt="Main robot mascot"
@@ -157,7 +157,6 @@ const Hero = () => {
             />
           </div>
         </div>
-        
       </section>
     </>
   );

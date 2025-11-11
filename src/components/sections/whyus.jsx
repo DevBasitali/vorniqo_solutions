@@ -242,7 +242,7 @@ export default function WhyUs() {
   ];
 
   return (
-    <section className="w-full p-[64px]" style={{ padding: "64px 0" }}>
+    <section className="w-full">
       <div className="mx-auto" style={{ width: CONTAINER_W }}>
         <div className="relative mb-12">
           <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-px w-screen bg-white/10" />

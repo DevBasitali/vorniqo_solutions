@@ -94,7 +94,7 @@ export default function companyLogos() {
         gap={40}
         hoverSpeed={0}
         scaleOnHover
-        className="pb-6 mb-0 m-0 "
+        className="pb-6 mb-0 m-0"
         // fadeOut
         // fadeOutColor="#ffffff"
         // ariaLabel="Technology partners"
