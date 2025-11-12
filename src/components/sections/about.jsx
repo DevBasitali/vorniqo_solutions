@@ -14,9 +14,9 @@ import certified from "../../../public/images/aboutlogo/certified.png";
 import emoji from "../../../public/images/aboutlogo/emoji.png";
 const VorniqoAboutSection = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-1 h-fit xs:h-full sm:h-[80%] xl:h-[70%]  lg:grid-cols-2 2xl:grid-cols-2 border-b border-white/30">
+    <section className="grid grid-cols-1 md:grid-cols-1 h-fit xs:h-full sm:h-[80%] xl:h-[70%]  lg:grid-cols-2 2xl:grid-cols-2 border-b border-t border-white/30">
       {/* left section */}
-      <div className="flex  justify-center items-center sm:pl-10 border-r border-white/30">
+      <div className="flex  justify-center items-center lg:pl-10 border-r border-white/30">
         <div className="md:flex md:flex-col px-4 md:px-15 lg:px-16 max-w-prose text-center">
           <span className="flex items-start sm:text-center mt-4 pl-10 sm:pl-0 text-pretty tracking-[2px] my-1">
             ABOUT US ///////////////////////////////////////
