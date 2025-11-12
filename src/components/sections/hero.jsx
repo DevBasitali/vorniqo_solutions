@@ -8,10 +8,14 @@ import ArtShowcaseCard from "../ui/ArtShowcaseCard";
 import React, { useState, useEffect } from "react";
 
 const showcaseProjects = [
-  { id: 1, image: "/images/project_Images/project3.webp" },
-  { id: 2, image: "/images/project_Images/project4.webp" },
-  { id: 3, image: "/images/project_Images/project3.webp" },
-  { id: 4, image: "/images/project_Images/project4.webp" },
+  // { id: 1, image: "/images/project_Images/project3.webp" },
+  { id: 1, image: "/images/project_Images/1.webp" },
+  { id: 2, image: "/images/project_Images/1.webp" },
+  { id: 3, image: "/images/project_Images/1.webp" },
+  { id: 4, image: "/images/project_Images/1.webp" },
+  // { id: 2, image: "/images/project_Images/project4.webp" },
+  // { id: 3, image: "/images/project_Images/project3.webp" },
+  // { id: 4, image: "/images/project_Images/project4.webp" },
 ];
 
 const Hero = () => {
@@ -37,10 +41,10 @@ const Hero = () => {
     <>
       <section className="relative border-b border-white/30">
         <div className="relative">
-          <div className="absolute hidden lg:block left-10 top-30 ">
+          <div className="absolute hidden xl:block left-10 top-30 ">
             <VerticalSocialBar />
           </div>
-          <div className="absolute hidden lg:block right-10 top-30">
+          <div className="absolute hidden xl:block right-10 top-30">
             <Image
               src="/images/hero/sideline.webp"
               alt="Hero"
@@ -78,21 +82,28 @@ const Hero = () => {
                     <h1 className="whitespace-nowrap">WE ARE AN</h1>
                   </div>
                   <h1 className="whitespace-nowrap">AWARD WINNING</h1>
-                  <div className="flex items-center justify-center gap-4">
+                  <div className="flex items-center justify-center gap-2">
                     <h1 className="whitespace-nowrap">SOFTWARE</h1>
                     <span
-                      className="relative inline-flex items-center whitespace-nowrap
-                    px-3 py-1 rounded-lg
-                    bg-gradient-to-r from-[#00F6FF] to-[#0A84FF]
-                    shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
+                      className="relative inline-flex items-center px-5 py-0 rounded-xl
+            bg-gradient-to-r from-[#00F6FF] to-[#0A84FF]
+            shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
                     >
-                      <h1 className="relative z-10">Company</h1>
+                      <h1 className="relative z-10 !text-background">Company</h1>
+                      <span
+                        className="absolute top-0 right-0 h-6 w-6 z-10 bg-background"
+                        style={{
+                          clipPath: "polygon(0 0, 100% 100%, 100% 0)",
+                        }}
+                      />
+                      <span className="absolute top-0 right-0 h-6 w-6  bg-white rounded-bl-lg" />
                     </span>
                   </div>
                 </div>
 
                 {/* ===================== Desktop ================= */}
-                <div className="hidden lg:flex lg:flex-col lg:items-center">
+
+                <div className="relative hidden lg:flex lg:flex-col lg:items-center">
                   <div className="flex items-center justify-center gap-6">
                     <PillBtn />
                     <h1 className="whitespace-nowrap ">WE ARE AN</h1>
@@ -102,12 +113,18 @@ const Hero = () => {
                     <h1 className="whitespace-nowrap">WINNING SOFTWARE</h1>
                     <span
                       className="relative inline-flex items-center whitespace-nowrap text-black
-                    px-8 py-2 rounded-xl
-                    bg-gradient-to-r from-[#00F6FF] to-[#0A84FF]
-                    shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
+            px-5 py-0 rounded-xl
+            bg-gradient-to-r from-[#00F6FF] to-[#0A84FF]
+            shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
                     >
-                      <h1 className="relative z-10">AGENCY</h1>
-                      <span className="absolute top-0 right-0 h-6 w-6 bg-white rounded-bl-lg" />
+                      <h1 className="relative z-10 !text-background">Company</h1>
+                      <span
+                        className="absolute top-0 right-0 h-6 w-6 z-10 bg-background"
+                        style={{
+                          clipPath: "polygon(0 0, 100% 100%, 100% 0)",
+                        }}
+                      />
+                      <span className="absolute top-0 right-0 h-6 w-6  bg-white rounded-bl-lg" />
                     </span>
                   </div>
                 </div>
@@ -121,16 +138,16 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="relative flex flex-col items-center justify-center align-middle mt-4 mb-1 md:my-25 lg:my-25">
-          <div className="flex justify-center py-15 px-4 md:px-10 lg:px-24 ">
-            <div className="flex items-center justify-center align-middle">
+        <div className="relative flex flex-col items-center justify-center align-middle mt-4 mb-1 md:my-25 lg:my-25 ">
+          <div className="flex justify-center py-15 xs:py-8 w-full">
+            <div className="flex items-center justify-center align-middle px-3 xs:px-5 md:px-28">
               {showcaseProjects.slice(0, visibleCount).map((project, index) => (
                 <div
                   key={project.id}
                   className={`group relative transition-all duration-500 ${
                     index % 2 === 0
-                      ? "translate-y-[-12px] hover:-translate-y-[20px]" // up for even items
-                      : "translate-y-[12px] hover:-translate-y-[20px]" // down for odd items
+                      ? "translate-y-[12px] hover:-translate-y-[20px]" // up for even items
+                      : "translate-y-[-12px] hover:-translate-y-[20px]" // down for odd items
                   } ${index !== 0 ? "-ml-4 md:-ml-1 lg:-ml-6" : ""}`}
                   style={{ zIndex: visibleCount - index }}
                 >
@@ -142,20 +159,15 @@ const Hero = () => {
               ))}
             </div>
           </div>
-          <div className="absolute z-10">
+          {/* <div className="absolute w-full flex justify-center items-center align-middle z-10 px-5 ">
             <Image
               src="/images/robots/robot.webp"
               alt="Main robot mascot"
               width={800}
               height={800}
-              className="
-        w-[300px]  
-        sm:w-[700px]
-        md:w-[300px]
-        object-contain 
-      "
+              className="w-[300px] sm:w-full object-contain"
             />
-          </div>
+          </div> */}
         </div>
       </section>
     </>

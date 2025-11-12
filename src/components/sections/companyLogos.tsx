@@ -77,15 +77,9 @@ const imageLogos = [
 export default function companyLogos() {
   return (
     <div
-      style={{
-        height: "113px",
-        marginTop: "30px",
-        position: "relative",
-        overflow: "hidden",
-        // border: 2px solid
-      }}
+      className="relative overflow-hidden h-[113px] mt-[30px] 
+               mx-px lg:mx-22 xl:mx-36"
     >
-      {/* Basic horizontal loop */}
       <LogoLoop
         logos={logos}
         speed={40}
@@ -94,22 +88,8 @@ export default function companyLogos() {
         gap={40}
         hoverSpeed={0}
         scaleOnHover
-        className="pb-6 mb-0 m-0"
-        // fadeOut
-        // fadeOutColor="#ffffff"
-        // ariaLabel="Technology partners"
+        className="pb-6 mb-0 m-0 "
       />
-      {/* Vertical loop with deceleration on hover */}
-      {/* <LogoLoop
-        logos={techLogos}
-        speed={80}
-        direction="up"
-        logoHeight={48}
-        gap={40}
-        hoverSpeed={20}
-        fadeOut
-      /> */}
-      <div className="w-full h-px bg-gray-100/30" />{" "}
     </div>
   );
 }
