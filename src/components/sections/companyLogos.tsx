@@ -78,9 +78,8 @@ export default function companyLogos() {
   return (
     <div
       className="relative overflow-hidden h-[113px] mt-[30px] 
-               mx-px xl:mx-22"
->
-      {/* Basic horizontal loop */}
+               mx-px lg:mx-22 xl:mx-36"
+    >
       <LogoLoop
         logos={logos}
         speed={40}
@@ -91,7 +90,6 @@ export default function companyLogos() {
         scaleOnHover
         className="pb-6 mb-0 m-0 "
       />
-      {/* <div className="w-full h-px bg-gray-100/30" />{" "} */}
     </div>
   );
 }
