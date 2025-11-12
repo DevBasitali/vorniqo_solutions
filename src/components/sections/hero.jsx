@@ -85,18 +85,25 @@ const Hero = () => {
                   <div className="flex items-center justify-center gap-2">
                     <h1 className="whitespace-nowrap">SOFTWARE</h1>
                     <span
-                      className="relative inline-flex items-center
-                    px-3 py-1 rounded-lg
-                    bg-gradient-to-r from-[#00F6FF] to-[#0A84FF]
-                    shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
+                      className="relative inline-flex items-center px-5 py-0 rounded-xl
+            bg-gradient-to-r from-[#00F6FF] to-[#0A84FF]
+            shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
                     >
-                      <h1 className="relative z-10">Company</h1>
+                      <h1 className="relative z-10 !text-background">Company</h1>
+                      <span
+                        className="absolute top-0 right-0 h-6 w-6 z-10 bg-background"
+                        style={{
+                          clipPath: "polygon(0 0, 100% 100%, 100% 0)",
+                        }}
+                      />
+                      <span className="absolute top-0 right-0 h-6 w-6  bg-white rounded-bl-lg" />
                     </span>
                   </div>
                 </div>
 
                 {/* ===================== Desktop ================= */}
-                <div className="hidden lg:flex lg:flex-col lg:items-center">
+
+                <div className="relative hidden lg:flex lg:flex-col lg:items-center">
                   <div className="flex items-center justify-center gap-6">
                     <PillBtn />
                     <h1 className="whitespace-nowrap ">WE ARE AN</h1>
@@ -106,12 +113,18 @@ const Hero = () => {
                     <h1 className="whitespace-nowrap">WINNING SOFTWARE</h1>
                     <span
                       className="relative inline-flex items-center whitespace-nowrap text-black
-                    px-8 py-2 rounded-xl
-                    bg-gradient-to-r from-[#00F6FF] to-[#0A84FF]
-                    shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
+            px-5 py-0 rounded-xl
+            bg-gradient-to-r from-[#00F6FF] to-[#0A84FF]
+            shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
                     >
-                      <h1 className="relative z-10">AGENCY</h1>
-                      <span className="absolute top-0 right-0 h-6 w-6 bg-white rounded-bl-lg" />
+                      <h1 className="relative z-10 !text-background">Company</h1>
+                      <span
+                        className="absolute top-0 right-0 h-6 w-6 z-10 bg-background"
+                        style={{
+                          clipPath: "polygon(0 0, 100% 100%, 100% 0)",
+                        }}
+                      />
+                      <span className="absolute top-0 right-0 h-6 w-6  bg-white rounded-bl-lg" />
                     </span>
                   </div>
                 </div>
