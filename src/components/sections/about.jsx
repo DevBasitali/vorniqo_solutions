@@ -3,11 +3,20 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import PrimaryBtn from "../ui/primaryBtn";
-
+import Image from "next/image";
+import { motion } from "framer-motion";
+import vorniqologo from "../../../public/images/v.png";
+import address from "../../../public/images/aboutlogo/address.png";
+import hsqlogo from "../../../public/images/aboutlogo/hsqlogo.png";
+import nouman from "../../../public/images/aboutlogo/nouman.png";
+import zafar from "../../../public/images/aboutlogo/zafar.png";
+import certified from "../../../public/images/aboutlogo/certified.png";
+import emoji from "../../../public/images/aboutlogo/emoji.png";
 const VorniqoAboutSection = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-1  lg:grid-cols-2 2xl:grid-cols-2 2xl:px-64 border-b border-white/30">
-      <div className="flex items-start justify-start pt-7 border-r border-white/30">
+    <section className="grid grid-cols-1 md:grid-cols-1 h-fit xs:h-full sm:h-[80%] xl:h-[70%]  lg:grid-cols-2 2xl:grid-cols-2 border-b border-white/30">
+      {/* left section */}
+      <div className="flex  justify-center items-center sm:pl-10 border-r border-white/30">
         <div className="md:flex md:flex-col px-4 md:px-15 lg:px-16 max-w-prose text-center">
           <span className="flex items-start sm:text-center mt-4 pl-10 sm:pl-0 text-pretty tracking-[2px] my-1">
             ABOUT US ///////////////////////////////////////
@@ -28,41 +37,127 @@ const VorniqoAboutSection = () => {
           </p>
         </div>
       </div>
-      <div className="flex items-center justify-end px-6">
-        <div
-          className="
-      relative mx-auto
-      h-[260px] sm:h-[320px] md:h-[400px] lg:h-[460px] 2xl:h-[520px]
-      w-full md:w-auto
-    "
-        >
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="relative">
-              {/* Outer Circle */}
-              <div
-                className="rounded-full w-[55vw] max-w-[420px] aspect-square inset-
-            bg-[conic-gradient(from_180deg,rgba(255,255,255,0.1)_0deg,rgba(255,255,255,0.1)_144deg,transparent_144deg,transparent_452deg,rgba(255,255,255,0.1)_252deg,rgba(255,255,255,0.1)_360deg)]
-          "
-              />
-
-              {/* Middle Ring */}
-              <div className="absolute inset-6 rounded-full bg-[#0E2152] border border-white/10" />
-
-              {/* Inner Gradient Circle with Logo */}
-              <div
-                className="absolute inset-[25%] rounded-full flex items-center justify-center
-          bg-[linear-gradient(120deg,#00FBCD_0%,#013EFC_100%)]
-          shadow-[0_0_50px_rgba(1,254,255,0.25)]"
-              >
-                <img
-                  src="/images/logos/vorniqoLogo.webp"
-                  alt="VORNIQO Logo"
-                  className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain"
-                />
-              </div>
-            </div>
+      {/* right */}
+      <div className="flex  justify-center pt-28 xs:pt-14  sm:pt-0 mb-24 lg:mb-0 items-center">
+        {/* Outer wrapper for all circles */}
+        <div className="relative flex justify-center items-center ">
+          {/* Outer arc (bottom) */}
+          <motion.div
+            className="absolute w-[18rem] h-[18rem] xs:w-[19rem] xs:h-[19rem] sm:w-80 sm:h-80 bg-[#112A68]"
+            style={{
+              clipPath: "polygon(0 75%, 100% 75%, 100% 100%, 0% 100%)",
+              borderRadius: "50%",
+              transform: "rotate(23deg)",
+            }}
+            animate={{
+              rotate: -360,
+            }}
+            transition={{
+              repeat: Infinity,
+              ease: "linear",
+              duration: 25, // speed control — smaller = faster
+            }}
+          ></motion.div>
+          {/* Outer arc (top) */}
+          <motion.div
+            className="absolute w-[18rem] h-[18rem] xs:w-[19rem] xs:h-[19rem] sm:w-80 sm:h-80 bg-[#112A68]"
+            style={{
+              clipPath: "polygon(0 0, 100% 0, 100% 25%, 0% 25%)",
+              borderRadius: "50%",
+              transform: "rotate(20deg)",
+            }}
+            animate={{
+              rotate: -360,
+            }}
+            transition={{
+              repeat: Infinity,
+              ease: "linear",
+              duration: 25,
+            }}
+          ></motion.div>
+          {/* Middle circle */}
+          <div className="absolute w-60 h-60 sm:w-64 sm:h-64 bg-[#0E2152] rounded-full" />
+          {/* emoji */}
+          <div className="absolute  w-full h-full">
+            <motion.div
+              className="absolute -top-14 -right-24 xs:-right-28  sm:-right-36 "
+              animate={{
+                y: [0, -10, 0, 10, 0], // up-down motion
+                x: [0, 10, 0, -10, 0], // right-left motion
+              }}
+              transition={{
+                duration: 6, // total loop duration (adjust for speed)
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <Image src={emoji} alt="Top Image" width={80} height={80} />
+            </motion.div>
           </div>
-          <div id="vorniqo-circle-mount" className="absolute inset-0" />
+          {/* Main inner gradient circle */}
+          <div className="relative w-40 h-40 sm:w-44 sm:h-44 rounded-full flex justify-center items-center bg-gradient-to-r from-[#00FBCD] to-[#013EFC]">
+            <Image
+              src={vorniqologo}
+              width={100}
+              height={100}
+              alt="Vorniqologo"
+            />
+          </div>
+          {/* Upper image section */}
+          <motion.div
+            className="absolute w-full h-[150px]"
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
+          >
+            {/* nouman */}
+            <motion.div
+              className="absolute -bottom-3 -left-16"
+              animate={{ rotate: -360 }}
+              transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
+            >
+              <Image src={nouman} alt="Top Image" width={50} height={50} />
+            </motion.div>
+            {/* address fountain */}
+            <motion.div
+              className="absolute -top-16 -left-4"
+              animate={{ rotate: -360 }}
+              transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
+            >
+              <Image src={address} alt="Top Image" width={50} height={50} />
+            </motion.div>
+            {/* zafar */}
+            <motion.div
+              className="absolute -top-4 -right-[65px]"
+              animate={{ rotate: -360 }}
+              transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
+            >
+              <Image src={zafar} alt="Top Image" width={50} height={50} />
+            </motion.div>
+            {/* hsq */}
+            <motion.div
+              className="absolute -bottom-7 -right-12"
+              animate={{ rotate: -360 }}
+              transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
+            >
+              <Image src={hsqlogo} alt="Top Image" width={50} height={50} />
+            </motion.div>
+          </motion.div>
+          {/* certified */}
+          <div className="absolute">
+            <motion.div
+              className="absolute -top-44 -left-[170px] sm:-top-30 sm:-left-[250px]"
+              animate={{
+                y: [0, -15, 0, 10, 0], // moves up, then down slightly, then resets
+              }}
+              transition={{
+                duration: 4, // speed of the up-down motion
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <Image src={certified} alt="Top Image" width={100} height={100} />
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
