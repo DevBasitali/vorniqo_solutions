@@ -8,7 +8,7 @@ const OctagonButton = ({ children, href = "", ariaLabel }) => {
       aria-label={ariaLabel}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative flex h-10 w-10 items-center justify-center text-white transition-transform duration-200 hover:scale-110"
+      className="relative flex h-8 w-8 items-center justify-center text-white transition-transform duration-200 hover:scale-110"
     >
       <svg
         viewBox="0 0 24 24"
@@ -36,7 +36,7 @@ const VerticalSocialBar = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="h-20 w-px bg-white/60" />
+      <div className="h-10 w-px bg-white/60" />
       <div className="flex flex-col gap-4 py-4">
         {socialLinks.map(({ href, icon: Icon, label }) => (
           <OctagonButton key={label} href={href} ariaLabel={label}>
@@ -44,7 +44,7 @@ const VerticalSocialBar = () => {
           </OctagonButton>
         ))}
       </div>
-      <div className="h-20 w-px bg-white/60" />
+      <div className="h-10 w-px bg-white/60" />
     </div>
   );
 };

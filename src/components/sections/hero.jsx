@@ -37,10 +37,10 @@ const Hero = () => {
     <>
       <section className="relative border-b border-white/30">
         <div className="relative">
-          <div className="absolute hidden lg:block left-10 top-30 ">
+          <div className="absolute hidden xl:block left-10 top-30 ">
             <VerticalSocialBar />
           </div>
-          <div className="absolute hidden lg:block right-10 top-30">
+          <div className="absolute hidden xl:block right-10 top-30">
             <Image
               src="/images/hero/sideline.webp"
               alt="Hero"
@@ -78,10 +78,10 @@ const Hero = () => {
                     <h1 className="whitespace-nowrap">WE ARE AN</h1>
                   </div>
                   <h1 className="whitespace-nowrap">AWARD WINNING</h1>
-                  <div className="flex items-center justify-center gap-4">
+                  <div className="flex items-center justify-center gap-2">
                     <h1 className="whitespace-nowrap">SOFTWARE</h1>
                     <span
-                      className="relative inline-flex items-center whitespace-nowrap
+                      className="relative inline-flex items-center
                     px-3 py-1 rounded-lg
                     bg-gradient-to-r from-[#00F6FF] to-[#0A84FF]
                     shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
@@ -121,9 +121,9 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="relative flex flex-col items-center justify-center align-middle mt-4 mb-1 md:my-25 lg:my-25">
-          <div className="flex justify-center py-15 px-4 md:px-10 lg:px-24 ">
-            <div className="flex items-center justify-center align-middle">
+        <div className="relative flex flex-col items-center justify-center align-middle mt-4 mb-1 md:my-25 lg:my-25 ">
+          <div className="flex justify-center py-15 xs:py-8 w-full">
+            <div className="flex items-center justify-center align-middle px-3 xs:px-5 md:px-28">
               {showcaseProjects.slice(0, visibleCount).map((project, index) => (
                 <div
                   key={project.id}
@@ -142,20 +142,15 @@ const Hero = () => {
               ))}
             </div>
           </div>
-          <div className="absolute z-10">
+          {/* <div className="absolute w-full flex justify-center items-center align-middle z-10 px-5 ">
             <Image
               src="/images/robots/robot.webp"
               alt="Main robot mascot"
               width={800}
               height={800}
-              className="
-        w-[300px]  
-        sm:w-[700px]
-        md:w-[300px]
-        object-contain 
-      "
+              className="w-[300px] sm:w-full object-contain"
             />
-          </div>
+          </div> */}
         </div>
       </section>
     </>

@@ -69,7 +69,7 @@ export default function services() {
               alt="card_robo"
               width={230}
               height={230}
-              className="absolute xl:-top-5 xl:-right-18"
+              className="absolute hidden xl:block xl:-top-5 xl:-right-18"
             />
           </div>
         </div>
