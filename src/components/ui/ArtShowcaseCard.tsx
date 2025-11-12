@@ -18,7 +18,7 @@ export default function ArtShowcaseCard({
         alt={title || "Showcase Image"}
         width={100}
         height={100}
-        className="object-center object-cover w-full xs:w-[350px]"
+        className="object-center object-cover w-full xs:w-[350px] rounded-xl"
         loading="lazy"
       />
     </div>

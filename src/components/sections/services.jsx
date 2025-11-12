@@ -22,9 +22,18 @@ export const servicesData = [
     title: "Web Development",
     subtitle: "Crafting your unique brand essence.",
   },
+  {
+    id: 4,
+    icon: "/icons/development.svg",
+    title: "Web Development",
+    subtitle: "Crafting your unique brand essence.",
+  },
 ];
 
 export default function services() {
+
+  const MAX_CARDS = 3;
+
   return (
     <section className="grid grid-cols-1">
       <div className="relative flex flex-col py-7">
@@ -54,7 +63,7 @@ export default function services() {
         </div>
         <div className="relative">
           <div className="grid grid-cols-1 gap-6 px-4 max-w-8xl sm:mx-20 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 justify-items-center z-10">
-            {servicesData.map((service) => (
+            {servicesData.slice(0, MAX_CARDS).map((service) => (
               <ServiceCard
                 key={service.id}
                 icon={service.icon}

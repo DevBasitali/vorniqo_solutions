@@ -8,10 +8,14 @@ import ArtShowcaseCard from "../ui/ArtShowcaseCard";
 import React, { useState, useEffect } from "react";
 
 const showcaseProjects = [
-  { id: 1, image: "/images/project_Images/project3.webp" },
-  { id: 2, image: "/images/project_Images/project4.webp" },
-  { id: 3, image: "/images/project_Images/project3.webp" },
-  { id: 4, image: "/images/project_Images/project4.webp" },
+  // { id: 1, image: "/images/project_Images/project3.webp" },
+  { id: 1, image: "/images/project_Images/1.webp" },
+  { id: 2, image: "/images/project_Images/1.webp" },
+  { id: 3, image: "/images/project_Images/1.webp" },
+  { id: 4, image: "/images/project_Images/1.webp" },
+  // { id: 2, image: "/images/project_Images/project4.webp" },
+  // { id: 3, image: "/images/project_Images/project3.webp" },
+  // { id: 4, image: "/images/project_Images/project4.webp" },
 ];
 
 const Hero = () => {
@@ -129,8 +133,8 @@ const Hero = () => {
                   key={project.id}
                   className={`group relative transition-all duration-500 ${
                     index % 2 === 0
-                      ? "translate-y-[-12px] hover:-translate-y-[20px]" // up for even items
-                      : "translate-y-[12px] hover:-translate-y-[20px]" // down for odd items
+                      ? "translate-y-[12px] hover:-translate-y-[20px]" // up for even items
+                      : "translate-y-[-12px] hover:-translate-y-[20px]" // down for odd items
                   } ${index !== 0 ? "-ml-4 md:-ml-1 lg:-ml-6" : ""}`}
                   style={{ zIndex: visibleCount - index }}
                 >

@@ -36,7 +36,7 @@ const VerticalSocialBar = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="h-10 w-px bg-white/60" />
+      <div className="h-15 w-px bg-white/60" />
       <div className="flex flex-col gap-4 py-4">
         {socialLinks.map(({ href, icon: Icon, label }) => (
           <OctagonButton key={label} href={href} ariaLabel={label}>
@@ -44,7 +44,7 @@ const VerticalSocialBar = () => {
           </OctagonButton>
         ))}
       </div>
-      <div className="h-10 w-px bg-white/60" />
+      <div className="h-15 w-px bg-white/60" />
     </div>
   );
 };
