@@ -8,39 +8,10 @@ import Image from "next/image";
 import Box1 from "../../../public/images/box1.png";
 import Box2 from "../../../public/images/box2.png";
 
-const LEFT_W = 150.65;
-const LEFT_H = 270.26;
-const RIGHT_W = 150.65;
-
-/* Gap controls */
-const OUTER_PAD = 8
-const GAP_X = 8;
-const GAP_Y = 8;
-
-const LOCK_RIGHT_H = false;
-const RIGHT_H_FIXED = 211.63;
-
-/* Computed sizes to keep edges aligned */
-const RIGHT_H = LOCK_RIGHT_H ? RIGHT_H_FIXED : (LEFT_H - GAP_Y) / 2;
-const COLLAGE_INNER_W = LEFT_W + GAP_X + RIGHT_W;
-const COLLAGE_INNER_H = Math.max(LEFT_H, RIGHT_H * 2 + GAP_Y);
-const COLLAGE_W = COLLAGE_INNER_W + OUTER_PAD * 2;
-const COLLAGE_H = COLLAGE_INNER_H + OUTER_PAD * 2;
-
-/* ========== Cards (your sizes) ========== */
-const CARD_W = 423;
-const CARD_H = 236;
-const CARD_GAP = 24;
-const CARDS_W = CARD_W * 2 + CARD_GAP; // 870
-const CARDS_H = CARD_H * 2 + CARD_GAP; // 496
-
-/* ========== Row 2 scaling to fit container ========== */
-const ROW_GAP = 48; // gap between collage and cards
-const CANVAS_W = COLLAGE_W + ROW_GAP + CARDS_W; // ~1412.58
-const CANVAS_H = Math.max(COLLAGE_H, CARDS_H); // ~496.5
-const CONTAINER_W = 1200; // keep section at 1200
-const SCALE = CONTAINER_W / CANVAS_W;
-const SCALED_H = CANVAS_H * SCALE;
+/* ========== COLLAGE PROPORTIONS ========== */
+const COLLAGE_ASPECT = 0.95; // width / height ratio
+const R_OUTER = 24;
+const R_INNER = 12;
 
 /* ========== Icons ========== */
 const BulbIcon = ({ className = "w-6 h-6" }) => (
@@ -54,6 +25,7 @@ const BulbIcon = ({ className = "w-6 h-6" }) => (
     />
   </svg>
 );
+
 const ShieldIcon = ({ className = "w-6 h-6" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="none">
     <path
@@ -72,6 +44,7 @@ const ShieldIcon = ({ className = "w-6 h-6" }) => (
     />
   </svg>
 );
+
 const TargetIcon = ({ className = "w-6 h-6" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="none">
     <circle cx="12" cy="12" r="8" stroke="white" strokeWidth="1.6" />
@@ -84,6 +57,7 @@ const TargetIcon = ({ className = "w-6 h-6" }) => (
     />
   </svg>
 );
+
 const GearIcon = ({ className = "w-6 h-6" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="none">
     <path
@@ -106,13 +80,13 @@ function HexBadge({ side, icon, delay = 0 }) {
       initial={{ y: -6, rotate: -4 }}
       animate={{ y: [-6, 6, -6], rotate: [-4, 4, -4] }}
       transition={{ duration: 3.2, repeat: Infinity, delay, ease: "easeInOut" }}
-      className={`absolute -top-6 ${side === "left" ? "-left-6" : "-right-6"} z-30 drop-shadow-[0_8px_24px_rgba(23,233,255,0.4)]`}
+      className={`absolute -top-4 sm:-top-6 ${
+        side === "left" ? "-left-4 sm:-left-6" : "-right-4 sm:-right-6"
+      } z-30 drop-shadow-[0_8px_24px_rgba(23,233,255,0.4)]`}
     >
       <div
-        className="grid place-items-center text-white"
+        className="grid place-items-center text-white w-12 h-12 sm:w-14 sm:h-14"
         style={{
-          width: 56,
-          height: 56,
           background: "linear-gradient(180deg,#17E9FF, #2166FF)",
           clipPath:
             "polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%)",
@@ -120,7 +94,7 @@ function HexBadge({ side, icon, delay = 0 }) {
             "0 8px 30px rgba(23,233,255,0.35), inset 0 0 12px rgba(255,255,255,0.15)",
         }}
       >
-        {icon}
+        <div className="w-4 h-4 sm:w-5 sm:h-5">{icon}</div>
       </div>
     </motion.div>
   );
@@ -140,6 +114,7 @@ function FeatureCard({ title, subtitle, badgeSide, Icon, index }) {
     el.style.setProperty("--rx", `${rx}deg`);
     el.style.setProperty("--ry", `${ry}deg`);
   };
+
   const resetTilt = () => {
     const el = ref.current;
     if (!el) return;
@@ -161,7 +136,7 @@ function FeatureCard({ title, subtitle, badgeSide, Icon, index }) {
       }}
       whileHover={{ scale: 1.02 }}
       className="relative rounded-[20px] bg-[#09183E] text-white/95 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.6)]
-        w-full h-60 sm:h-52 md:h-56 lg:h-60
+        w-full h-48 sm:h-52 md:h-56 lg:h-60
         max-w-xs sm:max-w-sm lg:max-w-none"
       style={{
         transform:
@@ -177,11 +152,11 @@ function FeatureCard({ title, subtitle, badgeSide, Icon, index }) {
         delay={0.06 * index}
       />
       <div className="absolute inset-0 rounded-[20px] ring-1 ring-white/10" />
-      <div className="h-full w-full p-6 flex flex-col items-center justify-center text-center">
-        <h3 className="text-5xl font-extrabold text-white tracking-tight mb-2">
+      <div className="h-full w-full p-4 sm:p-5 lg:p-6 flex flex-col items-center justify-center text-center">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-2">
           {title}
         </h3>
-        <p className="text-[#A9BDD1]">{subtitle}</p>
+        <p className="text-sm sm:text-base text-[#A9BDD1]">{subtitle}</p>
       </div>
       <div className="pointer-events-none absolute inset-0 rounded-[20px] ring-0 hover:ring-2 hover:ring-[rgba(27,100,242,0.5)] transition-shadow duration-300" />
     </motion.div>
@@ -189,30 +164,27 @@ function FeatureCard({ title, subtitle, badgeSide, Icon, index }) {
 }
 
 function Collage({ src }) {
-  const R_OUTER = 24;
-  const R_INNER = 12;
-
   return (
     <motion.div
       initial={{ x: -24, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className="relative bg-[#09183E] shadow-[0_30px_80px_-40px_rgba(0,0,0,0.7)] hidden lg:block"
+      className="relative bg-[#09183E] shadow-[0_30px_80px_-40px_rgba(0,0,0,0.7)]
+        w-full h-auto
+        max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg
+        mx-auto lg:mx-0
+        p-3 sm:p-4 lg:p-4"
       style={{
-        width: COLLAGE_W,
-        height: COLLAGE_H,
         borderRadius: R_OUTER,
-        padding: OUTER_PAD,
+        aspectRatio: COLLAGE_ASPECT,
       }}
     >
       <div
-        className="grid"
+        className="grid h-full w-full"
         style={{
-          gridTemplateColumns: `${LEFT_W}px ${RIGHT_W}px`,
-          gridTemplateRows: `${RIGHT_H}px ${RIGHT_H}px`,
-          gap: `${GAP_Y}px ${GAP_X}px`, // row gap then column gap
-          width: COLLAGE_INNER_W,
-          height: COLLAGE_INNER_H,
+          gridTemplateColumns: "1fr 1fr",
+          gridTemplateRows: "1fr 1fr",
+          gap: "8px 8px",
         }}
       >
         {/* Left tile (spans both rows) */}
@@ -227,7 +199,7 @@ function Collage({ src }) {
             src={src}
             alt="analytics-1"
             fill
-            sizes={`${LEFT_W}px`}
+            sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 250px, 300px"
             className="object-cover object-left"
             priority
           />
@@ -244,7 +216,7 @@ function Collage({ src }) {
             src={src}
             alt="analytics-2"
             fill
-            sizes={`${RIGHT_W}px`}
+            sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 250px, 300px"
             className="object-cover object-top"
           />
         </div>
@@ -260,7 +232,7 @@ function Collage({ src }) {
             src={Box2}
             alt="analytics-3"
             fill
-            sizes={`${RIGHT_W}px`}
+            sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 250px, 300px"
             className="object-cover object-bottom"
           />
         </div>
@@ -300,8 +272,9 @@ export default function WhyUs() {
   return (
     <section className="grid grid-cols-1">
       <div className="relative flex flex-col py-7">
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start px-22 border-t border-b border-white/30 ">
-          <div className="w-full h-full lg:w-1/2 text-center lg:text-left lg:border-r lg:border-white/30">
+        {/* Header Section */}
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start px-4 md:px-20 lg:px-24 border-t border-b border-white/30">
+          <div className="w-full lg:w-1/2 text-center lg:text-left lg:border-r lg:border-white/30 py-8 lg:pr-8">
             <span className="inline-block tracking-[2px] mb-2 text-color-text-dark font-body font-semibold">
               WHY CHOOSE US ///////////////////////
             </span>
@@ -314,8 +287,8 @@ export default function WhyUs() {
             </h2>
           </div>
 
-          <div className="w-full lg:w-1/2 md:my-15">
-            <p className="text-color-text-light text-center lg:text-left lg:px-30">
+          <div className="w-full lg:w-1/2 py-8 lg:pl-8">
+            <p className="text-color-text-light text-center lg:text-left px-4 sm:px-8 lg:px-0">
               We go beyond just delivering projects we create meaningful digital
               experiences that drive results. Our approach combines creativity,
               technology, and strategy to help your business grow with
@@ -324,14 +297,15 @@ export default function WhyUs() {
           </div>
         </div>
 
-        <div className="relative border py-10 border-pink-950">
-          <div className="grid grid-cols-1 gap-6 px-4 mx-auto max-w-8xl sm:mx-auto sm:px-20 lg:grid-cols-2 place-items-center z-10">
-
-            <div className="w-full max-w-md lg:max-w-full">
+        {/* Content Section */}
+        <div className="relative py-8 lg:py-12">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 lg:gap-12 px-4 mx-auto sm:px-8 md:px-12 lg:px-20 lg:grid-cols-2 place-items-center z-10">
+            <div className="w-full hidden md:block">
               <Collage src={Box1} />
             </div>
 
-            <div className="w-full max-w-md lg:max-w-full">
+            {/* Feature Cards Grid */}
+            <div className="w-full">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 place-items-center">
                 {features.map((f, i) => (
                   <FeatureCard
