@@ -275,7 +275,7 @@ export default function WhyUs() {
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start px-4 md:px-20 lg:px-24 border-t border-b border-white/30">
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:border-r lg:border-white/30 py-8 lg:pr-8">
-            <span className="inline-block tracking-[2px] mb-2 text-color-text-dark font-body font-semibold">
+            <span className="inline-block tracking-[2px] mb-2 text-color-text-dark font-semibold">
               WHY CHOOSE US ///////////////////////
             </span>
             <h2 className="font-heading uppercase">
