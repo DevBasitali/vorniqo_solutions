@@ -25,15 +25,3 @@ w-full h-60 duration-300"
 
 export default ServiceCard;
 
-{
-  /* <div className="flex items-center justify-start mb-4 border">
-        
-          <Image
-          src="/images/services/card_icons.webp"
-          alt="Service Logo Here"
-          width={10}
-          height={10}
-          className="w-20 h-20"
-          />
-      </div> */
-}

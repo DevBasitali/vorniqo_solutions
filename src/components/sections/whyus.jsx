@@ -8,19 +8,15 @@ import Image from "next/image";
 import Box1 from "../../../public/images/box1.png";
 import Box2 from "../../../public/images/box2.png";
 
-/* ========== FIGMA COLLAGE SETTINGS ========== */
-/* Base sizes (your numbers) */
-const LEFT_W = 223.29;
-const LEFT_H = 464.51;
-const RIGHT_W = 223.29;
+const LEFT_W = 150.65;
+const LEFT_H = 270.26;
+const RIGHT_W = 150.65;
 
-/* Gap controls (tune to match Figma visuals) */
-const OUTER_PAD = 16;  // padding between tiles and the rounded frame
-const GAP_X = 16;      // gap between left column and right stack
-const GAP_Y = 16;      // vertical gap between right-top and right-bottom
+/* Gap controls */
+const OUTER_PAD = 8
+const GAP_X = 8;
+const GAP_Y = 8;
 
-/* If you MUST keep right height at 211.63, set this true.
-   Then the middle gap becomes 41.25 to keep bottoms aligned. */
 const LOCK_RIGHT_H = false;
 const RIGHT_H_FIXED = 211.63;
 
@@ -39,40 +35,71 @@ const CARDS_W = CARD_W * 2 + CARD_GAP; // 870
 const CARDS_H = CARD_H * 2 + CARD_GAP; // 496
 
 /* ========== Row 2 scaling to fit container ========== */
-const ROW_GAP = 48;                 // gap between collage and cards
+const ROW_GAP = 48; // gap between collage and cards
 const CANVAS_W = COLLAGE_W + ROW_GAP + CARDS_W; // ~1412.58
-const CANVAS_H = Math.max(COLLAGE_H, CARDS_H);  // ~496.5
-const CONTAINER_W = 1200;           // keep section at 1200
+const CANVAS_H = Math.max(COLLAGE_H, CARDS_H); // ~496.5
+const CONTAINER_W = 1200; // keep section at 1200
 const SCALE = CONTAINER_W / CANVAS_W;
 const SCALED_H = CANVAS_H * SCALE;
 
 /* ========== Icons ========== */
 const BulbIcon = ({ className = "w-6 h-6" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="none">
-    <path d="M9 18h6m-6 2h6M7 10a5 5 0 1110 0c0 2.09-1.05 3.38-2.1 4.37-.49.45-.9.82-.9 1.63v.5H10v-.5c0-.81-.41-1.18-.9-1.63C8.05 13.38 7 12.09 7 10z" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+    <path
+      d="M9 18h6m-6 2h6M7 10a5 5 0 1110 0c0 2.09-1.05 3.38-2.1 4.37-.49.45-.9.82-.9 1.63v.5H10v-.5c0-.81-.41-1.18-.9-1.63C8.05 13.38 7 12.09 7 10z"
+      stroke="white"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 const ShieldIcon = ({ className = "w-6 h-6" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="none">
-    <path d="M12 3l7 3v5c0 4.97-3.05 9.24-7 10-3.95-.76-7-5.03-7-10V6l7-3z" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M9 12l2 2 4-4" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+    <path
+      d="M12 3l7 3v5c0 4.97-3.05 9.24-7 10-3.95-.76-7-5.03-7-10V6l7-3z"
+      stroke="white"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M9 12l2 2 4-4"
+      stroke="white"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 const TargetIcon = ({ className = "w-6 h-6" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="none">
-    <circle cx="12" cy="12" r="8" stroke="white" strokeWidth="1.6"/>
-    <circle cx="12" cy="12" r="4" stroke="white" strokeWidth="1.6"/>
-    <path d="M12 2v3M22 12h-3M12 22v-3M2 12h3" stroke="white" strokeWidth="1.6" strokeLinecap="round"/>
+    <circle cx="12" cy="12" r="8" stroke="white" strokeWidth="1.6" />
+    <circle cx="12" cy="12" r="4" stroke="white" strokeWidth="1.6" />
+    <path
+      d="M12 2v3M22 12h-3M12 22v-3M2 12h3"
+      stroke="white"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+    />
   </svg>
 );
 const GearIcon = ({ className = "w-6 h-6" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="none">
-    <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" stroke="white" strokeWidth="1.6"/>
-    <path d="M19.4 15a7.96 7.96 0 00.1-2l2.1-1.6-2-3.5-2.5.6a8.06 8.06 0 00-1.7-1l-.4-2.6H11l-.4-2.6a8.06 8.06 0 00-1.7 1l-2.5-.6-2 3.5L4.5 13a7.96 7.96 0 000 2l-2.1 1.6 2 3.5 2.5-.6a8.06 8.06 0 001.7 1l.4 2.6h4l.4-2.6a8.06 8.06 0 001.7-1l2.5.6 2-3.5L19.4 15z" stroke="white" strokeWidth="1.6" strokeLinejoin="round"/>
+    <path
+      d="M12 15a3 3 0 100-6 3 3 0 000 6z"
+      stroke="white"
+      strokeWidth="1.6"
+    />
+    <path
+      d="M19.4 15a7.96 7.96 0 00.1-2l2.1-1.6-2-3.5-2.5.6a8.06 8.06 0 00-1.7-1l-.4-2.6H11l-.4-2.6a8.06 8.06 0 00-1.7 1l-2.5-.6-2 3.5L4.5 13a7.96 7.96 0 000 2l-2.1 1.6 2 3.5 2.5-.6a8.06 8.06 0 001.7 1l.4 2.6h4l.4-2.6a8.06 8.06 0 001.7-1l2.5.6 2-3.5L19.4 15z"
+      stroke="white"
+      strokeWidth="1.6"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 
-/* ========== Hex badge (z-index high, no clipping) ========== */
 function HexBadge({ side, icon, delay = 0 }) {
   return (
     <motion.div
@@ -87,8 +114,10 @@ function HexBadge({ side, icon, delay = 0 }) {
           width: 56,
           height: 56,
           background: "linear-gradient(180deg,#17E9FF, #2166FF)",
-          clipPath: "polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%)",
-          boxShadow: "0 8px 30px rgba(23,233,255,0.35), inset 0 0 12px rgba(255,255,255,0.15)"
+          clipPath:
+            "polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%)",
+          boxShadow:
+            "0 8px 30px rgba(23,233,255,0.35), inset 0 0 12px rgba(255,255,255,0.15)",
         }}
       >
         {icon}
@@ -97,7 +126,6 @@ function HexBadge({ side, icon, delay = 0 }) {
   );
 }
 
-/* ========== Feature card (centered text) ========== */
 function FeatureCard({ title, subtitle, badgeSide, Icon, index }) {
   const ref = useRef(null);
 
@@ -107,8 +135,8 @@ function FeatureCard({ title, subtitle, badgeSide, Icon, index }) {
     const r = el.getBoundingClientRect();
     const x = e.clientX - r.left;
     const y = e.clientY - r.top;
-    const rx = -((y / r.height) - 0.5) * 10;
-    const ry = ((x / r.width) - 0.5) * 12;
+    const rx = -(y / r.height - 0.5) * 10;
+    const ry = (x / r.width - 0.5) * 12;
     el.style.setProperty("--rx", `${rx}deg`);
     el.style.setProperty("--ry", `${ry}deg`);
   };
@@ -126,22 +154,33 @@ function FeatureCard({ title, subtitle, badgeSide, Icon, index }) {
       onMouseLeave={resetTilt}
       initial={{ y: 24, opacity: 0, scale: 0.98 }}
       animate={{ y: 0, opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6, delay: 0.15 * index, ease: [0.22, 1, 0.36, 1] }}
+      transition={{
+        duration: 0.6,
+        delay: 0.15 * index,
+        ease: [0.22, 1, 0.36, 1],
+      }}
       whileHover={{ scale: 1.02 }}
-      className="relative rounded-[20px] bg-[#09183E] text-white/95 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.6)]"
+      className="relative rounded-[20px] bg-[#09183E] text-white/95 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.6)]
+        w-full h-60 sm:h-52 md:h-56 lg:h-60
+        max-w-xs sm:max-w-sm lg:max-w-none"
       style={{
-        width: CARD_W,
-        height: CARD_H,
-        transform: "perspective(800px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))",
+        transform:
+          "perspective(800px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))",
         transition: "transform 120ms ease, box-shadow 200ms ease",
         overflow: "visible",
-        zIndex: 20
+        zIndex: 20,
       }}
     >
-      <HexBadge side={badgeSide} icon={<Icon className="w-6 h-6" />} delay={0.06 * index} />
+      <HexBadge
+        side={badgeSide}
+        icon={<Icon className="w-6 h-6" />}
+        delay={0.06 * index}
+      />
       <div className="absolute inset-0 rounded-[20px] ring-1 ring-white/10" />
       <div className="h-full w-full p-6 flex flex-col items-center justify-center text-center">
-        <h3 className="text-5xl font-extrabold text-white tracking-tight mb-2">{title}</h3>
+        <h3 className="text-5xl font-extrabold text-white tracking-tight mb-2">
+          {title}
+        </h3>
         <p className="text-[#A9BDD1]">{subtitle}</p>
       </div>
       <div className="pointer-events-none absolute inset-0 rounded-[20px] ring-0 hover:ring-2 hover:ring-[rgba(27,100,242,0.5)] transition-shadow duration-300" />
@@ -149,9 +188,7 @@ function FeatureCard({ title, subtitle, badgeSide, Icon, index }) {
   );
 }
 
-/* ========== Collage (Figma-like gaps via grid) ========== */
 function Collage({ src }) {
-  // Outer and inner corner radii (larger on outer, smaller on inner seams)
   const R_OUTER = 24;
   const R_INNER = 12;
 
@@ -165,7 +202,7 @@ function Collage({ src }) {
         width: COLLAGE_W,
         height: COLLAGE_H,
         borderRadius: R_OUTER,
-        padding: OUTER_PAD
+        padding: OUTER_PAD,
       }}
     >
       <div
@@ -175,7 +212,7 @@ function Collage({ src }) {
           gridTemplateRows: `${RIGHT_H}px ${RIGHT_H}px`,
           gap: `${GAP_Y}px ${GAP_X}px`, // row gap then column gap
           width: COLLAGE_INNER_W,
-          height: COLLAGE_INNER_H
+          height: COLLAGE_INNER_H,
         }}
       >
         {/* Left tile (spans both rows) */}
@@ -183,7 +220,7 @@ function Collage({ src }) {
           className="relative overflow-hidden ring-1 ring-white/10"
           style={{
             gridRow: "1 / span 2",
-            borderRadius: `${R_OUTER}px ${R_INNER}px ${R_INNER}px ${R_OUTER}px`
+            borderRadius: `${R_OUTER}px ${R_INNER}px ${R_INNER}px ${R_OUTER}px`,
           }}
         >
           <Image
@@ -200,7 +237,7 @@ function Collage({ src }) {
         <div
           className="relative overflow-hidden ring-1 ring-white/10"
           style={{
-            borderRadius: `${R_INNER}px ${R_OUTER}px ${R_INNER}px ${R_INNER}px`
+            borderRadius: `${R_INNER}px ${R_OUTER}px ${R_INNER}px ${R_INNER}px`,
           }}
         >
           <Image
@@ -216,7 +253,7 @@ function Collage({ src }) {
         <div
           className="relative overflow-hidden ring-1 ring-white/10"
           style={{
-            borderRadius: `${R_INNER}px ${R_INNER}px ${R_OUTER}px ${R_INNER}px`
+            borderRadius: `${R_INNER}px ${R_INNER}px ${R_OUTER}px ${R_INNER}px`,
           }}
         >
           <Image
@@ -232,78 +269,84 @@ function Collage({ src }) {
   );
 }
 
-/* ========== Section ========== */
 export default function WhyUs() {
   const features = [
-    { title: "Custom-Fit Solutions", subtitle: "Built around your exact needs", badgeSide: "left",  Icon: BulbIcon },
-    { title: "Transparent Process", subtitle: "No hidden steps, no surprises",   badgeSide: "right", Icon: ShieldIcon },
-    { title: "Results-Driven",       subtitle: "Focused on outcomes that matter", badgeSide: "left",  Icon: TargetIcon },
-    { title: "Modern Tech",          subtitle: "Always using the latest tools & trends", badgeSide: "right", Icon: GearIcon }
+    {
+      title: "Custom-Fit Solutions",
+      subtitle: "Built around your exact needs",
+      badgeSide: "left",
+      Icon: BulbIcon,
+    },
+    {
+      title: "Transparent Process",
+      subtitle: "No hidden steps, no surprises",
+      badgeSide: "right",
+      Icon: ShieldIcon,
+    },
+    {
+      title: "Results-Driven",
+      subtitle: "Focused on outcomes that matter",
+      badgeSide: "left",
+      Icon: TargetIcon,
+    },
+    {
+      title: "Modern Tech",
+      subtitle: "Always using the latest tools & trends",
+      badgeSide: "right",
+      Icon: GearIcon,
+    },
   ];
 
   return (
-    <section className="w-full">
-      <div className="mx-auto" style={{ width: CONTAINER_W }}>
-        <div className="relative mb-12">
-          <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-px w-screen bg-white/10" />
-          <div className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 h-px w-screen bg-white/10" />
-          <div className="pointer-events-none absolute left-1/2 top-[-1px] bottom-[-1px] -translate-x-1/2 w-px bg-white/10" />
+    <section className="grid grid-cols-1">
+      <div className="relative flex flex-col py-7">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start px-22 border-t border-b border-white/30 ">
+          <div className="w-full h-full lg:w-1/2 text-center lg:text-left lg:border-r lg:border-white/30">
+            <span className="inline-block tracking-[2px] mb-2 text-color-text-dark font-body font-semibold">
+              WHY CHOOSE US ///////////////////////
+            </span>
+            <h2 className="font-heading uppercase">
+              Why Our Client
+              <br />
+              Believe We Are
+              <br />
+              Different
+            </h2>
+          </div>
 
-          <div className="grid grid-cols-2">
-            <div className="pr-12 py-8">
-              <div className="mb-5 flex items-center gap-4">
-                <span className="text-[12px] tracking-[0.18em] font-semibold uppercase text-[#78F1FF]">
-                  WHY CHOOSE US ///////////////////////////////////////
-                </span>
-              </div>
-              <h2 className="uppercase font-extrabold" style={{ letterSpacing: "-0.02em", lineHeight: "1.05" }}>
-                Why Our Client<br />Believe We Are<br />Different
-              </h2>
-            </div>
-            <div className="pl-12 py-8">
-              <p className="text-[#A9BDD1]" style={{ fontSize: 16, lineHeight: "1.9" }}>
-                We go beyond just delivering projects — we create meaningful digital
-                experiences that drive results. Our approach combines creativity,
-                technology, and strategy to help your business grow with confidence.
-              </p>
-            </div>
+          <div className="w-full lg:w-1/2 md:my-15">
+            <p className="text-color-text-light text-center lg:text-left lg:px-30">
+              We go beyond just delivering projects we create meaningful digital
+              experiences that drive results. Our approach combines creativity,
+              technology, and strategy to help your business grow with
+              confidence.
+            </p>
           </div>
         </div>
 
-        {/* Row 2 scaled to fit 1200 (prevents right-side clipping) */}
-        <div className="relative z-10" style={{ width: CONTAINER_W, height: SCALED_H, overflow: "visible" }}>
-          <div
-            className="absolute left-0 top-0"
-            style={{
-              width: CANVAS_W,
-              height: CANVAS_H,
-              transform: `scale(${SCALE})`,
-              transformOrigin: "top left"
-            }}
-          >
-            <div className="flex items-start" style={{ width: CANVAS_W }}>
-              {/* Collage */}
+        <div className="relative border py-10 border-pink-950">
+          <div className="grid grid-cols-1 gap-6 px-4 mx-auto max-w-8xl sm:mx-auto sm:px-20 lg:grid-cols-2 place-items-center z-10">
+
+            <div className="w-full max-w-md lg:max-w-full">
               <Collage src={Box1} />
+            </div>
 
-              {/* Cards area */}
-              <div className="shrink-0" style={{ width: CARDS_W, marginLeft: ROW_GAP }}>
-                <div className="grid grid-cols-2" style={{ gap: CARD_GAP }}>
-                  {features.map((f, i) => (
-                    <FeatureCard
-                      key={f.title}
-                      title={f.title}
-                      subtitle={f.subtitle}
-                      badgeSide={f.badgeSide}
-                      Icon={f.Icon}
-                      index={i}
-                    />
-                  ))}
-                </div>
+            <div className="w-full max-w-md lg:max-w-full">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 place-items-center">
+                {features.map((f, i) => (
+                  <FeatureCard
+                    key={f.title}
+                    title={f.title}
+                    subtitle={f.subtitle}
+                    badgeSide={f.badgeSide}
+                    Icon={f.Icon}
+                    index={i}
+                  />
+                ))}
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
