@@ -21,7 +21,7 @@ function primaryBtn() {
     inline-flex items-center justify-center gap-x-2 rounded-full
     bg-gradient-to-r from-[#014FF8] to-[#01F1D6]
     px-4 py-2
-    transition-all duration-500
+    transition-all duration-300
     group
   "
     >

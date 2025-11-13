@@ -8,8 +8,7 @@ import Image from "next/image";
 import Box1 from "../../../public/images/box1.png";
 import Box2 from "../../../public/images/box2.png";
 
-/* ========== COLLAGE PROPORTIONS ========== */
-const COLLAGE_ASPECT = 0.95; // width / height ratio
+const COLLAGE_ASPECT = 0.95;
 const R_OUTER = 24;
 const R_INNER = 12;
 
@@ -85,7 +84,7 @@ function HexBadge({ side, icon, delay = 0 }) {
       } z-30 drop-shadow-[0_8px_24px_rgba(23,233,255,0.4)]`}
     >
       <div
-        className="grid place-items-center text-white w-12 h-12 sm:w-14 sm:h-14"
+        className="flex items-center justify-center text-white w-12 h-12 sm:w-14 sm:h-14"
         style={{
           background: "linear-gradient(180deg,#17E9FF, #2166FF)",
           clipPath:
@@ -94,7 +93,9 @@ function HexBadge({ side, icon, delay = 0 }) {
             "0 8px 30px rgba(23,233,255,0.35), inset 0 0 12px rgba(255,255,255,0.15)",
         }}
       >
-        <div className="w-4 h-4 sm:w-5 sm:h-5">{icon}</div>
+        <div className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center">
+          {icon}
+        </div>
       </div>
     </motion.div>
   );
@@ -152,11 +153,9 @@ function FeatureCard({ title, subtitle, badgeSide, Icon, index }) {
         delay={0.06 * index}
       />
       <div className="absolute inset-0 rounded-[20px] ring-1 ring-white/10" />
-      <div className="h-full w-full p-4 sm:p-5 lg:p-6 flex flex-col items-center justify-center text-center">
-        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-2">
-          {title}
-        </h3>
-        <p className="text-sm sm:text-base text-[#A9BDD1]">{subtitle}</p>
+      <div className="h-full w-full p-4 sm:p-5 lg:p-6 flex flex-col justify-center text-start ">
+        <h3 className=" max-w-full tracking-tight mb-2">{title}</h3>
+        <p className="">{subtitle}</p>
       </div>
       <div className="pointer-events-none absolute inset-0 rounded-[20px] ring-0 hover:ring-2 hover:ring-[rgba(27,100,242,0.5)] transition-shadow duration-300" />
     </motion.div>
@@ -169,11 +168,8 @@ function Collage({ src }) {
       initial={{ x: -24, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className="relative bg-[#09183E] shadow-[0_30px_80px_-40px_rgba(0,0,0,0.7)]
-  w-full h-auto
-  max-w-[240px] sm:max-w-[280px] md:max-w-[250px] lg:max-w-[360px]
-  mx-auto lg:mx-0
-  p-2 sm:p-3 lg:p-3"
+      className="relative bg-[#09183E] shadow-[0_30px_80px_-40px_rgba(0,0,0,0.7)] w-full h-auto
+  max-w-[240px] sm:max-w-[280px] md:max-w-[250px] lg:max-w-[420px] xl:max-w-[480px] mx-auto lg:mx-0 p-2 sm:p-3 lg:p-3"
       style={{
         borderRadius: R_OUTER,
         aspectRatio: COLLAGE_ASPECT,
@@ -201,7 +197,7 @@ function Collage({ src }) {
             fill
             sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 250px, 300px"
             className="object-cover object-left"
-            priority
+            loading="lazy"
           />
         </div>
 
@@ -218,6 +214,7 @@ function Collage({ src }) {
             fill
             sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 250px, 300px"
             className="object-cover object-top"
+            loading="lazy"
           />
         </div>
 
@@ -234,6 +231,7 @@ function Collage({ src }) {
             fill
             sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 250px, 300px"
             className="object-cover object-bottom"
+            loading="lazy"
           />
         </div>
       </div>
@@ -287,7 +285,7 @@ export default function WhyUs() {
             </h2>
           </div>
 
-          <div className="w-full lg:w-1/2 py-8 lg:pl-8">
+          <div className="w-full lg:w-1/2 py-8 md:px-15 xl:pt-20 xl:px-40">
             <p className="text-color-text-light text-center lg:text-left px-4 sm:px-8 lg:px-0">
               We go beyond just delivering projects we create meaningful digital
               experiences that drive results. Our approach combines creativity,
@@ -299,7 +297,7 @@ export default function WhyUs() {
 
         {/* Content Section */}
         <div className="relative py-8 lg:py-12">
-         <div className="grid grid-cols-1 gap-6 md:gap-[5px] px-4 mx-auto sm:px-8 md:px-12 lg:px-20 lg:grid-cols-2 place-items-center z-10">
+          <div className="grid grid-cols-1 gap-6 md:gap-[5px] px-4 mx-auto sm:px-8 md:px-12 lg:px-20 lg:grid-cols-2 place-items-center z-10">
             <div className="w-full hidden lg:block">
               <Collage src={Box1} />
             </div>
