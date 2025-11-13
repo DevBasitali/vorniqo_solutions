@@ -170,10 +170,10 @@ function Collage({ src }) {
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       className="relative bg-[#09183E] shadow-[0_30px_80px_-40px_rgba(0,0,0,0.7)]
-        w-full h-auto
-        max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg
-        mx-auto lg:mx-0
-        p-3 sm:p-4 lg:p-4"
+  w-full h-auto
+  max-w-[240px] sm:max-w-[280px] md:max-w-[250px] lg:max-w-[360px]
+  mx-auto lg:mx-0
+  p-2 sm:p-3 lg:p-3"
       style={{
         borderRadius: R_OUTER,
         aspectRatio: COLLAGE_ASPECT,
@@ -299,8 +299,8 @@ export default function WhyUs() {
 
         {/* Content Section */}
         <div className="relative py-8 lg:py-12">
-          <div className="grid grid-cols-1 gap-6 sm:gap-8 lg:gap-12 px-4 mx-auto sm:px-8 md:px-12 lg:px-20 lg:grid-cols-2 place-items-center z-10">
-            <div className="w-full hidden md:block">
+         <div className="grid grid-cols-1 gap-6 md:gap-[5px] px-4 mx-auto sm:px-8 md:px-12 lg:px-20 lg:grid-cols-2 place-items-center z-10">
+            <div className="w-full hidden lg:block">
               <Collage src={Box1} />
             </div>
 

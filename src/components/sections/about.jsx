@@ -14,9 +14,9 @@ import certified from "../../../public/images/aboutlogo/certified.png";
 import emoji from "../../../public/images/aboutlogo/emoji.png";
 const VorniqoAboutSection = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-1 h-fit xs:h-full sm:h-[80%] xl:h-[70%]  lg:grid-cols-2 2xl:grid-cols-2 border-b border-t border-white/30">
+    <section className="grid grid-cols-1 md:grid-cols-1 h-fit xs:h-full sm:h-[80%] xl:h-[40%] lg:grid-cols-2 2xl:grid-cols-2 border-b border-t border-white/30">
       {/* left section */}
-      <div className="flex  justify-center items-center lg:pl-10 border-r border-white/30">
+      <div className="flex  justify-center items-center lg:pl-1 border-r  border border-amber-400">
         <div className="md:flex md:flex-col px-4 md:px-15 lg:px-16 max-w-prose text-center">
           <span className="flex items-start sm:text-center mt-4 pl-10 sm:pl-0 text-pretty tracking-[2px] my-1">
             ABOUT US ///////////////////////////////////////
@@ -38,7 +38,7 @@ const VorniqoAboutSection = () => {
         </div>
       </div>
       {/* right */}
-      <div className="flex  justify-center pt-28 xs:pt-14  sm:pt-0 mb-24 lg:mb-0 items-center">
+      <div className="flex justify-center pt-28 xs:pt-14 sm:pt-0 mb-24 lg:mb-0 items-center border border-red-400">
         {/* Outer wrapper for all circles */}
         <div className="relative flex justify-center items-center ">
           {/* Outer arc (bottom) */}
