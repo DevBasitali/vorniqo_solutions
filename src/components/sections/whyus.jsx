@@ -285,7 +285,7 @@ export default function WhyUs() {
             </h2>
           </div>
 
-          <div className="w-full lg:w-1/2 py-8 md:px-15 xl:pt-20 xl:px-40">
+          <div className="w-full lg:w-1/2 py-8 md:px-15 xl:pt-20 xl:px-20">
             <p className="text-color-text-light text-center lg:text-left px-4 sm:px-8 lg:px-0">
               We go beyond just delivering projects we create meaningful digital
               experiences that drive results. Our approach combines creativity,
