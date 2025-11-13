@@ -16,7 +16,7 @@ export default function Home() {
       <Services />
       <Whyus />
       <Team />
-      {/* <Project /> */}
+      <Project />
       {/* <Faq /> */}
     </>
   );

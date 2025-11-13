@@ -272,20 +272,20 @@ export default function WhyUs() {
       <div className="relative flex flex-col py-7">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start px-4 md:px-20 lg:px-24 border-t border-b border-white/30">
-          <div className="w-full lg:w-1/2 text-center lg:text-left lg:border-r lg:border-white/30 py-8 lg:pr-8">
+          <div className="w-full lg:w-1/2 text-center lg:text-left lg:border-r lg:border-white/30 pt-8 lg:pr-8">
             <span className="inline-block tracking-[2px] mb-2 text-color-text-dark font-semibold">
               WHY CHOOSE US ///////////////////////
             </span>
-            <h2 className="font-heading uppercase">
+            <h1 className="font-heading uppercase">
               Why Our Client
               <br />
               Believe We Are
               <br />
               Different
-            </h2>
+            </h1>
           </div>
 
-          <div className="w-full lg:w-1/2 py-8 md:px-15 xl:pt-20 xl:px-20">
+          <div className="w-full lg:w-1/2 pb-8 sm:pt-10 md:px-15 xl:pt-20 xl:px-20">
             <p className="text-color-text-light text-center lg:text-left px-4 sm:px-8 lg:px-0">
               We go beyond just delivering projects we create meaningful digital
               experiences that drive results. Our approach combines creativity,
