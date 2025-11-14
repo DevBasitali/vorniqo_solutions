@@ -5,19 +5,19 @@ import ProjectCard from "../ui/porjectcard"
 const projectsData = [
   {
     id: 1,
-    image: "/images/projects/project1.jpg",
+    image: "/images/project_Images/1.webp",
     title: "Address Fountain",
     subtitle: "LUXURY HOTEL WEB DEVELOPMENT"
   },
   {
     id: 2,
-    image: "/images/projects/project2.jpg",
+    image: "/images/project_Images/4.webp",
     title: "E-Commerce Hub",
     subtitle: "RETAIL PLATFORM DESIGN"
   },
   {
     id: 3,
-    image: "/images/projects/project3.jpg",
+    image: "/images/project_Images/1.webp",
     title: "Fitness Pro",
     subtitle: "MOBILE APP DEVELOPMENT"
   }
