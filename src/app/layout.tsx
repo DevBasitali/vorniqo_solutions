@@ -8,7 +8,7 @@ import Footer from "../components/layout/footer"
 
 export const metadata: Metadata = {
   title: "Vorniqo Solution",
-  description: "A Award Winning Software Agency",
+  description: "A Award Winning Software Company",
 };
 
 export default function RootLayout({

@@ -5,19 +5,19 @@ import ProjectCard from "../ui/porjectcard"
 const projectsData = [
   {
     id: 1,
-    image: "/images/project_Images/1.webp",
-    title: "Address Fountain",
+    image: "/images/our_projectImages/hsq.webp",
+    title: "Hsq",
     subtitle: "LUXURY HOTEL WEB DEVELOPMENT"
   },
   {
     id: 2,
-    image: "/images/project_Images/4.webp",
+    image: "/images/our_projectImages/address_fountain.webp",
     title: "E-Commerce Hub",
     subtitle: "RETAIL PLATFORM DESIGN"
   },
   {
     id: 3,
-    image: "/images/project_Images/1.webp",
+    image: "/images/our_projectImages/burj_a_zafar.webp",
     title: "Fitness Pro",
     subtitle: "MOBILE APP DEVELOPMENT"
   }
@@ -36,7 +36,7 @@ export default function Projects() {
           <div className="border-t-[1px] border-t-white/30">
             <div className="w-full md:w-[90%] m-auto p-6 sm:p-10 md:p-16 border-r-[1px] min-h-screen border-l-[1px] border-l-white/30 border-r-white/30">
               {/* Projects Grid - Matching WhyUs layout */}
-              <div className="grid grid-cols-1 gap-6 md:gap-[5px] lg:grid-cols-2 place-items-center my-10">
+              <div className="grid grid-cols-1 gap-6 md:gap-[5px] lg:grid-cols-3 place-items-center my-10">
                 {projectsData.map((project) => (
                   <ProjectCard 
                     key={project.id}
