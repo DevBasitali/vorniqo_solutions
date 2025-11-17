@@ -4,7 +4,7 @@ import VerticalSocialBar from "@/components/ui/VerticalSocialBar";
 export default function HeroSection() {
   return (
     <>
-      <div className="flex justify-between">
+      <div className="flex justify-between border-b border-white/30">
         <div className="w-[10%]  bg-red-600">
           <VerticalSocialBar />
         </div>
