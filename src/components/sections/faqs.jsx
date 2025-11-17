@@ -41,7 +41,7 @@ function faqs() {
   return (
     <section className="border-t-[1px] md:border-t-[2px] lg:border-t-[1px] border-t-white/30 ">
       {/* heading  */}
-      <div className="w-1/2 m-auto border-l-[1px] border-l-white/30 border-r-[1px] border-r-white/30 ">
+      <div className="w-full xs:w-1/2 m-auto border-l-[1px] border-l-white/30 border-r-[1px] border-r-white/30 ">
         <h1 className="text-center">FREQUENTLY ASKED</h1>
         <h1 className="text-center">QUESTIONS</h1>
       </div>
@@ -50,12 +50,16 @@ function faqs() {
       <div className="flex flex-col sm:flex-row w-full lg:w-[90%] sm:m-auto  sm:border-l-[1px] sm:border-l-white/30 sm:border-r-[1px] sm:border-r-white/30 ">
         {/* faq card */}
         <div className="flex flex-col p-10 space-y-5">
-          {faq.map((data) => (
-            <Faqcard question={data.question} answer={data.answer} />
+          {faq.map((data, index) => (
+            <Faqcard
+              key={index}
+              question={data.question}
+              answer={data.answer}
+            />
           ))}
         </div>
         {/* contact btn  */}
-        <div className="pt-5 md:pt-10 flex flex-col lg:mx-auto">
+        <div className="relative pt-5 md:pt-10 flex flex-col lg:mx-auto">
           <Contactbtn />
           <div className="flex relative justify-center mt-36 md:mt-48 lg:mt-36 ml-5 md:ml-0 lg:mx-auto  w-[250px]">
             <div className="absolute -top-32 -right-[63px] xs:-right-20 md:-right-8 lg:-right-20 bg-[#0073EB] pt-2 p-1 w-[130px] sm:w-32 h-10 rounded-xl">
@@ -73,7 +77,7 @@ function faqs() {
             <div className="absolute -top-[188px] ">
               <Image
                 src={faqrobot}
-                className="w-80 h-full"
+                className="w-80 h-full relative"
                 alt="faqrobot"
               />{" "}
             </div>

@@ -24,10 +24,10 @@ export default function FAQCard({ question, answer }) {
       <button
         onClick={() => setIsOpen(!isOpen)}
         // focus:ring-2 focus:ring-[#00FFFF] focus:ring-opacity-50
-        className="w-full flex items-center justify-between bg-[#081850] p-6 text-left focus:outline-none rounded-lg transition-all"
+        className="w-full flex items-center justify-between bg-[#081850] p-4 xs:p-6 text-left focus:outline-none rounded-lg transition-all"
         aria-expanded={isOpen}
       >
-        <span className="!text-white text-lg md:text-xl pr-4 font-bold">
+        <span className="!text-white !text-sm xs:text-lg md:text-xl pr-4 font-bold">
           {question}
         </span>
 

@@ -11,14 +11,14 @@ const SocialLink = ({ name, icon, href = "#" }) => (
     target="_blank"
     className="
       group flex flex-col items-start lg:justify-center gap-y-1 lg:gap-y-4 
-     pl-3 sm:pl-0  lg:px-8 py-10 transition hover:bg-white/[.03] h-full
+       pl-3 sm:pl-0  lg:px-8 py-10 transition hover:bg-white/[.03] h-full
     "
   >
     {/* Icon */}
     <div className="flex h-12 w-12 items-center">{icon}</div>
 
     {/* Text and small arrow */}
-    <h1 className="flex lg:items-center gap-x-1.5 !text-sm lg:!text-lg !font-bold !text-white">
+    <h1 className="flex lg:items-center gap-x-1.5 !text-xs xs:!text-sm lg:!text-lg !font-bold !text-white">
       {name}
       <ArrowRight
         size={30}
@@ -63,12 +63,12 @@ function Footer() {
           <div className="flex items-end justify-between p-5 lg:p-12">
             <div>
               <p
-                className="mb-2 text-sm font-medium tracking-wider"
+                className="mb-2 !text-sm lg:!text-2xl font-medium tracking-wider"
                 style={{ color: TEXT_SOFT }}
               >
                 HAVE A PROJECT IN MIND?
               </p>
-              <h2 className="text-4xl font-bold leading-tight text-white">
+              <h2 className=" text-3xl xs:text-4xl font-bold leading-tight text-white">
                 BOOK A FREE CALL
                 <br />
                 WITH US
@@ -85,7 +85,7 @@ function Footer() {
           {/* Right Column */}
           <div className="flex items-center justify-center p-5 lg:p-12">
             <p className="max-w-md !text-lg text-white">
-              Get a Free Demo Session — See How We Work Before You Decide.
+              Get a Free Demo Session See How We Work Before You Decide.
             </p>
           </div>
         </div>
