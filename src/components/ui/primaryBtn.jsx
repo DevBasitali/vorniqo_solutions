@@ -39,7 +39,7 @@ function primaryBtn() {
         className="
       relative z-10 flex items-center gap-x-2
       transition-colors duration-500
-      !text-[#061A36] group-hover:!text-black
+      !text-[#061A36] !text-sm group-hover:!text-black
     "
       >
         Contact Us
