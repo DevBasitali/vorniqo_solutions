@@ -41,7 +41,7 @@ export default function Projects() {
 
         {/* Content Section */}
         <div className="md:border-t md:border-white/30">
-          <div className="w-full lg:w-[90%] xl:w-[85%] 2xl:w-[80%] mx-auto px-4 sm:px-20 md:px-3 lg:px-5 xl:px-16 py-8 sm:py-10 md:py-20 lg:py-20 min-h-screen">
+          <div className="w-full lg:w-[90%] xl:w-[85%] 2xl:w-[80%] mx-auto px-4 sm:px-20 md:px-3 lg:px-5 xl:px-16 py-8 sm:py-10 md:py-20 lg:py-20 h-full">
             {/* Projects Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 xl:grid-cols-3 gap-6 sm:gap-8 md:gap-0 place-items-center">
               {projectsData.map((project) => (

@@ -6,6 +6,7 @@ import Whyus from "../components/sections/whyus";
 import Faq from "../components/sections/faqs";
 import Project from "../components/sections/projects";
 import Team from "@/components/sections/team";
+import Footer from "@/components/layout/footer";
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
       <Whyus />
       <Team />
       <Project />
-      {/* <Faq /> */}
+      <Faq />
+      <Footer />
     </>
   );
 }

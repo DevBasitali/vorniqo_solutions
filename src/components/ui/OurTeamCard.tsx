@@ -11,10 +11,10 @@ function OurTeamCard() {
   return (
     <>
       <div className="flex flex-col justify-center w-fit">
-        <Image src={talha} className="" alt="ceo" />
+        <Image src={talha} className="w-[95%] h-[95%] " alt="ceo" />
         {/* descreption */}
         <div className="flex justify-center flex-col items-center">
-          <h3>M.TALHA</h3>
+          <h1>M.TALHA</h1>
           <p className="!text-sm">CEO FOUNDER OF</p>
           <p className="!text-sm">VORNIQO SOLUTIONS</p>
         </div>
