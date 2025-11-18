@@ -122,7 +122,7 @@ export default function ServiceSection() {
               </div>
             </div>
             <div className="flex flex-col gap-2 text-center sm:text-left flex-1">
-              <h2 className="font-heading uppercase text-color-text-light">
+              <h2 className="font-heading  uppercase text-color-text-light">
                 Branding and Graphics Design
               </h2>
               <p className="text-color-text-light font-body">
