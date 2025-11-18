@@ -89,7 +89,9 @@ const Hero = () => {
             bg-gradient-to-r from-[#00F6FF] to-[#0A84FF]
             shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
                     >
-                      <h1 className="relative z-10 !text-background">Company</h1>
+                      <h1 className="relative z-10 !text-background">
+                        Company
+                      </h1>
                       <span
                         className="absolute top-0 right-0 h-6 w-6 z-10 bg-background"
                         style={{
@@ -117,7 +119,9 @@ const Hero = () => {
             bg-gradient-to-r from-[#00F6FF] to-[#0A84FF]
             shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
                     >
-                      <h1 className="relative z-10 !text-background">Company</h1>
+                      <h1 className="relative z-10 !text-background">
+                        Company
+                      </h1>
                       <span
                         className="absolute top-0 right-0 h-6 w-6 z-10 bg-background"
                         style={{
