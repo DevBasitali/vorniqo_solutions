@@ -1,40 +1,40 @@
+"use client";
+
 import React from "react";
 
-export default function ClipPathCard({
-  title,
-  gifSrc,
-}) {
+export default function ClipPathCard({ title, gifSrc, onClick }) {
   const customCutClipPath =
     "polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)";
 
+  const shadowFilterStyle = {
+    filter: "drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.3))",
+  };
+
   return (
-    <div className="relative w-full aspect-[4/3] sm:aspect-[4/3] md:aspect-[4/3] lg:aspect-[4/3] xl:aspect-[4/3] 2xl:aspect-[4/3] p-2 rounded-xl overflow-hidden">
+    <div 
+      className="relative w-full aspect-[4/3] p-2 rounded-xl overflow-hidden" 
+      style={shadowFilterStyle}
+    >
       <div
         className="w-full h-full bg-[#081840] relative transition-transform duration-300 hover:scale-105 cursor-pointer group border border-white/5"
-        style={{
-          clipPath: customCutClipPath, // Defines the sharp cuts on TL and BR
-        }}
+        style={{ clipPath: customCutClipPath }}
+        onClick={onClick}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => e.key === 'Enter' && onClick?.()}
       >
-        {/* Content Overlay */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center" 
-             style={{ 
-               paddingTop: '10px',    
-               paddingBottom: '2px', 
-             }}
-        >
-          {/* Main Card Title */}
-          <h3 className="uppercase !text-sm line-clamp-2 "
-              style={{ marginBottom: '5px' }}
-          >
+        <div className="relative z-10 flex flex-col items-center h-full text-center p-2">
+          <h3 className="w-full flex-shrink-0 !font-body !font-bold text-white !text-sm sm:!text-lg line-clamp-2 pt-2 pb-1">
             {title}
           </h3>
 
           {gifSrc && (
-            <div className="relative w-full h-full flex-grow flex items-center justify-center">
+            <div className="relative w-full flex-1 px-px py-5 min-h-0">
               <img
                 src={gifSrc}
                 alt={`${title} animation`}
-                className="max-w-[90%] max-h-[70%] sm:max-w-[80%] sm:max-h-[80%] object-cover"
+                className="w-full h-full object-contain"
+                loading="lazy"
               />
             </div>
           )}
