@@ -4,22 +4,22 @@ import ClipPathCard from "@/components/ui/ClipPathCard";
 
 export default function ServiceSection() {
   const cards = [
-    {
-      id: 1,
-      title: "Creative Graphics",
-      gifSrc: "/images/project_Images/1.webp", // Example GIF path
-    },
-    {
-      id: 2,
-      title: "Brand Identity",
-      gifSrc: "/images/project_Images/1.webp", // Example GIF path
-    },
-    {
-      id: 3,
-      title: "Design Excellence",
-      gifSrc: "/images/project_Images/1.webp", // Example GIF path
-    },
-  ];
+  {
+    id: 1,
+    title: "Creative Graphics",
+    gifSrc: "/images/Animationfiles/CreativeGraphics.gif",
+  },
+  {
+    id: 2,
+    title: "Brand Identity",
+    gifSrc: "/images/Animationfiles/CreativeGraphics.gif",
+  },
+  {
+    id: 3,
+    title: "Design Excellence",
+    gifSrc: "/images/Animationfiles/designExcelence.gif",
+  },
+];
 
   return (
     <section className="w-full border-b border-white/30 py-8 sm:py-10 md:py-12 lg:py-14">

@@ -11,8 +11,8 @@ export default function ClipPathCard({ title, gifSrc, onClick }) {
   };
 
   return (
-    <div 
-      className="relative w-full aspect-[4/3] p-2 rounded-xl overflow-hidden" 
+    <div
+      className="relative w-full aspect-[4/3] p-2 rounded-xl overflow-hidden"
       style={shadowFilterStyle}
     >
       <div
@@ -21,22 +21,31 @@ export default function ClipPathCard({ title, gifSrc, onClick }) {
         onClick={onClick}
         role="button"
         tabIndex={0}
-        onKeyDown={(e) => e.key === 'Enter' && onClick?.()}
+        onKeyDown={(e) => e.key === "Enter" && onClick?.()}
       >
         <div className="relative z-10 flex flex-col items-center h-full text-center p-2">
-          <h3 className="w-full flex-shrink-0 !font-body !font-bold text-white !text-sm sm:!text-lg line-clamp-2 pt-2 pb-1">
+          <h3 className="w-full flex-shrink-0 !font-body !font-bold text-white !text-sm sm:!text-lg line-clamp-2 mt-8 pb-1">
             {title}
           </h3>
 
           {gifSrc && (
-            <div className="relative w-full flex-1 px-px py-5 min-h-0">
+            // <div className="relative w-full flex-1 px-10 py-5 min-h-0">
+            //   <img
+            //     src={gifSrc}
+            //     alt={`${title} animation`}
+            //     className="w-full h-full object-cover"
+            //     loading="lazy"
+            //   />
+            // </div>
+            <div className="relative w-full flex-1 px-2 py-2 min-h-0 overflow-hidden">
               <img
                 src={gifSrc}
                 alt={`${title} animation`}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover scale-125"
                 loading="lazy"
               />
             </div>
+            
           )}
         </div>
       </div>
