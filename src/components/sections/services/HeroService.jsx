@@ -4,7 +4,8 @@ import React from "react";
 import Image from "next/image";
 import PrimaryBtn from "@/components/ui/primaryBtn";
 import VerticalSocialBar from "@/components/ui/VerticalSocialBar";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform } from "framer-motion";
+import Lottie from "react-lottie-player";
 // icons
 import { Code, SquareBottomDashedScissors, Lightbulb } from "lucide-react";
 // Images
@@ -12,76 +13,94 @@ import robot from "../../../../public/images/robots/robo.webp";
 import sidepin from "../../../../public/images/hero/sideline.webp";
 import flash from "../../../../public/images/services/flashes.webp";
 import Arrow from "../../../../public/images/Arrow.webp";
+import servicerobot from "../../../../public/images/Animationfiles/servicerobot.gif";
 
 export default function HeroSection() {
+  const rotate = useMotionValue(0);
+  const counterRotate = useTransform(rotate, (v) => -v);
   return (
-    <section className="w-full  text-white py-5 px-6 relative overflow-hidden">
+    <section className="w-full lg:h-[90%] border-b-[1px] border-b-white/30  text-white py-10 md:py-20 lg:py-24 px-6 relative overflow-hidden">
       {/* MAIN FLEX */}
-      <div className="w-full max-w-[1400px] mx-auto flex flex-col lg:flex-row justify-between items-center">
+      <div className="w-full max-w-[1400px]  h-full mx-auto flex flex-col lg:flex-row justify-between">
         {/* LEFT CONTENT */}
-        <div className="w-full md:pl-28 lg:w-1/2 flex flex-col gap-8 relative">
+        <div className="w-full lg:pl-28 lg:w-1/2 flex flex-col gap-8 bg-red-40 relative">
           {/* Social Bar */}
           <div className="absolute left-10 top-10 hidden md:block">
             <VerticalSocialBar />
           </div>
           <div>
-            <h1 className="!text-2xl md:!text-5xl text-center md:text-start font-bold leading-tight">
+            <h1 className="!text-2xl md:!text-5xl text-center lg:text-start font-bold leading-tight">
               VORNIQO
             </h1>
-            <h1 className="!text-2xl md:!text-5xl text-center md:text-start font-bold leading-tight">
+            <h1 className="!text-2xl md:!text-5xl text-center lg:text-start font-bold leading-tight">
               SERVICES
             </h1>
 
-            <p className="mt-5 text-white/70 w-full text-center md:text-start md:w-[80%] leading-relaxed">
+            <p className="mt-5 text-white/70 w-full text-center lg:text-start md:w-1/2 mx-auto lg:mx-0  lg:w-[80%] leading-relaxed">
               Vorniqo Solution is a full-service software house dedicated to
               delivering excellence in digital innovation.
             </p>
           </div>
-          <div className="flex justify-center md:w-1/3">
+          <div className="flex justify-center lg:w-1/3">
             <PrimaryBtn text="Contact Us" />
           </div>
         </div>
 
         {/* CENTER ROBOT + LABELS */}
-        <div className="relative flex justify-center mr-38 mt-10 lg:mt-0">
+        <div className="relative flex justify-center mb-10 mt-16 md:mt-20 lg:mb-0 lg:mr-38 lg:mt-0">
           {/* Outer Glow Circle */}
           <div
-            className="w-[350px] h-[350px] rounded-full 
+            className="w-[280px] h-[280px] md:w-[350px] md:h-[350px] rounded-full 
            bg-[#004cff]
           flex justify-center items-center relative"
           >
             {/* middle circle with robot image */}
             <div
-              className="w-[310px] h-[310px] rounded-full 
+              className="w-[235px] h-[235px] md:w-[310px] md:h-[310px] rounded-full 
           bg-gradient-to-br from-[#00eaff] to-[#004cff]
           flex justify-center items-center relative"
             >
-              <Image src={robot} alt="robot" width={270} height={270} />
+              <Image src={servicerobot} alt="robot" className="" />
+              {/* <Lottie
+                animationData="/images/Animationfiles/servicerobot.json"
+                loop
+                play
+                style={{ width: 300, height: 300 }}
+              ></Lottie> */}
             </div>
             {/* Rotation */}
             <motion.div
+              style={{ rotate }}
               animate={{ rotate: -360 }}
-              transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
+              transition={{
+                duration: 12,
+                repeat: Infinity,
+                ease: "linear",
+              }}
               className="absolute inset-0"
             >
               {/* Web Designing Tag */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }} // start slightly below
-                animate={{ opacity: 1, y: 0 }} // move to original position
-                exit={{ opacity: 0 }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeOut",
+                style={{ rotate: counterRotate }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{
+                  opacity: [0, 1, 1, 0],
+                  scale: [0.8, 1, 1, 0.8],
                 }}
-                className="absolute w-[152px] top-9 z-50 -left-16 bg-white flex items-center gap-2 shadow-xl rounded-3xl"
-                // style={{ rotate: "-360deg" }}
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute w-[142px] md:w-[152px] top-9 z-50 -left-16 bg-white flex items-center gap-2 shadow-xl rounded-3xl"
               >
                 <div className="px-2 py-2 flex gap-2 items-center">
                   <div className="w-7 h-7 rounded-full bg-gradient-to-t from-[#00eaff] to-[#004cff] flex items-center justify-center">
                     <Code size={16} strokeWidth={3} color="black" />
                   </div>
-                  <p className="!text-sm !text-black">Web Designing</p>
+                  <p className="!text-xs md:!text-sm !text-black">
+                    Web Designing
+                  </p>
                 </div>
               </motion.div>
               {/* square */}
@@ -95,15 +114,18 @@ export default function HeroSection() {
               </div> */}
               {/* Video Editing Tag */}
               <motion.div
-                initial={{ opacity: 0, y: -20 }} // start slightly above
-                animate={{ opacity: [0, 1, 1, 0], y: [-20, 0, 0, 20] }} // drop down, then fade
+                style={{ rotate: counterRotate }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{
+                  opacity: [0, 1, 1, 0],
+                  scale: [0.8, 1, 1, 0.8],
+                }}
                 transition={{
-                  duration: 4, // total loop duration
+                  duration: 8,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute w-[152px] top-28 -right-24 bg-white flex items-center gap-2 shadow-xl rounded-3xl"
-                style={{ rotate: "-360deg" }}
+                className="absolute w-[142px] md:w-[152px] top-28 -right-24 bg-white flex items-center gap-2 shadow-xl rounded-3xl"
               >
                 <div className="px-2 py-2 flex gap-2 items-center">
                   <div className="w-7 h-7 rounded-full bg-gradient-to-t from-[#00eaff] to-[#004cff] flex items-center justify-center">
@@ -114,51 +136,52 @@ export default function HeroSection() {
                     />
                     {/* < /> */}
                   </div>
-                  <p className="!text-sm !text-black">Video Editing</p>
+                  <p className="!text-xs md:!text-sm !text-black">
+                    Video Editing
+                  </p>
                 </div>
               </motion.div>
               {/* Arrow */}
-
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{
                   opacity: [0, 1, 1, 0],
                   scale: [0.8, 1, 1, 0.8],
-                  // rotate: 360,
                 }}
                 transition={{
-                  duration: 5,
+                  duration: 8,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                // animate={}
-                className="absolute -bottom-2 -right-8"
+                className="absolute -bottom-2 -right-6"
               >
-                {/* <MoveRight /> */}
                 <Image
-                  width={70}
-                  height={70}
                   src={Arrow}
-                  className="rotate-[20deg]"
+                  alt="Arrow"
+                  className="w-20 h-20 md:w-24 md:h-24"
                 ></Image>
               </motion.div>
               {/* Marketing Tag */}
               <motion.div
+                style={{ rotate: counterRotate }}
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: [0, 1, 1, 0], scale: [0.8, 1, 1, 0.8] }}
+                animate={{
+                  opacity: [0, 1, 1, 0],
+                  scale: [0.8, 1, 1, 0.8],
+                }}
                 transition={{
-                  duration: 5,
+                  duration: 8,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute w-[152px] -bottom-4 left-28 bg-white flex items-center gap-2 shadow-xl rounded-3xl"
-                style={{ rotate: "-360deg" }}
+                className="absolute w-[142px] md:w-[152px] -bottom-4 left-28 bg-white flex items-center gap-2 shadow-xl rounded-3xl"
+                // style={{ rotate: 360 }}
               >
                 <div className="px-2 py-2 flex gap-2 items-center">
                   <div className="w-7 h-7 rounded-full bg-gradient-to-t from-[#00eaff] to-[#004cff] flex items-center justify-center">
                     <Lightbulb size={16} strokeWidth={3} color="black" />
                   </div>
-                  <p className="!text-sm !text-black">Marketing</p>
+                  <p className="!text-xs md:!text-sm !text-black">Marketing</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -187,7 +210,8 @@ export default function HeroSection() {
             >
               <Image src={flash} alt="flashes" />
             </motion.div> */}
-            <div className="absolute  top-24 -left-14 space-y-3">
+            {/* animated square */}
+            {/* <div className="absolute  top-24 -left-14 space-y-3">
               <motion.div
                 animate={{
                   y: [0, -6, 0], // up → down → original
@@ -216,7 +240,7 @@ export default function HeroSection() {
                 }}
                 className="w-7 h-7 bg-[#01CBF8]"
               />
-            </div>
+            </div> */}
           </div>
         </div>
 
