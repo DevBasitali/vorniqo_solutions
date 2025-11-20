@@ -6,32 +6,31 @@ import ServiceCard from "../ui/serviceCard";
 export const servicesData = [
   {
     id: 1,
-    icon: "/icons/branding.svg",
+    href: "/services",
     title: "Branding and Identity",
     subtitle: "Crafting your unique brand essence.",
   },
   {
     id: 2,
-    icon: "/icons/marketing.svg",
+    href: "/services",
     title: "Digital Marketing",
     subtitle: "Crafting your unique brand essence.",
   },
   {
     id: 3,
-    icon: "/icons/development.svg",
+    href: "/services",
     title: "Web Development",
     subtitle: "Crafting your unique brand essence.",
   },
   {
     id: 4,
-    icon: "/icons/development.svg",
+    href: "/services",
     title: "Web Development",
     subtitle: "Crafting your unique brand essence.",
   },
 ];
 
 export default function services() {
-
   const MAX_CARDS = 3;
 
   return (
@@ -66,7 +65,7 @@ export default function services() {
             {servicesData.slice(0, MAX_CARDS).map((service) => (
               <ServiceCard
                 key={service.id}
-                icon={service.icon}
+                href={service.href}
                 title={service.title}
                 subtitle={service.subtitle}
               />

@@ -1,8 +1,9 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import PrimaryButton from "./primaryBtn";
 
-const ServiceCard = ({ icon, title, subtitle }) => {
+import Link from "next/link";
+const ServiceCard = ({ href, title, subtitle }) => {
   return (
     <div
       className="relative flex flex-col 
@@ -16,7 +17,9 @@ w-full h-60 duration-300"
           <p className="text-slate-300">{subtitle}</p>
         </div>
         <div className="mt-4">
-          <PrimaryButton />
+          <Link href={href}>
+            <PrimaryButton />
+          </Link>
         </div>
       </div>
     </div>
@@ -24,4 +27,3 @@ w-full h-60 duration-300"
 };
 
 export default ServiceCard;
-

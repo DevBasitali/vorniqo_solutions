@@ -62,7 +62,7 @@ function faqs() {
         <div className="relative pt-5 md:pt-10 flex flex-col lg:mx-auto">
           <Contactbtn />
           <div className="flex relative justify-center mt-36 md:mt-48 lg:mt-36 ml-5 md:ml-0 lg:mx-auto  w-[250px]">
-            <div className="absolute -top-32 -right-[63px] xs:-right-20 md:-right-8 lg:-right-20 bg-[#0073EB] pt-2 p-1 w-[130px] sm:w-32 h-10 rounded-xl">
+            <div className="absolute -top-32 -right-[63px] xs:-right-20 md:-right-8 lg:-right-20 bg-[#0073EB] pt-2 p-1 w-[135px] sm:w-32 h-10 rounded-xl">
               <p>Ask us anything</p>
               <div
                 style={{

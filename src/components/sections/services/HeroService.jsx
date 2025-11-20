@@ -19,11 +19,11 @@ export default function HeroSection() {
   const rotate = useMotionValue(0);
   const counterRotate = useTransform(rotate, (v) => -v);
   return (
-    <section className="w-full lg:h-[90%] border-b-[1px] border-b-white/30  text-white py-10 md:py-20 lg:py-24 px-6 relative overflow-hidden">
+    <section className="w-full border-b-[1px] border-b-white/30  text-white py-10 md:py-20 lg:py-24 px-6 relative overflow-hidden">
       {/* MAIN FLEX */}
       <div className="w-full max-w-[1400px]  h-full mx-auto flex flex-col lg:flex-row justify-between">
         {/* LEFT CONTENT */}
-        <div className="w-full lg:pl-28 lg:w-1/2 flex flex-col gap-8 bg-red-40 relative">
+        <div className="w-full lg:pl-44 lg:w-1/2 bg-r0 flex flex-col gap-8 bg-red-40 relative">
           {/* Social Bar */}
           <div className="absolute left-10 top-10 hidden md:block">
             <VerticalSocialBar />
@@ -41,7 +41,7 @@ export default function HeroSection() {
               delivering excellence in digital innovation.
             </p>
           </div>
-          <div className="flex justify-center lg:w-1/3">
+          <div className="flex justify-center lg:justify-start">
             <PrimaryBtn text="Contact Us" />
           </div>
         </div>
@@ -60,7 +60,12 @@ export default function HeroSection() {
           bg-gradient-to-br from-[#00eaff] to-[#004cff]
           flex justify-center items-center relative"
             >
-              <Image src={servicerobot} alt="robot" className="" />
+              <Image
+                src={servicerobot}
+                alt="robot"
+                className=""
+                unoptimized={true}
+              />
               {/* <Lottie
                 animationData="/images/Animationfiles/servicerobot.json"
                 loop

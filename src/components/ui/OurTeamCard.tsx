@@ -1,25 +1,27 @@
 import React from "react";
 import Image from "next/image";
-import single_flash from "../../../public/images/services/single_flash.png";
-import talha from "../../../public/images/team/talha.png";
-// import daniyal from "../../../public/images/team/daniyal.png";
-// import hera from "../../../public/images/team/hera.png";
-// import shafay from "../../../public/images/team/shafay.png";
-// import ahmad from "../../../public/images/team/ahmad.png";
-// import fawad from "../../../public/images/team/fawad.png";
-function OurTeamCard() {
+
+interface OurTeamCardProps {
+  image: string;
+  name: string;
+  designation: string;
+  grade?: string; // optional
+}
+
+function OurTeamCard({ image, name, designation, grade }: OurTeamCardProps) {
   return (
-    <>
-      <div className="flex flex-col justify-center w-fit">
-        <Image src={talha} className="w-[95%] h-[95%] " alt="ceo" />
-        {/* descreption */}
-        <div className="flex justify-center flex-col items-center">
-          <h1>M.TALHA</h1>
-          <p className="!text-sm">CEO FOUNDER OF</p>
-          <p className="!text-sm">VORNIQO SOLUTIONS</p>
-        </div>
+    <div className="flex flex-col justify-center items-center ">
+      <Image src={image} width={200} height={200} alt={name} />
+
+      {/* Details */}
+      <div className="flex flex-col justify-center items-center">
+        <h1 className=" !text-sm lg:!text-lg ">{name}</h1>
+        <p className="!text-xs lg:!text-sm">{designation}</p>
+
+        {/* Optional Grade */}
+        {grade && <p className="!text-xs lg:!text-sm">{grade}</p>}
       </div>
-    </>
+    </div>
   );
 }
 

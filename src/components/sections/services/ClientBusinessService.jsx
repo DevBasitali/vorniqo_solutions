@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 import { Palette } from "lucide-react";
 import ClipPathCard from "@/components/ui/ClipPathCard";
 
-
 export default function ClientBusinessService() {
-
-    const cards = [
+  const cards = [
     {
       id: 1,
       title: "Client Management",
@@ -22,7 +20,6 @@ export default function ClientBusinessService() {
       gifSrc: "/images/project_Images/1.webp", // Example GIF path
     },
   ];
-
 
   return (
     <section className="w-full border-b border-t border-white/20 py-8 sm:py-10 md:py-12 lg:py-14">
@@ -42,7 +39,8 @@ export default function ClientBusinessService() {
                 Client and Business Systems
               </h2>
               <p className="text-color-text-light font-body">
-                Optimizing systems and workflows to streamline operations and empower business growth.
+                Optimizing systems and workflows to streamline operations and
+                empower business growth.
               </p>
             </div>
           </div>

@@ -1,17 +1,11 @@
 "use client";
-
 import React from "react";
-import { ArrowRight } from "lucide-react";
-import PrimaryBtn from "../ui/primaryBtn";
+// import { ArrowRight } from "lucide-react";
+// import PrimaryBtn from "../ui/primaryBtn";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import vorniqologo from "../../../public/images/v.png";
-import address from "../../../public/images/aboutlogo/address.png";
-import hsqlogo from "../../../public/images/aboutlogo/hsqlogo.png";
-import nouman from "../../../public/images/aboutlogo/nouman.png";
-import zafar from "../../../public/images/aboutlogo/zafar.png";
-import certified from "../../../public/images/aboutlogo/certified.png";
-import emoji from "../../../public/images/aboutlogo/emoji.png";
+
 const VorniqoAboutSection = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-1 h-fit xs:h-full sm:h-[80%] xl:h-[60%] lg:grid-cols-2 2xl:grid-cols-2 border-b border-t border-white/30">
@@ -91,7 +85,12 @@ const VorniqoAboutSection = () => {
                 ease: "easeInOut",
               }}
             >
-              <Image src={emoji} alt="Top Image" width={80} height={80} />
+              <Image
+                src="/images/aboutlogo/emoji.webp"
+                alt="emoji"
+                width={80}
+                height={80}
+              />
             </motion.div>
           </div>
           {/* Main inner gradient circle */}
@@ -115,7 +114,12 @@ const VorniqoAboutSection = () => {
               animate={{ rotate: -360 }}
               transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
             >
-              <Image src={nouman} alt="Top Image" width={50} height={50} />
+              <Image
+                src="/images/aboutlogo/nouman.webp"
+                alt="nouman"
+                width={50}
+                height={50}
+              />
             </motion.div>
             {/* address fountain */}
             <motion.div
@@ -123,7 +127,12 @@ const VorniqoAboutSection = () => {
               animate={{ rotate: -360 }}
               transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
             >
-              <Image src={address} alt="Top Image" width={50} height={50} />
+              <Image
+                src="/images/aboutlogo/address.webp"
+                alt="address"
+                width={50}
+                height={50}
+              />
             </motion.div>
             {/* zafar */}
             <motion.div
@@ -131,7 +140,12 @@ const VorniqoAboutSection = () => {
               animate={{ rotate: -360 }}
               transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
             >
-              <Image src={zafar} alt="Top Image" width={50} height={50} />
+              <Image
+                src="/images/aboutlogo/zafar.webp"
+                alt="zafar"
+                width={50}
+                height={50}
+              />
             </motion.div>
             {/* hsq */}
             <motion.div
@@ -139,7 +153,12 @@ const VorniqoAboutSection = () => {
               animate={{ rotate: -360 }}
               transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
             >
-              <Image src={hsqlogo} alt="Top Image" width={50} height={50} />
+              <Image
+                src="/images/aboutlogo/hsq.webp"
+                alt="hsq"
+                width={50}
+                height={50}
+              />
             </motion.div>
           </motion.div>
           {/* certified */}
@@ -155,7 +174,12 @@ const VorniqoAboutSection = () => {
                 ease: "easeInOut",
               }}
             >
-              <Image src={certified} alt="Top Image" width={100} height={100} />
+              <Image
+                src="/images/aboutlogo/certified.png"
+                alt="certified"
+                width={100}
+                height={100}
+              />
             </motion.div>
           </div>
         </div>

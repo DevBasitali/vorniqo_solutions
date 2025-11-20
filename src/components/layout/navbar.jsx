@@ -69,7 +69,7 @@ function Navbar() {
                 <ul className="flex items-center gap-10 text-[14px] font-medium text-text-light">
                   <li>
                     <Link
-                      href="#home"
+                      href="/"
                       className="transition-colors hover:text-primary"
                     >
                       Home
@@ -77,7 +77,7 @@ function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="#services"
+                      href="/services"
                       className="transition-colors hover:text-primary"
                     >
                       Services
@@ -85,7 +85,7 @@ function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="#about-us"
+                      href="/"
                       className="transition-colors hover:text-primary"
                     >
                       About Us
@@ -97,7 +97,7 @@ function Navbar() {
               {/* Desktop Navigation - Right Side */}
               <div className="hidden lg:flex items-center gap-6 ml-auto">
                 <Link
-                  href="#why-us"
+                  href="/services"
                   className="text-[14px] font-medium transition-colors hover:text-primary text-text-light"
                 >
                   Why Us
@@ -179,7 +179,7 @@ function Navbar() {
             <ul className="flex flex-col gap-6">
               <li>
                 <Link
-                  href="#home"
+                  href="/"
                   onClick={toggleMenu}
                   className="block text-lg font-medium text-text-light hover:text-[#01feff] transition-colors py-2 border-b border-white/10"
                 >
@@ -188,7 +188,7 @@ function Navbar() {
               </li>
               <li>
                 <Link
-                  href="#services"
+                  href="/services"
                   onClick={toggleMenu}
                   className="block text-lg font-medium text-text-light hover:text-[#01feff] transition-colors py-2 border-b border-white/10"
                 >
@@ -197,7 +197,7 @@ function Navbar() {
               </li>
               <li>
                 <Link
-                  href="#about-us"
+                  href="/"
                   onClick={toggleMenu}
                   className="block text-lg font-medium text-text-light hover:text-[#01feff] transition-colors py-2 border-b border-white/10"
                 >
@@ -206,7 +206,7 @@ function Navbar() {
               </li>
               <li>
                 <Link
-                  href="#why-us"
+                  href="/services"
                   onClick={toggleMenu}
                   className="block text-lg font-medium text-text-light hover:text-[#01feff] transition-colors py-2 border-b border-white/10"
                 >
