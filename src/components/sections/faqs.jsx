@@ -39,7 +39,7 @@ const faq = [
 // background-color: #0073EB
 function faqs() {
   return (
-    <section className="border-t-[1px] md:border-t-[2px] lg:border-t-[1px] border-t-white/30 ">
+    <section className="border-t-[1px] mb-56  md:mb-10 lg:mb-0 md:border-t-[2px] lg:border-t-[1px] border-t-white/30 ">
       {/* heading  */}
       <div className="w-full xs:w-1/2 m-auto border-l-[1px] border-l-white/30 border-r-[1px] border-r-white/30 ">
         <h1 className="text-center">FREQUENTLY ASKED</h1>

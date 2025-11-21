@@ -5,6 +5,7 @@ import PillBtn from "../ui/buttonPill";
 import VerticalSocialBar from "../ui/VerticalSocialBar";
 import PrimaryBtn from "../ui/primaryBtn";
 import ArtShowcaseCard from "../ui/ArtShowcaseCard";
+import HeroLoaderCard from "@/components/ui/HeroLoaderCard";
 import React, { useState, useEffect } from "react";
 
 const showcaseProjects = [
@@ -163,15 +164,16 @@ const Hero = () => {
               ))}
             </div>
           </div>
-          {/* <div className="absolute w-full flex justify-center items-center align-middle z-10 px-5 ">
-            <Image
+          <div className="absolute w-full flex justify-center items-center align-middle z-10 px-5 ">
+            <HeroLoaderCard></HeroLoaderCard>
+            {/* <Image
               src="/images/robots/robot.webp"
               alt="Main robot mascot"
-              width={800}
-              height={800}
+              width={200}
+              height={200}
               className="w-[300px] sm:w-full object-contain"
-            />
-          </div> */}
+            /> */}
+          </div>
         </div>
       </section>
     </>
