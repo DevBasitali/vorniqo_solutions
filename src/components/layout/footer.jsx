@@ -108,7 +108,7 @@ function Footer() {
       {/* Row 3: Copyright with Gradient */}
       <div className="py-3 text-center bg-gradient-to-r from-[#0073EB] to-[#01FFFF] ">
         <p
-          className=" !text-sm sm:!text-lg  !text-[#071435] font-medium tracking-wide"
+          className=" !text-sm sm:!text-sm  !text-[#071435] font-medium tracking-wide"
           // style={{ color: NAV_BG }}
         >
           © ALL RIGHTS RESERVED 2025 | VORNIQO SOLUTIONS

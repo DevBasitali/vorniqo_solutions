@@ -12,7 +12,7 @@ const faq = [
   {
     question: "Do You Work With Startups As Well As Established Businesses?",
     answer:
-      "Yes, We Work With Businesses Of All Sizes—From Startups Building Their First Product To Enterprises Looking To Scale And Optimize Existing Systems.",
+      "Yes, We Work With Businesses Of All Sizes From Startups Building Their First Product To Enterprises Looking To Scale And Optimize Existing Systems.",
   },
   {
     question: "What Technologies Do You Specialize In?",
