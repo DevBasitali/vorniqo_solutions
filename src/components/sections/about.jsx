@@ -17,19 +17,19 @@ const VorniqoAboutSection = () => {
             ABOUT VORNIQO
           </h1>
           <p className="text-center sm:text-start leading-relaxed">
-            Vorniqo Solution is a full-service software house dedicated to
+            Vorniqo Solution is a full service software house dedicated to
             delivering excellence in digital innovation.
           </p>
 
           <p className="text-center sm:text-start leading-relaxed mt-4">
-            We specialize in strategic marketing, high-quality graphical
+            We specialize in strategic marketing, high quality graphical
             content, and reliable customer care solutions designed to help
             businesses grow and thrive in a competitive landscape. By combining
             creativity with technology,
           </p>
         </div>
       </div>
-      
+
       {/* right section */}
       <div className="flex justify-center pt-28 xs:pt-14 sm:pt-0 mb-24 lg:mb-0 items-center ">
         {/* Outer wrapper for all circles */}
@@ -183,7 +183,6 @@ const VorniqoAboutSection = () => {
           </div>
         </div>
       </div>
-
     </section>
   );
 };
