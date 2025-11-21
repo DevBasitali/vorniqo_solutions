@@ -8,17 +8,17 @@ export default function ServiceSection() {
     {
       id: 1,
       title: "Creative Graphics",
-      gifSrc: "/images/Animationfiles/CreativeGraphics.gif",
+      gifSrc: "/images/Animationfiles/CreativeGraphics.webm",
     },
     {
       id: 2,
       title: "Brand Identity",
-      gifSrc: "/images/Animationfiles/CreativeGraphics.gif",
+      gifSrc: "/images/Animationfiles/Brandidentity.webm",
     },
     {
       id: 3,
       title: "Design Excellence",
-      gifSrc: "/images/Animationfiles/designExcelence.gif",
+      gifSrc: "/images/Animationfiles/designExcelence.webm",
     },
   ];
 
@@ -27,7 +27,6 @@ export default function ServiceSection() {
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="w-full ">
           <div className="flex flex-col lg:flex-row lg:items-start ml-8 sm:ml-6 xl:ml-4 2xl:ml-16 gap-x-8 mb-8 sm:mb-10 md:mb-12">
-        
             <div className="flex-shrink-0 mx-0">
               <div
                 className="
@@ -60,7 +59,6 @@ export default function ServiceSection() {
                 that elevate your brand's presence across all platforms.
               </p>
             </div>
-
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

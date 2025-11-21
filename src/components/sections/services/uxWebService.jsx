@@ -1,34 +1,32 @@
-import React from 'react';
-import Image from "next/image"; 
+import React from "react";
+import Image from "next/image";
 import UIUXLogo from "../../../../public/images/servicesPageLogos/ui.webp";
 import ClipPathCard from "@/components/ui/ClipPathCard";
 
 export default function UxWebService() {
-
   const cards = [
     {
       id: 1,
       title: "User Interface & UX design",
-      gifSrc: "/images/project_Images/1.webp",
+      gifSrc: "/images/Animationfiles/uxdesign.webm",
     },
     {
       id: 2,
       title: "Web Development",
-      gifSrc: "/images/project_Images/1.webp",
+      gifSrc: "/images/Animationfiles/webdevelopment.webm",
     },
     {
       id: 3,
       title: "Web Support & Maintance",
-      gifSrc: "/images/project_Images/1.webp",
+      gifSrc: "/images/Animationfiles/websupport.webm",
     },
   ];
 
   return (
     <section className="w-full border-b border-t border-white/30 py-8 sm:py-10 md:py-12 lg:py-14">
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        <div className="w-full"> 
+        <div className="w-full">
           <div className="flex flex-col lg:flex-row lg:items-start ml-8 sm:ml-6 xl:ml-4 2xl:ml-16 gap-x-8 mb-8 sm:mb-10 md:mb-12">
-            
             <div className="flex-shrink-0 mx-0">
               <div
                 className="
@@ -63,14 +61,11 @@ export default function UxWebService() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cards.map((card) => (
               <div key={card.id} className="w-full flex justify-center">
-                <div className="w-full max-w-sm xl:max-w-md 2xl:max-w-md"> 
-                    <ClipPathCard
-                      title={card.title}
-                      gifSrc={card.gifSrc}
-                    />
+                <div className="w-full max-w-sm xl:max-w-md 2xl:max-w-md">
+                  <ClipPathCard title={card.title} gifSrc={card.gifSrc} />
                 </div>
               </div>
             ))}

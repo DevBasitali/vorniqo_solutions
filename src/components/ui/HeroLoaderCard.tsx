@@ -3,7 +3,7 @@ import { SignalMedium } from "lucide-react";
 function HeroLoaderCard() {
   return (
     <>
-      <div className="w-[300px] h-[80px] bg-[#0A1B45] rounded-full flex items-center gap-4 px-5 relative overflow-hidden">
+      <div className=" w-[240px] h-[70px] lg:w-[300px] lg:h-[80px] bg-[#0A1B45] rounded-full flex items-center gap-4 px-5 relative overflow-hidden">
         {/* Left Icon Circle */}
         <div className="w-12 h-10 rounded-full bg-white flex items-center justify-center">
           {/* <div className="  bg-white rounded-full"> */}
@@ -26,10 +26,10 @@ function HeroLoaderCard() {
         {/* Text Lines */}
         <div className="flex flex-col gap-2 w-full">
           {/* Cyan Top Bar */}
-          <div className="h-3 w-[70%] rounded-full bg-[#01FFFF]/20 relative overflow-hidden shimmer"></div>
+          <div className="h-3 w-[70%] lg:w-[70%] rounded-full bg-[#01FFFF]/50 relative overflow-hidden shimmer"></div>
 
           {/* White Bottom Bar */}
-          <div className="h-3 w-[60%] rounded-full bg-white/40 relative overflow-hidden shimmer"></div>
+          <div className="h-3 w-[55%] lg:w-[60%] rounded-full bg-white/50 relative overflow-hidden shimmer"></div>
         </div>
 
         {/* Shimmer Effect */}

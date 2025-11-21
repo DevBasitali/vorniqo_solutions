@@ -136,8 +136,8 @@ const Hero = () => {
                           clipPath: "polygon(0 0, 100% 100%, 100% 0)",
                         }}
                       />
-                      <span 
-                        className="absolute top-0 right-0 h-6 w-6 bg-white rounded-bl-lg" 
+                      <span
+                        className="absolute top-0 right-0 h-6 w-6 bg-white rounded-bl-lg"
                         style={{
                           clipPath: "polygon(0 0, 100% 100%, 0 100%)",
                         }}
@@ -183,16 +183,16 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-            {/* <div className="absolute w-full flex justify-center items-center align-middle z-10 px-5 ">
-              <HeroLoaderCard/>
-               <Image
+            <div className="absolute w-full flex justify-center items-center align-middle z-10 px-5 ">
+              <HeroLoaderCard />
+              {/* <Image
               src="/images/robots/robot.webp"
               alt="Main robot mascot"
               width={200}
               height={200}
               className="w-[300px] sm:w-full object-contain"
-            /> 
-            </div> */}
+            />  */}
+            </div>
           </div>
         </div>
       </section>

@@ -38,14 +38,17 @@ export default function ClipPathCard({ title, gifSrc, onClick }) {
             //   />
             // </div>
             <div className="relative w-full flex-1 px-2 py-2 min-h-0 overflow-hidden">
-              <img
+              <video
                 src={gifSrc}
+                autoPlay
+                loop
+                muted
+                playsInline
                 alt={`${title} animation`}
                 className="w-full h-full object-cover scale-125"
-                loading="lazy"
+                // loading="lazy"
               />
             </div>
-            
           )}
         </div>
       </div>

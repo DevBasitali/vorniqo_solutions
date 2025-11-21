@@ -7,7 +7,7 @@ const COLLAGE_ASPECT = 0.95;
 const R_OUTER = 24;
 const R_INNER = 12;
 
-export default function Collage({ src, Box2 }) {
+export default function Collage() {
   return (
     <motion.div
       initial={{ x: -24, opacity: 0 }}
@@ -35,53 +35,50 @@ export default function Collage({ src, Box2 }) {
       >
         {/* Left tile (spans both rows) */}
         <div
-          className="relative overflow-hidden ring-1 ring-white/10"
+          className="relative overflow-hidden "
           style={{
             gridRow: "1 / span 2",
             borderRadius: `${R_OUTER}px ${R_INNER}px ${R_INNER}px ${R_OUTER}px`,
           }}
         >
           <Image
-            src={src}
+            src="/images/rec.png"
             alt="Analytics dashboard preview"
             fill
             sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 250px, 300px"
             className="object-cover object-left"
-            loading="lazy"
           />
         </div>
 
         {/* Right top */}
         <div
-          className="relative overflow-hidden ring-1 ring-white/10"
+          className="relative overflow-hidden "
           style={{
             borderRadius: `${R_INNER}px ${R_OUTER}px ${R_INNER}px ${R_INNER}px`,
           }}
         >
           <Image
-            src={src}
+            src="/images/box1.png"
             alt="Project detail view"
             fill
             sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 250px, 300px"
             className="object-cover object-top"
-            loading="lazy"
           />
         </div>
 
         {/* Right bottom */}
         <div
-          className="relative overflow-hidden ring-1 ring-white/10"
+          className="relative overflow-hidden "
           style={{
             borderRadius: `${R_INNER}px ${R_INNER}px ${R_OUTER}px ${R_INNER}px`,
           }}
         >
           <Image
-            src={Box2}
+            src="/images/box2.png"
             alt="Additional project screenshot"
             fill
             sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 250px, 300px"
             className="object-cover object-bottom"
-            loading="lazy"
           />
         </div>
       </div>
