@@ -25,5 +25,3 @@ export default function ArtShowcaseCard({
   );
 }
 
-// w-[500px] h-20 md:w-90 md:h-50 lg:w-50 lg:h-50
-

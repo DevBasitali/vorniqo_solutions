@@ -1,22 +1,20 @@
 "use client";
+
 import Image from "next/image";
 import { Diamond } from "lucide-react";
 import PillBtn from "../ui/buttonPill";
 import VerticalSocialBar from "../ui/VerticalSocialBar";
 import PrimaryBtn from "../ui/primaryBtn";
 import ArtShowcaseCard from "../ui/ArtShowcaseCard";
-import HeroLoaderCard from "@/components/ui/HeroLoaderCard";
 import React, { useState, useEffect } from "react";
+import Flashes from "../../../public/images/services/flashes.webp";
+import HeroLoaderCard from "../ui/HeroLoaderCard";
 
 const showcaseProjects = [
-  // { id: 1, image: "/images/project_Images/project3.webp" },
-  { id: 1, image: "/images/project_Images/1.webp" },
-  { id: 2, image: "/images/project_Images/1.webp" },
-  { id: 3, image: "/images/project_Images/1.webp" },
-  { id: 4, image: "/images/project_Images/1.webp" },
-  // { id: 2, image: "/images/project_Images/project4.webp" },
-  // { id: 3, image: "/images/project_Images/project3.webp" },
-  // { id: 4, image: "/images/project_Images/project4.webp" },
+  { id: 1, image: "/images/project_Images/4.webp" },
+  { id: 2, image: "/images/project_Images/4.webp" },
+  { id: 3, image: "/images/project_Images/4.webp" },
+  { id: 4, image: "/images/project_Images/4.webp" },
 ];
 
 const Hero = () => {
@@ -93,6 +91,8 @@ const Hero = () => {
                       <h1 className="relative z-10 !text-background">
                         Company
                       </h1>
+
+                      {/* === FOLDED CORNER LOGIC === */}
                       <span
                         className="absolute top-0 right-0 h-6 w-6 z-10 bg-background"
                         style={{
@@ -100,6 +100,15 @@ const Hero = () => {
                         }}
                       />
                       <span className="absolute top-0 right-0 h-6 w-6  bg-white rounded-bl-lg" />
+
+                      {/* === FLASHES IMAGE (Mobile Size: w-10) === */}
+                      <div className="absolute -top-6 -right-8 z-20 pointer-events-none">
+                        <Image
+                          src={Flashes}
+                          alt="sparks"
+                          className="w-10 h-auto"
+                        />
+                      </div>
                     </span>
                   </div>
                 </div>
@@ -116,9 +125,7 @@ const Hero = () => {
                     <h1 className="whitespace-nowrap">WINNING SOFTWARE</h1>
                     <span
                       className="relative inline-flex items-center whitespace-nowrap text-black
-            px-5 py-0 rounded-xl
-            bg-gradient-to-r from-[#00F6FF] to-[#0A84FF]
-            shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
+                                px-5 py-0 rounded-xl bg-gradient-to-r from-[#00F6FF] to-[#0A84FF] shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
                     >
                       <h1 className="relative z-10 !text-background">
                         Company
@@ -129,7 +136,20 @@ const Hero = () => {
                           clipPath: "polygon(0 0, 100% 100%, 100% 0)",
                         }}
                       />
-                      <span className="absolute top-0 right-0 h-6 w-6  bg-white rounded-bl-lg" />
+                      <span 
+                        className="absolute top-0 right-0 h-6 w-6 bg-white rounded-bl-lg" 
+                        style={{
+                          clipPath: "polygon(0 0, 100% 100%, 0 100%)",
+                        }}
+                      />
+
+                      <div className="absolute -top-6 -right-8 lg:-top-9 lg:-right-10 xl:-top-10 xl:-right-12 z-20 pointer-events-none">
+                        <Image
+                          src={Flashes}
+                          alt="sparks"
+                          className="w-12 lg:w-14 xl:w-16 h-auto"
+                        />
+                      </div>
                     </span>
                   </div>
                 </div>
@@ -163,16 +183,16 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-          </div>
-          <div className="absolute w-full flex justify-center items-center align-middle z-10 px-5 ">
-            <HeroLoaderCard></HeroLoaderCard>
-            {/* <Image
+            {/* <div className="absolute w-full flex justify-center items-center align-middle z-10 px-5 ">
+              <HeroLoaderCard/>
+               <Image
               src="/images/robots/robot.webp"
               alt="Main robot mascot"
               width={200}
               height={200}
               className="w-[300px] sm:w-full object-contain"
-            /> */}
+            /> 
+            </div> */}
           </div>
         </div>
       </section>
@@ -181,7 +201,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-{
-  /* */
-}

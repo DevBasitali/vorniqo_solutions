@@ -93,7 +93,7 @@ function Team() {
           {/* heading */}
           <div className="border-l-[1px] flex justify-center items-center !border-r-[1px] !border-r-white/30 h-24 border-l-white/30 w-1/2 m-auto">
             <h1 className="text-center md:!text-3xl lg:!text-6xl">
-              MEET OUR TEAM
+              CEO VISION
             </h1>
           </div>
           <section className="w-full  border-t-[1px] border-white/30 px-2 xs:px-8 lg:px-10">
@@ -106,7 +106,7 @@ function Team() {
                   </h2>
 
                   <p className="text-[#7EA0FF] font-semibold tracking-wide">
-                    CEO FOUNDER OF VORNIGO SOLUTIONS
+                    CEO FOUNDER OF VORNIQO SOLUTIONS
                   </p>
 
                   <p className="text-gray-300 leading-relaxed text-sm sm:text-base">

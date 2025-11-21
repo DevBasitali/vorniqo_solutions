@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-// import { ArrowRight } from "lucide-react";
-// import PrimaryBtn from "../ui/primaryBtn";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import vorniqologo from "../../../public/images/v.png";
@@ -10,8 +8,8 @@ const VorniqoAboutSection = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-1 h-fit xs:h-full sm:h-[80%] xl:h-[60%] lg:grid-cols-2 2xl:grid-cols-2 border-b border-t border-white/30">
       {/* left section */}
-      <div className="flex  justify-center items-center lg:pl-1 border-r border-white/30">
-        <div className="md:flex md:flex-col px-4 md:px-15 lg:px-16 max-w-prose text-center">
+      <div className="flex justify-center items-center lg:pl-1 border-r border-white/30">
+        <div className="md:flex md:flex-col px-4 md:px-15 lg:px-16 xl:px-1 max-w-prose text-center">
           <span className="flex items-start sm:text-center mt-4 pl-10 sm:pl-0 text-pretty tracking-[2px] my-1">
             ABOUT US ///////////////////////////////////////
           </span>
@@ -31,7 +29,8 @@ const VorniqoAboutSection = () => {
           </p>
         </div>
       </div>
-      {/* right */}
+      
+      {/* right section */}
       <div className="flex justify-center pt-28 xs:pt-14 sm:pt-0 mb-24 lg:mb-0 items-center ">
         {/* Outer wrapper for all circles */}
         <div className="relative flex justify-center items-center ">
@@ -184,6 +183,7 @@ const VorniqoAboutSection = () => {
           </div>
         </div>
       </div>
+
     </section>
   );
 };
