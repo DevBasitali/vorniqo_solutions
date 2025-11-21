@@ -1,5 +1,6 @@
 import React from "react";
-import { Palette } from "lucide-react";
+import Image from "next/image"; // 1. Added missing Image import
+import MarketingLogo from "../../../../public/images/servicesPageLogos/digital.webp";
 import ClipPathCard from "@/components/ui/ClipPathCard";
 
 export default function MarketingVideosService() {
@@ -7,17 +8,17 @@ export default function MarketingVideosService() {
     {
       id: 1,
       title: "Marketing Solutions",
-      gifSrc: "/images/project_Images/1.webp", // Example GIF path
+      gifSrc: "/images/project_Images/1.webp",
     },
     {
       id: 2,
       title: "Creative Videos/Reels",
-      gifSrc: "/images/project_Images/1.webp", // Example GIF path
+      gifSrc: "/images/project_Images/1.webp",
     },
     {
       id: 3,
       title: "Brand Growth",
-      gifSrc: "/images/project_Images/1.webp", // Example GIF path
+      gifSrc: "/images/project_Images/1.webp",
     },
   ];
 
@@ -25,17 +26,41 @@ export default function MarketingVideosService() {
     <section className="w-full border-b border-t border-white/30 py-8 sm:py-10 md:py-12 lg:py-14">
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="w-full">
-          <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:ml-18 mb-8 sm:mb-10 md:mb-12">
-            <div className="flex-shrink-0 mx-auto sm:mx-0">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center">
-                <Palette
-                  className="w-full h-full text-color-text-dark"
-                  strokeWidth={1.5}
+          {/* UPDATED: Matched layout classes to other service components
+              - flex-col lg:flex-row (Stacked on mobile/tablet, Row on desktop)
+              - ml-8 sm:ml-6 (Mobile margins)
+              - xl:ml-4 2xl:ml-16 (Desktop margins)
+              - gap-x-8 (Spacing)
+          */}
+          <div className="flex flex-col lg:flex-row lg:items-start ml-8 sm:ml-6 xl:ml-4 2xl:ml-16 gap-x-8 mb-8 sm:mb-10 md:mb-12">
+            
+            {/* UPDATED: mx-0 ensures left alignment on all screens */}
+            <div className="flex-shrink-0 mx-0">
+              <div
+                className="
+                  relative flex items-center justify-center
+                  w-16 h-16           
+                  sm:w-20 sm:h-20     
+                  md:w-24 md:h-24     
+                  lg:w-24 lg:h-24     
+                  xl:w-24 xl:h-24     
+                  2xl:w-24 2xl:h-24 
+              "
+              >
+                <Image
+                  src={MarketingLogo}
+                  alt="Digital Marketing Logo"
+                  className="object-contain"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="lazy"
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-2 text-center sm:text-left flex-1">
-              <h2 className="font-heading  uppercase text-color-text-light">
+            
+            {/* UPDATED: text-left ensures left alignment on all screens */}
+            <div className="flex flex-col gap-2 text-left flex-1">
+              <h2 className="font-heading uppercase text-color-text-light">
                 Digital Marketing and Videos
               </h2>
               <p className="text-color-text-light font-body">
