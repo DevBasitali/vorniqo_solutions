@@ -6,15 +6,14 @@ import UxWebService from "@/components/sections/services/uxWebService";
 import MarketingVideosService from "@/components/sections/services/MarketingVideosService";
 import ClientBusinessService from "@/components/sections/services/ClientBusinessService";
 
-
 function page() {
   return (
     <>
       <HeroSection />
-      <BrandingSection/>
-      <UxWebService/>
-      <MarketingVideosService/>
-      <ClientBusinessService/>
+      <BrandingSection />
+      <UxWebService />
+      <MarketingVideosService />
+      <ClientBusinessService />
     </>
   );
 }

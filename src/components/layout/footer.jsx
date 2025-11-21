@@ -56,7 +56,7 @@ function Footer() {
 
   return (
     <footer>
-      <div className="mx-auto w-full mt-52 md:mt-10 lg:mt-0">
+      <div className="mx-auto w-full ">
         {/* Row 1: Call to Action Section (Two-column grid) */}
         <div className="grid  grid-cols-1 sm:grid-cols-2 divide-x divide-white/30 border-b border-white/30 border-t">
           {/* Left Column */}

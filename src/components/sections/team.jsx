@@ -11,57 +11,66 @@ import Image from "next/image";
 
 const Teamarray = [
   {
+    id: 1,
     image: "/images/team/hr.webp",
     name: "DANIYAL ZAFAR",
     des: "CO FOUNDER/",
     grade: "HR MANAGER",
   },
   {
+    id: 2,
     image: "/images/team/basit.webp",
     name: "BASIT ALI",
-    des: "SENIOR MERNSTACK",
+    des: "SENIOR MERN STACK",
     grade: "DEVELOPER",
   },
   {
+    id: 3,
     image: "/images/team/fawad.webp",
     name: "M FAWAD KHAN",
-    des: "JUNIOR MERNSTACK",
+    des: "JUNIOR MERN STACK",
     grade: "DEVELOPER",
   },
   {
+    id: 4,
     image: "/images/team/huzaifa.webp",
     name: "HUZAIFA ABBASI",
     des: "FRONTEND DEVELOPER",
   },
   {
+    id: 5,
     image: "/images/team/ahmad.webp",
     name: "M AHMAD",
     des: "SENIOR",
     grade: "UI UX DESIGNER",
   },
   {
+    id: 6,
     image: "/images/team/shafay.webp",
     name: "SHAFAY SHAHEEN",
     des: "GRAPHICS DESIGNER,",
     grade: "UI UX DESIGNER",
   },
   {
+    id: 7,
     image: "/images/team/ubaid.webp",
     name: "M UBAID",
     des: "ANIMATOR EDITOR",
   },
   {
+    id: 8,
     image: "/images/team/saad.webp",
     name: "SAAD SOHAIL",
     des: "DIGITAL MARKETER",
   },
   {
+    id: 9,
     image: "/images/team/mamoona.webp",
     name: "MAMOONA KHAN",
-    // des: "CUSTOMER SERVICE REPRESENTATIVE",
     des: "CSR",
   },
   {
+    id: 10,
     image: "/images/team/hera.webp",
     name: "HIRA NAZ",
     des: "CSR",
@@ -139,8 +148,8 @@ function Team() {
                 <CarouselContent className="flex  ">
                   {Teamarray.map((data, i) => (
                     <CarouselItem
-                      key={i}
-                      className="basis-1/2 lg:basis-1/4 2xl:basis-1/5 flex justify-center pl-5 gap-1"
+                      key={data.id}
+                      className="basis-1/2 md:basis-1/3 lg:basis-1/4 2xl:basis-1/5 flex justify-center pl-5 gap-1"
                     >
                       <OurTeamCard
                         image={data.image}

@@ -1,17 +1,13 @@
 "use client";
-
 import React from "react";
 import Image from "next/image";
 import PrimaryBtn from "@/components/ui/primaryBtn";
 import VerticalSocialBar from "@/components/ui/VerticalSocialBar";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import Lottie from "react-lottie-player";
 // icons
 import { Code, SquareBottomDashedScissors, Lightbulb } from "lucide-react";
 // Images
-import robot from "../../../../public/images/robots/robo.webp";
 import sidepin from "../../../../public/images/hero/sideline.webp";
-import flash from "../../../../public/images/services/flashes.webp";
 import Arrow from "../../../../public/images/Arrow.webp";
 import servicerobot from "../../../../public/images/Animationfiles/servicerobot.gif";
 
@@ -66,12 +62,6 @@ export default function HeroSection() {
                 className=""
                 unoptimized={true}
               />
-              {/* <Lottie
-                animationData="/images/Animationfiles/servicerobot.json"
-                loop
-                play
-                style={{ width: 300, height: 300 }}
-              ></Lottie> */}
             </div>
             {/* Rotation */}
             <motion.div
@@ -108,15 +98,6 @@ export default function HeroSection() {
                   </p>
                 </div>
               </motion.div>
-              {/* square */}
-              {/* <div className="absolute top-24 -left-14 space-y-3">
-                <div className="w-10 h-10 bg-[#01CBF8]" />
-                <div className="w-7 h-7 bg-[#01CBF8]" />
-              </div> */}
-              {/* flashes */}
-              {/* <div className="absolute top-5 -right-20">
-                <Image src={flash} alt="flashes" />
-              </div> */}
               {/* Video Editing Tag */}
               <motion.div
                 style={{ rotate: counterRotate }}
@@ -190,62 +171,6 @@ export default function HeroSection() {
                 </div>
               </motion.div>
             </motion.div>
-            {/* square */}
-            {/* <div className="absolute top-24 -left-14 space-y-3">
-              <div className="w-10 h-10 bg-[#01CBF8]" />
-              <div className="w-7 h-7 bg-[#01CBF8]" />
-            </div> */}
-            {/* flashes */}
-            {/* <div className="absolute top-5 -right-20">
-              <Image src={flash} alt="flashes" />
-            </div> */}
-            {/* <motion.div
-              initial={{ opacity: 0, scale: 0.8, y: 0 }}
-              animate={{
-                opacity: [0, 1, 1, 0],
-                scale: [0.8, 1.1, 1.1, 0.8],
-                y: [0, -10, 10, 0], // Up → Down → Original
-              }}
-              transition={{
-                duration: 3, // full animation loop
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="absolute top-5 -right-20 z-50"
-            >
-              <Image src={flash} alt="flashes" />
-            </motion.div> */}
-            {/* animated square */}
-            {/* <div className="absolute  top-24 -left-14 space-y-3">
-              <motion.div
-                animate={{
-                  y: [0, -6, 0], // up → down → original
-                  scale: [1, 1.1, 1], // light crash/bounce
-                  opacity: [1, 1, 0.5, 1], // fade effect
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="w-10 h-10 bg-[#01CBF8] -z-10"
-              />
-
-              <motion.div
-                animate={{
-                  y: [0, 6, 0], // opposite direction
-                  scale: [1, 1.1, 1], // crash
-                  opacity: [1, 1, 0.5, 1],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0.4, // second box slightly later
-                }}
-                className="w-7 h-7 bg-[#01CBF8]"
-              />
-            </div> */}
           </div>
         </div>
 
