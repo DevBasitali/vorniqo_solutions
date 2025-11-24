@@ -1,6 +1,7 @@
 // import React from "react";
 // import Image from "next/image";
-
+// import Link from "next/link"; // Added Link import
+// import PrimaryBtn from "../ui/primaryBtn"; // Imported PrimaryBtn
 // import ServiceCard from "../ui/serviceCard";
 
 // export const servicesData = [
@@ -38,9 +39,10 @@
 //       <div className="relative flex flex-col py-7">
 //         {/* Header Section */}
 //         <div className="mb-12">
+//           {/* UPDATED: Added Link and Button to the flex container */}
 //           <div className="flex flex-col md:flex-row justify-between items-start md:items-end px-4 md:px-15 lg:px-23">
             
-//             {/* Title Group - Added 'relative' to anchor the absolute image inside */}
+//             {/* Title Group */}
 //             <div className="relative text-center md:text-left w-full md:w-auto">
 //               <span className="inline-block tracking-[2px] mb-2 text-color-text-dark font-body font-semibold">
 //                 Services ///////////////////////////////////////
@@ -56,6 +58,14 @@
 //                 className="absolute hidden lg:block -top-4 -right-24 xl:-right-28 2xl:-right-32 w-17 lg:w-20 xl:w-20 2xl:w-24 object-contain"
 //               />
 //             </div>
+
+//             {/* View All Button - Aligned to bottom right on desktop */}
+//             <div className="mt-6 md:mt-0 md:mb-2 w-full md:w-auto flex justify-center md:justify-end">
+//               <Link href="/services">
+//                 <PrimaryBtn>View All</PrimaryBtn>
+//               </Link>
+//             </div>
+
 //           </div>
 //         </div>
         
@@ -87,8 +97,8 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link"; // Added Link import
-import PrimaryBtn from "../ui/primaryBtn"; // Imported PrimaryBtn
+import Link from "next/link";
+import PrimaryBtn from "../ui/primaryBtn";
 import ServiceCard from "../ui/serviceCard";
 
 export const servicesData = [
@@ -126,7 +136,6 @@ export default function services() {
       <div className="relative flex flex-col py-7">
         {/* Header Section */}
         <div className="mb-12">
-          {/* UPDATED: Added Link and Button to the flex container */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end px-4 md:px-15 lg:px-23">
             
             {/* Title Group */}
@@ -146,7 +155,7 @@ export default function services() {
               />
             </div>
 
-            {/* View All Button - Aligned to bottom right on desktop */}
+            {/* View All Button */}
             <div className="mt-6 md:mt-0 md:mb-2 w-full md:w-auto flex justify-center md:justify-end">
               <Link href="/services">
                 <PrimaryBtn>View All</PrimaryBtn>
@@ -158,24 +167,21 @@ export default function services() {
         
         <div className="relative">
           <div className="grid grid-cols-1 gap-6 px-4 max-w-8xl sm:mx-20 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 justify-items-center z-10">
-            {servicesData.slice(0, MAX_CARDS).map((service) => (
+            {servicesData.slice(0, MAX_CARDS).map((service, index) => (
               <ServiceCard
                 key={service.id}
                 href={service.href}
                 title={service.title}
                 subtitle={service.subtitle}
+                // === THIS IS THE CHANGE ===
+                // We pass 'true' only if it is the 3rd card (index 2)
+                showRobot={index === 2}
               />
             ))}
           </div>
-          <div>
-            <Image
-              src="/images/services/card_robot.webp"
-              alt="card_robo"
-              width={230}
-              height={230}
-              className="absolute hidden xl:block xl:-top-5 xl:-right-18"
-            />
-          </div>
+          
+          {/* UPDATED: I removed the old static robot image div from here. 
+              The robot is now inside the ServiceCard above! */}
         </div>
       </div>
     </section>
