@@ -30,7 +30,7 @@ const ServiceCard = ({ href, title, subtitle, showRobot, index = 0 }) => {
            />
         </div>
       )}
-      
+
       <HexBadge 
         side="left" 
         icon={<IconComponent size={24} strokeWidth={2.5} className="text-white" />} 
@@ -41,7 +41,7 @@ const ServiceCard = ({ href, title, subtitle, showRobot, index = 0 }) => {
       {/* === MAIN CARD CONTAINER === */}
       <div className="relative z-10 h-full min-h-[280px] w-full bg-[#081840] border border-white/10 rounded-[32px] overflow-hidden transition-all duration-300 hover:border-[#01feff]/50 hover:shadow-[0_0_30px_rgba(1,254,255,0.1)]">
 
-        <div className="absolute bottom-0 -right-30 w-[400px] h-56 bg-[#091C4B] rounded-[500px] opacity-50 rotate-[50deg]"/>
+        <div className="absolute bottom-0 -right-30 w-[400px] h-56 bg-[#091C4B] rounded-[500px] opacity-80 rotate-[50deg]"/>
         
         {/* Content Container */}
         <div className="relative z-10 flex flex-col h-full p-8 pt-12">
