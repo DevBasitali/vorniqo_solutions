@@ -20,7 +20,7 @@ const ServiceCard = ({ href, title, subtitle, showRobot, index = 0 }) => {
   return (
     <div className="group relative w-full h-full mt-6"> 
        {showRobot && (
-        <div className="absolute hidden xl:block top-[120px] -right-40 xl:-right-60 z-50 w-48 h-48 xl:w-80 xl:h-80 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-800 ease-in-out pointer-events-none">
+        <div className="absolute hidden xl:block top-[129px] -right-40 xl:-right-[238px] z-50 w-48 h-48 xl:w-80 xl:h-80 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-800 ease-in-out pointer-events-none">
            <Image 
              src="/images/services/card_robot.webp" 
              alt="Robot" 

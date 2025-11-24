@@ -141,7 +141,6 @@ export default function services() {
             {/* Title Group */}
             <div className="relative text-center md:text-left w-full md:w-auto">
               <span className="inline-block tracking-[2px] mb-2 text-color-text-dark font-body font-semibold"> 
-                {/* inline-block tracking-[2px] mb-2 text-color-text-dark font-body font-semibold */}
                 SERVICES ////////////////////////////////
               </span>
               <h1 className="text-7xl md:text-8xl text-white font-heading uppercase">
@@ -152,7 +151,7 @@ export default function services() {
                 alt="flashes"
                 width={80}
                 height={80}
-                className="absolute hidden lg:block -top-4 -right-24 xl:-right-28 2xl:-right-32 w-17 lg:w-20 xl:w-20 2xl:w-24 object-contain"
+                className="absolute hidden lg:block -top-[16px] -right-24 xl:-right-22 2xl:-right-22 w-17 lg:w-20 xl:w-20 2xl:w-24 object-contain"
               />
             </div>
 
@@ -174,15 +173,10 @@ export default function services() {
                 href={service.href}
                 title={service.title}
                 subtitle={service.subtitle}
-                // === THIS IS THE CHANGE ===
-                // We pass 'true' only if it is the 3rd card (index 2)
                 showRobot={index === 2}
               />
             ))}
           </div>
-          
-          {/* UPDATED: I removed the old static robot image div from here. 
-              The robot is now inside the ServiceCard above! */}
         </div>
       </div>
     </section>
