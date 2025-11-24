@@ -42,7 +42,7 @@ export default function Collage() {
           }}
         >
           <Image
-            src="/images/rec.png"
+            src="/images/rec.webp"
             alt="Analytics dashboard preview"
             fill
             sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 250px, 300px"
@@ -58,7 +58,7 @@ export default function Collage() {
           }}
         >
           <Image
-            src="/images/box1.png"
+            src="/images/box1.webp"
             alt="Project detail view"
             fill
             sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 250px, 300px"
@@ -74,7 +74,7 @@ export default function Collage() {
           }}
         >
           <Image
-            src="/images/box2.png"
+            src="/images/box2.webp"
             alt="Additional project screenshot"
             fill
             sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 250px, 300px"

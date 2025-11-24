@@ -9,25 +9,25 @@ const CompanyLogos = dynamic(
   () => import("@/components/sections/companyLogos"),
   {
     ssr: false,
-    loading: () => <p>Loading About...</p>,
+    // loading: () => <p>Loading About...</p>,
   }
 );
 const About = dynamic(() => import("@/components/sections/about"), {
   ssr: false,
-  loading: () => <p>Loading About...</p>,
+  // loading: () => <p>Loading About...</p>,
 });
 const Team = dynamic(() => import("@/components/sections/team"), {
   ssr: false,
-  loading: () => <p>Loading Team...</p>,
+  // loading: () => <p>Loading Team...</p>,
 });
 const Project = dynamic(() => import("@/components/sections/projects"), {
   ssr: false,
-  loading: () => <p>Loading Projects...</p>,
+  // loading: () => <p>Loading Projects...</p>,
 });
 
 const Faq = dynamic(() => import("@/components/sections/faqs"), {
   ssr: false,
-  loading: () => <p>Loading FAQ...</p>,
+  // loading: () => <p>Loading FAQ...</p>,
 });
 export default function Home() {
   return (

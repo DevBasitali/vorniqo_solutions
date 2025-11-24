@@ -1,7 +1,7 @@
 import React from "react";
 // import { BrandMarquee } from "../ui/BrandMarquee";
 
-import LogoLoop from "@/components/LogoLoop";
+import LogoLoop from "@/components/ui/LogoLoop";
 const logos = [
   { src: "/images/aboutlogo/zafar.webp", alt: "alzafar" },
   { src: "/images/aboutlogo/hsq.webp", alt: "hsq" },
