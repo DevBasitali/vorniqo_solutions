@@ -169,17 +169,16 @@ const Hero = () => {
               {showcaseProjects.slice(0, visibleCount).map((project, index) => (
                 <div
                   key={project.id}
+                  // UPDATED: Removed 'hover:-translate-y-[20px]' to stop manual hover movement.
+                  // The 'translate-y' classes below keep the static wave layout.
                   className={`group relative transition-all duration-500 ${
                     index % 2 === 0
-                      ? "translate-y-[12px] hover:-translate-y-[20px]" // up for even items
-                      : "translate-y-[-12px] hover:-translate-y-[20px]" // down for odd items
+                      ? "translate-y-[12px]" 
+                      : "translate-y-[-12px]"
                   } ${index !== 0 ? "-ml-4 md:-ml-1 lg:-ml-6" : ""}`}
                   style={{ zIndex: visibleCount - index }}
                 >
-                  <ArtShowcaseCard image={project.image} />
-
-                  {/* Hover overlay */}
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <ArtShowcaseCard image={project.image} index={index} /> 
                 </div>
               ))}
             </div>
