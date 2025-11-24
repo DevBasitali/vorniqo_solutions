@@ -5,34 +5,34 @@ import faqrobot from "../../../public/images/robots/faqrobot.png";
 import Image from "next/image";
 const faq = [
   {
-    question: "How Do You Handle Communication During Projects?",
+    question: "What services do you offer?",
     answer:
-      "We maintain transparent communication through regular updates, dedicated project managers, and real-time collaboration tools to ensure you're always informed about project progress.",
+      "We provide web & app development, UI/UX design, custom software solutions, and ongoing maintenance to help your business grow digitally.",
   },
   {
-    question: "Do You Work With Startups As Well As Established Businesses?",
+    question: "Do you work with startups as well as established businesses?",
     answer:
-      "Yes, We Work With Businesses Of All Sizes From Startups Building Their First Product To Enterprises Looking To Scale And Optimize Existing Systems.",
+      "Yes, we work with startups, growing companies, and enterprises, tailoring solutions to your business stage and goals.",
   },
   {
-    question: "What Technologies Do You Specialize In?",
+    question: "How long does it take to complete a project?",
     answer:
-      "We specialize in modern web technologies including React, Next.js, Node.js, and cloud platforms, ensuring scalable and performant solutions for your business needs.",
+      "Project timelines depend on scope and complexity. We provide clear schedules and milestones after understanding your requirements.",
   },
   {
-    question: "What Technologies Do You Specialize In?",
+    question: "Can you customize solutions according to my business needs?",
     answer:
-      "We specialize in modern web technologies including React, Next.js, Node.js, and cloud platforms, ensuring scalable and performant solutions for your business needs.",
+      "Absolutely. Every solution is tailored to your workflows and goals for maximum impact and efficiency.",
   },
   {
-    question: "What Technologies Do You Specialize In?",
+    question: "How do you handle communication during projects?",
     answer:
-      "We specialize in modern web technologies including React, Next.js, Node.js, and cloud platforms, ensuring scalable and performant solutions for your business needs.",
+      "We ensure smooth communication through regular updates, meetings, and dedicated project channels for full transparency.",
   },
   {
-    question: "What Technologies Do You Specialize In?",
+    question: "What technologies do you specialize in?",
     answer:
-      "We specialize in modern web technologies including React, Next.js, Node.js, and cloud platforms, ensuring scalable and performant solutions for your business needs.",
+      "We specialize in modern technologies including JavaScript frameworks, Word Press, mobile platforms, cloud solutions, and emerging tools to deliver scalable and future-ready software.",
   },
 ];
 // clip-path: polygon(48.77% 10.99%, 79.58% 10.99%, 75.48% 31.79%, 70.91% 42.91%, 48.77% 70.83%)
