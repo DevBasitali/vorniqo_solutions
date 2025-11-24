@@ -140,8 +140,9 @@ export default function services() {
             
             {/* Title Group */}
             <div className="relative text-center md:text-left w-full md:w-auto">
-              <span className="inline-block tracking-[2px] mb-2 text-color-text-dark font-body font-semibold">
-                Services ///////////////////////////////////////
+              <span className="inline-block tracking-[2px] mb-2 text-color-text-dark font-body font-semibold"> 
+                {/* inline-block tracking-[2px] mb-2 text-color-text-dark font-body font-semibold */}
+                SERVICES ////////////////////////////////
               </span>
               <h1 className="text-7xl md:text-8xl text-white font-heading uppercase">
                 Our Services

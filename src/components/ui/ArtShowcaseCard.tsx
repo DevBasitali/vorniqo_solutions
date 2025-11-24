@@ -38,7 +38,7 @@ export default function ArtShowcaseCard({
         className="object-center object-cover w-full xs:w-[350px] rounded-xl"
         loading="lazy"
       />
-       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-100 rounded-2xl" />
+       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-100 rounded-xl" />
     </motion.div>
   );
 }

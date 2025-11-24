@@ -8,10 +8,10 @@ const VorniqoAboutSection = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-1 h-fit xs:h-full sm:h-[80%] xl:h-[60%] lg:grid-cols-2 2xl:grid-cols-2 border-b border-t border-white/30">
       {/* left section */}
-      <div className="flex justify-center items-center lg:pl-1 border-r border-white/30">
+      <div className="flex justify-center items-center lg:pl-1 border-r border-white/30 mt-6 xs:mt-0">
         <div className="md:flex md:flex-col px-4 md:px-15 lg:px-16 xl:px-1 max-w-prose text-center">
-          <span className="flex items-start sm:text-center mt-4 pl-10 sm:pl-0 text-pretty tracking-[2px] my-1">
-            ABOUT US ///////////////////////////////////////
+          <span className="inline-block tracking-[2px] mb-2 text-color-text-dark font-body font-semibold ">
+            ABOUT US ////////////////////////////////////
           </span>
           <h1 className="flex items-start justify-center sm:justify-center md:justify-start">
             ABOUT VORNIQO

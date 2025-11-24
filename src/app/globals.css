@@ -72,7 +72,7 @@ body {
   --h3-size: var(--text-lg);
   --h4-size: var(--text-xs);
   --p-size: var(--text-md);
-  --span-size: var(--text-sm);
+  --span-size: var(--text-xs);
 }
 
 /* 400px AND UP (Extra-Small Phones, e.g., iPhone/Android) */
