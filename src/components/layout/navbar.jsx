@@ -8,6 +8,9 @@ import SecondaryBtn from "../ui/secondaryBtn";
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // New Polygon Shape: Square top corners, Angled (chamfered) bottom corners
+  // 24px is the size of the cut. Adjust this number to make the cut bigger/smaller.
   const navShape =
     "polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 24px 100%, 0 calc(100% - 24px))";
 
