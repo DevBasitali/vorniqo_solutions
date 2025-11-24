@@ -13,7 +13,7 @@ export default function ClientBusinessService() {
     {
       id: 2,
       title: "Client Infrastructure",
-      gifSrc: "/images/project_Images/1.webp",
+      gifSrc: "/images/Animationfiles/clientinfrastructure.png",
     },
     {
       id: 3,
@@ -28,7 +28,6 @@ export default function ClientBusinessService() {
         <div className="w-full">
           {/* UPDATED: Matched layout classes to ServiceSection.js & UxWebService.js */}
           <div className="flex flex-col lg:flex-row lg:items-start ml-8 sm:ml-6 xl:ml-4 2xl:ml-16 gap-x-8 mb-8 sm:mb-10 md:mb-12">
-            
             <div className="flex-shrink-0 mx-0">
               <div
                 className="
@@ -51,7 +50,7 @@ export default function ClientBusinessService() {
                 />
               </div>
             </div>
-            
+
             <div className="flex flex-col gap-2 text-left flex-1">
               <h2 className="font-heading uppercase text-color-text-light">
                 Client and Business Systems

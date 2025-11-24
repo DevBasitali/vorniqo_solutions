@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-
+import Image from "next/image";
 export default function ClipPathCard({ title, gifSrc, onClick }) {
   const customCutClipPath =
     "polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)";
@@ -24,30 +24,19 @@ export default function ClipPathCard({ title, gifSrc, onClick }) {
         onKeyDown={(e) => e.key === "Enter" && onClick?.()}
       >
         <div className="relative z-10 flex flex-col items-center h-full text-center p-2">
-          <h3 className="w-full flex-shrink-0 !font-body !font-bold text-white !text-sm sm:!text-lg line-clamp-2 mt-8 pb-1">
+          <h3 className="w-full flex-shrink-0 !font-body !font-bold text-white !text-sm sm:!text-lg line-clamp-2 mt-4 pb-1">
             {title}
           </h3>
 
           {gifSrc && (
-            // <div className="relative w-full flex-1 px-10 py-5 min-h-0">
-            //   <img
-            //     src={gifSrc}
-            //     alt={`${title} animation`}
-            //     className="w-full h-full object-cover"
-            //     loading="lazy"
-            //   />
-            // </div>
-            <div className="relative w-full flex-1 px-2 py-2 min-h-0 overflow-hidden">
-              <video
+            <div className="relative w-full flex items-center justify-center px-2 py-2   overflow-hidden">
+              <Image
                 src={gifSrc}
-                autoPlay
-                loop
-                muted
-                playsInline
+                width={2000}
+                height={2000}
+                className="object-cover"
                 alt={`${title} animation`}
-                className="w-full h-full object-cover scale-125"
-                // loading="lazy"
-              />
+              ></Image>
             </div>
           )}
         </div>

@@ -8,7 +8,7 @@ export default function MarketingVideosService() {
     {
       id: 1,
       title: "Marketing Solutions",
-      gifSrc: "/images/project_Images/1.webp",
+      gifSrc: "/images/Animationfiles/marketingsolution.png",
     },
     {
       id: 2,
@@ -26,14 +26,7 @@ export default function MarketingVideosService() {
     <section className="w-full border-b border-t border-white/30 py-8 sm:py-10 md:py-12 lg:py-14">
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="w-full">
-          {/* UPDATED: Matched layout classes to other service components
-              - flex-col lg:flex-row (Stacked on mobile/tablet, Row on desktop)
-              - ml-8 sm:ml-6 (Mobile margins)
-              - xl:ml-4 2xl:ml-16 (Desktop margins)
-              - gap-x-8 (Spacing)
-          */}
           <div className="flex flex-col lg:flex-row lg:items-start ml-8 sm:ml-6 xl:ml-4 2xl:ml-16 gap-x-8 mb-8 sm:mb-10 md:mb-12">
-            
             {/* UPDATED: mx-0 ensures left alignment on all screens */}
             <div className="flex-shrink-0 mx-0">
               <div
@@ -57,14 +50,15 @@ export default function MarketingVideosService() {
                 />
               </div>
             </div>
-            
+
             {/* UPDATED: text-left ensures left alignment on all screens */}
             <div className="flex flex-col gap-2 text-left flex-1">
               <h2 className="font-heading uppercase text-color-text-light">
                 Digital Marketing and Videos
               </h2>
               <p className="text-color-text-light font-body">
-                Creating compelling campaigns and engaging videos that drive growth and captivate your audience.
+                Creating compelling campaigns and engaging videos that drive
+                growth and captivate your audience.
               </p>
             </div>
           </div>

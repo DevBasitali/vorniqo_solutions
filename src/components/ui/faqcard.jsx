@@ -14,8 +14,7 @@ export default function FAQCard({ question, answer }) {
         rounded-lg
         ${
           isOpen
-            ? // border-[#00FFFF]
-              "border-2  bg-[#081840]"
+            ? "border-2  bg-[#081840]"
             : "border-2 border-transparent bg-[#081840]"
         }
       `}
@@ -23,7 +22,6 @@ export default function FAQCard({ question, answer }) {
       {/* Question Header - Clickable */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        // focus:ring-2 focus:ring-[#00FFFF] focus:ring-opacity-50
         className="w-full flex items-center justify-between bg-[#081850] p-4 xs:p-6 text-left focus:outline-none rounded-lg transition-all"
         aria-expanded={isOpen}
       >

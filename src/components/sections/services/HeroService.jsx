@@ -120,7 +120,6 @@ export default function HeroSection() {
                       strokeWidth={3}
                       color="black"
                     />
-                    {/* < /> */}
                   </div>
                   <p className="!text-xs md:!text-sm !text-black">
                     Video Editing
@@ -161,7 +160,6 @@ export default function HeroSection() {
                   ease: "easeInOut",
                 }}
                 className="absolute w-[142px] md:w-[152px] -bottom-4 left-28 bg-white flex items-center gap-2 shadow-xl rounded-3xl"
-                // style={{ rotate: 360 }}
               >
                 <div className="px-2 py-2 flex gap-2 items-center">
                   <div className="w-7 h-7 rounded-full bg-gradient-to-t from-[#00eaff] to-[#004cff] flex items-center justify-center">

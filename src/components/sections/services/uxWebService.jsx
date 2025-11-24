@@ -8,17 +8,17 @@ export default function UxWebService() {
     {
       id: 1,
       title: "User Interface & UX design",
-      gifSrc: "/images/Animationfiles/uxdesign.webm",
+      gifSrc: "/images/Animationfiles/userinterface.png",
     },
     {
       id: 2,
       title: "Web Development",
-      gifSrc: "/images/Animationfiles/webdevelopment.webm",
+      gifSrc: "/images/Animationfiles/webdevelopment.png",
     },
     {
       id: 3,
       title: "Web Support & Maintance",
-      gifSrc: "/images/Animationfiles/websupport.webm",
+      gifSrc: "/images/project_Images/1.webp",
     },
   ];
 

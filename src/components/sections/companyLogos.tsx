@@ -1,5 +1,4 @@
 import React from "react";
-// import { BrandMarquee } from "../ui/BrandMarquee";
 
 import LogoLoop from "@/components/ui/LogoLoop";
 const logos = [
@@ -7,7 +6,6 @@ const logos = [
   { src: "/images/aboutlogo/hsq.webp", alt: "hsq" },
   { src: "/images/aboutlogo/address.webp", alt: "alzafar" },
   { src: "/images/aboutlogo/nouman.webp", alt: "hsq" },
-  // { src: "/images/clients/alzafar.webp", alt: "alzafar" },
 ];
 
 export default function companyLogos() {

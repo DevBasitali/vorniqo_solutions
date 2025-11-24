@@ -1,6 +1,4 @@
-"use client";
 import { ChevronRightIcon } from "lucide-react";
-// Contact Card Component
 export default function ContactCard() {
   return (
     <div className="w-[90%] max-w-[400px] h-60 mx-auto">
@@ -14,10 +12,7 @@ export default function ContactCard() {
         </h3>
 
         {/* Description */}
-        <p
-          className="!text-[#0A1E42] text-sm text-center mb-6 leading-relaxed"
-          // style={{ fontFamily: "tt-firs", fontWeight: 300 }}
-        >
+        <p className="!text-[#0A1E42] text-sm text-center mb-6 leading-relaxed">
           Have a question or a project in mind? We're here to help. Reach out to
           our team and let's start building solutions together.``
         </p>
@@ -42,12 +37,3 @@ export default function ContactCard() {
     </div>
   );
 }
-
-// Demo showing the card in context
-// export function ContactCardDemo() {
-//   return (
-//     <div className="min-h-screen bg-[#09183E] flex items-center justify-center p-8">
-//       <ContactCard />
-//     </div>
-//   );
-// }

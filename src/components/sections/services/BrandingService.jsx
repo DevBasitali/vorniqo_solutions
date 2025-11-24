@@ -8,17 +8,17 @@ export default function ServiceSection() {
     {
       id: 1,
       title: "Creative Graphics",
-      gifSrc: "/images/Animationfiles/CreativeGraphics.webm",
+      gifSrc: "/images/project_Images/1.webp",
     },
     {
       id: 2,
       title: "Brand Identity",
-      gifSrc: "/images/Animationfiles/Brandidentity.webm",
+      gifSrc: "/images/Animationfiles/Brandidentity.png",
     },
     {
       id: 3,
       title: "Design Excellence",
-      gifSrc: "/images/Animationfiles/designExcelence.webm",
+      gifSrc: "/images/project_Images/1.webp",
     },
   ];
 
