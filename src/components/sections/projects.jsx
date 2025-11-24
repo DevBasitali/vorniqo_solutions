@@ -22,7 +22,7 @@ const projectsData = [
     id: 3,
     image: "/images/our_projectImages/burjZafar.webp",
     title: "Burj A Zafar",
-    subtitle: "MOBILE APP DEVELOPMENT",
+    subtitle: "Hospitality Website Solution",
     bgColor: "#361C03",
     link: "https://www.hsqtowers.com",
   },

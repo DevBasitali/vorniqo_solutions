@@ -10,7 +10,7 @@ const VorniqoAboutSection = () => {
       {/* left section */}
       <div className="flex justify-center items-center lg:pl-1 border-r border-white/30 mt-6 xs:mt-0">
         <div className="md:flex md:flex-col px-4 md:px-15 lg:px-16 xl:px-1 max-w-prose text-center">
-          <span className="inline-block tracking-[2px] mb-2 text-color-text-dark font-body font-semibold ">
+          <span className="inline-block tracking-[2px] text-start mb-2 text-color-text-dark font-body font-semibold">
             ABOUT US ////////////////////////////////////
           </span>
           <h1 className="flex items-start justify-center sm:justify-center md:justify-start">
