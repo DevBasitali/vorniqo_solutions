@@ -21,7 +21,8 @@ function PrimaryBtn({ children, className = "", ...props }) {
         className="
           absolute inset-0 bg-white rounded-t-full scale-0 origin-bottom
           transition-transform duration-1000 ease-out
-          group-hover:scale-150
+          active:duration-initial
+          group-hover:scale-150 group-active:scale-150
         "
       ></span>
 
@@ -31,16 +32,18 @@ function PrimaryBtn({ children, className = "", ...props }) {
           relative z-10 flex items-center gap-x-2
           transition-colors duration-500
           !text-[#061A36] !text-sm !font-extralight group-hover:!text-black
+          group-active:!text-black
         "
       >
         {/* Render passed text or default to 'Contact Us' */}
         {children || "Contact Us"}
-        
+
         <span
           className="
             flex items-center justify-center rounded-full bg-transparent p-1
             transition-all duration-500 ease-in-out
             group-hover:bg-black group-hover:rotate-[-50deg]
+           group-active:bg-black group-active::rotate-[-50deg]
           "
         >
           <ArrowRight
@@ -49,6 +52,7 @@ function PrimaryBtn({ children, className = "", ...props }) {
             className="
               text-[#061A36] transition-all duration-500 ease-in-out 
               group-hover:text-white
+              group-active:text-white
             "
           />
         </span>

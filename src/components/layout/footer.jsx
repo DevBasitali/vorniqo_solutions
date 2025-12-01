@@ -45,7 +45,7 @@ function Footer() {
     {
       name: "INSTAGRAM",
       icon: <FaInstagram className="h-6 w-6 text-white" />,
-      href: "https://instagram.com",
+      href: "https://www.instagram.com/vorniqo_solutions?igsh=NDBzeHExdG1la2I5",
     },
     {
       name: "FACEBOOK",

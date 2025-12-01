@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import UIUXLogo from "../../../../public/images/servicesPageLogos/ui.webp";
+import UIUXLogo from "../../../../public/images/servicespagelogos/ui.webp";
 import ClipPathCard from "@/components/ui/ClipPathCard";
 
 export default function UxWebService() {
@@ -8,17 +8,17 @@ export default function UxWebService() {
     {
       id: 1,
       title: "User Interface & UX design",
-      gifSrc: "/images/Animationfiles/userinterface.png",
+      gifSrc: "/images/animationfiles/userinterface.png",
     },
     {
       id: 2,
       title: "Web Development",
-      gifSrc: "/images/Animationfiles/webdevelopment.png",
+      gifSrc: "/images/animationfiles/webdevelopment.png",
     },
     {
       id: 3,
       title: "Web Support & Maintance",
-      gifSrc: "/images/project_Images/1.webp",
+      gifSrc: "/images/animationfiles/websupport.png",
     },
   ];
 

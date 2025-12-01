@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image"; // 1. Added missing Image import
-import MarketingLogo from "../../../../public/images/servicesPageLogos/digital.webp";
+import MarketingLogo from "../../../../public/images/servicespagelogos/digital.webp";
 import ClipPathCard from "@/components/ui/ClipPathCard";
 
 export default function MarketingVideosService() {
@@ -8,17 +8,17 @@ export default function MarketingVideosService() {
     {
       id: 1,
       title: "Marketing Solutions",
-      gifSrc: "/images/Animationfiles/marketingsolution.png",
+      gifSrc: "/images/animationfiles/marketingsolution.png",
     },
     {
       id: 2,
       title: "Creative Videos/Reels",
-      gifSrc: "/images/project_Images/1.webp",
+      gifSrc: "/images/animationfiles/creativevideos.png",
     },
     {
       id: 3,
       title: "Brand Growth",
-      gifSrc: "/images/project_Images/1.webp",
+      gifSrc: "/images/animationfiles/brandgrowth.png",
     },
   ];
 

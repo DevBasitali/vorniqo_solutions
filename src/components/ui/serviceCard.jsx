@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FileText, Check, Code } from "lucide-react";
 import PrimaryButton from "./primaryBtn";
-import HexBadge from "./HexBadge"; // 1. Import the animated badge
+import HexBadge from "./HexBadge";
 
 const ServiceCard = ({ href, title, subtitle, showRobot, index = 0 }) => {
   let IconComponent = FileText;
@@ -23,7 +23,11 @@ const ServiceCard = ({ href, title, subtitle, showRobot, index = 0 }) => {
   return (
     <div className="group relative w-full h-full mt-6">
       {showRobot && (
-        <div className="absolute hidden xl:block top-[129px] -right-40 xl:-right-[238px] z-50 w-48 h-48 xl:w-80 xl:h-80 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-800 ease-in-out pointer-events-none">
+        <div
+          className={`absolute hidden xl:block top-[129px] z-50 w-48 h-48 xl:w-80 xl:h-80 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-800 ease-in-out pointer-events-none
+            ${index === 2 ? "right-[-238px]" : ""} 
+            ${index === 0 ? "left-[-238px] scale-x-[-1]" : ""}`}
+        >
           <Image
             src="/images/services/card_robot.webp"
             alt="Robot"
@@ -43,11 +47,9 @@ const ServiceCard = ({ href, title, subtitle, showRobot, index = 0 }) => {
         className="!left-8"
       />
 
-      {/* === MAIN CARD CONTAINER === */}
       <div className="relative z-10 h-full min-h-[280px] w-full bg-[#081840] border border-white/10 rounded-[32px] overflow-hidden transition-all duration-300 hover:border-[#01feff]/50 hover:shadow-[0_0_30px_rgba(1,254,255,0.1)]">
         <div className="absolute bottom-0 -right-30 w-[400px] h-56 bg-[#091C4B] rounded-[500px] opacity-80 rotate-[50deg]" />
 
-        {/* Content Container */}
         <div className="relative z-10 flex flex-col h-full p-8 pt-12">
           <div className="flex-grow mt-2">
             <h3 className="text-2xl font-heading text-white mb-3 group-hover:text-[#01feff] transition-colors">

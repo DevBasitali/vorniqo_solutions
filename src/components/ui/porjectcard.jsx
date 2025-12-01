@@ -30,7 +30,7 @@ export default function ProjectCard({
         {/* Robot Head - LARGER SIZE - Animates from bottom to top on hover */}
         <div className="absolute hidden md:block -top-10 sm:-top-12 md:-top-17.5 lg:-top-20 left-10 sm:left-4 md:left-10 -z-40 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 opacity-0 group-hover:opacity-100 transform translate-y-16 group-hover:translate-y-0 transition-all duration-200 ease-out ">
           <Image
-            src="/images/our_projectImages/robo_head.webp"
+            src="/images/our_project_images/robo_head.webp"
             alt="Robot"
             width={112}
             height={112}

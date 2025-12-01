@@ -25,13 +25,14 @@ function Navbar() {
     <>
       <header className="relative flex justify-center py-4 md:py-10 select-none z-50">
         <div className="relative w-full max-w-[1120px] px-4 md:px-0">
-          
           {/* --- CENTER LOGO (Now Clickable) --- */}
           <div className="absolute left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2">
             <Link href="/" aria-label="Home">
               <div
                 className="relative w-[80px] h-[92.38px] md:w-[100px] md:h-[115.47px] cursor-pointer transition-transform hover:scale-105"
-                style={{ filter: "drop-shadow(0 0 10px rgba(9, 24, 62, 0.75))" }}
+                style={{
+                  filter: "drop-shadow(0 0 10px rgba(9, 24, 62, 0.75))",
+                }}
               >
                 <div
                   className="absolute inset-0 bg-gradient-to-r from-[#014FF8] to-[#01F1D6]"
@@ -46,7 +47,7 @@ function Navbar() {
                   style={{ clipPath: hexClipPath }}
                 >
                   <Image
-                    src="/images/logos/vorniqoLogo.webp"
+                    src="/images/logos/vorniqologo.webp"
                     width={70}
                     height={70}
                     alt="Vorniqo Logo"
@@ -66,9 +67,9 @@ function Navbar() {
             // We apply the clip-path dynamically using Tailwind arbitrary values for MD screens and up
           >
             {/* 1. THE BORDER LAYER */}
-            <div 
-               className="absolute inset-0 bg-white/10 md:[clip-path:var(--nav-shape)]"
-               style={{ "--nav-shape": navShape }}
+            <div
+              className="absolute inset-0 bg-white/10 md:[clip-path:var(--nav-shape)]"
+              style={{ "--nav-shape": navShape }}
             />
 
             {/* 2. THE CONTENT LAYER */}
@@ -79,7 +80,6 @@ function Navbar() {
             >
               {/* Navbar Content */}
               <div className="relative z-10 flex h-full items-center justify-between px-6 md:px-8">
-                
                 {/* Left Navigation */}
                 <nav className="hidden lg:flex">
                   <ul className="flex items-center gap-10 text-[14px] font-medium text-text-light">
@@ -140,7 +140,6 @@ function Navbar() {
               </div>
             </div>
           </div>
-
         </div>
       </header>
 

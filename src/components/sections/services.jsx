@@ -23,17 +23,9 @@ export const servicesData = [
     title: "Web Development",
     subtitle: "Crafting your unique brand essence.",
   },
-  {
-    id: 4,
-    href: "/services",
-    title: "Web Development",
-    subtitle: "Crafting your unique brand essence.",
-  },
 ];
-
 export default function services() {
   const MAX_CARDS = 3;
-
   return (
     <section className="grid grid-cols-1">
       <div className="relative flex flex-col py-7">
@@ -73,8 +65,8 @@ export default function services() {
                 key={service.id}
                 href={service.href}
                 title={service.title}
-                subtitle={service.subtitle}
-                showRobot={index === 2}
+                showRobot={index === 0 || index === 2}
+                index={index}
               />
             ))}
           </div>

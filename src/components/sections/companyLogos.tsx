@@ -10,7 +10,7 @@ const logos = [
 
 export default function companyLogos() {
   return (
-    <div className="relative overflow-hidden h-[113px] mt-[30px] mx-px lg:mx-22 xl:mx-36">
+    <div className=" overflow-hidden h-[113px] mt-[30px] mx-auto lg:mx-22 xl:mx-36">
       <LogoLoop
         logos={logos}
         speed={40}
@@ -20,6 +20,7 @@ export default function companyLogos() {
         hoverSpeed={0}
         scaleOnHover
         className="pb-6 mb-0 m-0 "
+        pauseOnHover={true}
       />
     </div>
   );

@@ -8,8 +8,8 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 import { Code, SquareBottomDashedScissors, Lightbulb } from "lucide-react";
 // Images
 import sidepin from "../../../../public/images/hero/sideline.webp";
-import Arrow from "../../../../public/images/Arrow.webp";
-import servicerobot from "../../../../public/images/Animationfiles/servicerobot.gif";
+import Arrow from "../../../../public/images/arrow.webp";
+// import servicerobot from "../../../../public/images/animationfiles/servicerobot.png";
 
 export default function HeroSection() {
   const rotate = useMotionValue(0);
@@ -57,9 +57,10 @@ export default function HeroSection() {
           flex justify-center items-center relative"
             >
               <Image
-                src={servicerobot}
+                src="/images/animationfiles/servicerobot.png"
                 alt="robot"
-                className=""
+                width={250}
+                height={250}
                 unoptimized={true}
               />
             </div>

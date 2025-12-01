@@ -4,7 +4,7 @@ import ProjectCard from "../ui/porjectcard";
 const projectsData = [
   {
     id: 1,
-    image: "/images/our_projectImages/hsqTower.webp",
+    image: "/images/our_project_images/hsqtower.webp",
     title: "HSQ Towers",
     subtitle: "Hotel Website Design",
     bgColor: "#FFF3DB",
@@ -12,7 +12,7 @@ const projectsData = [
   },
   {
     id: 2,
-    image: "/images/our_projectImages/address_fountain.webp",
+    image: "/images/our_project_images/address_fountain.webp",
     title: "Address Fountain",
     subtitle: "Luxury Hotel Web Development",
     bgColor: "#0073EB",
@@ -20,7 +20,7 @@ const projectsData = [
   },
   {
     id: 3,
-    image: "/images/our_projectImages/burjZafar.webp",
+    image: "/images/our_project_images/burjzafar.webp",
     title: "Burj A Zafar",
     subtitle: "Hospitality Website Solution",
     bgColor: "#361C03",

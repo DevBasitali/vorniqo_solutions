@@ -11,10 +11,10 @@ import Flashes from "../../../public/images/services/flashes.webp";
 import HeroLoaderCard from "../ui/HeroLoaderCard";
 
 const showcaseProjects = [
-  { id: 1, image: "/images/project_Images/4.webp" },
-  { id: 2, image: "/images/project_Images/4.webp" },
-  { id: 3, image: "/images/project_Images/4.webp" },
-  { id: 4, image: "/images/project_Images/4.webp" },
+  { id: 1, image: "/images/projectimages/1.webp" },
+  { id: 2, image: "/images/projectimages/2.webp" },
+  { id: 3, image: "/images/projectimages/3.webp" },
+  { id: 4, image: "/images/projectimages/4.webp" },
 ];
 
 const Hero = () => {
@@ -43,6 +43,7 @@ const Hero = () => {
           <div className="absolute hidden xl:block left-10 top-30 ">
             <VerticalSocialBar />
           </div>
+          {/* sidepin */}
           <div className="absolute hidden xl:block right-10 top-30">
             <Image
               src="/images/hero/sideline.webp"
@@ -63,10 +64,11 @@ const Hero = () => {
 
               <div className="absolute right-[-52px] sm:right-[-68px]">
                 <Image
-                  src="/images/robots/robo.webp"
+                  src="/images/animationfiles/servicerobot.png"
                   alt="Robot Head"
                   width={96}
                   height={96}
+                  unoptimized={true}
                   className="w-12 h-12 sm:w-15 sm:h-15"
                 />
               </div>
@@ -102,7 +104,7 @@ const Hero = () => {
                       <span className="absolute top-0 right-0 h-6 w-6  bg-white rounded-bl-lg" />
 
                       {/* === FLASHES IMAGE (Mobile Size: w-10) === */}
-                      <div className="absolute -top-6 -right-8 z-20 pointer-events-none">
+                      <div className="absolute hidden xs:block -top-6 -right-8 z-20 pointer-events-none">
                         <Image
                           src={Flashes}
                           alt="sparks"
@@ -173,24 +175,24 @@ const Hero = () => {
                   // The 'translate-y' classes below keep the static wave layout.
                   className={`group relative transition-all duration-500 ${
                     index % 2 === 0
-                      ? "translate-y-[12px]" 
+                      ? "translate-y-[12px]"
                       : "translate-y-[-12px]"
                   } ${index !== 0 ? "-ml-4 md:-ml-1 lg:-ml-6" : ""}`}
                   style={{ zIndex: visibleCount - index }}
                 >
-                  <ArtShowcaseCard image={project.image} index={index} /> 
+                  <ArtShowcaseCard image={project.image} index={index} />
                 </div>
               ))}
             </div>
-            <div className="absolute w-full flex justify-center items-center align-middle z-10 px-5 ">
+            <div className="absolute -top-7 xs:-top-[28px] md:-top-[120px] lg:-top-[160px] xl:-top-[110px] 2xl:-top-[65px] w-full flex justify-center items-center align-middle z-10 px-5 ">
+              <img
+                src="/images/animationfiles/herorobot.png"
+                alt="Main robot"
+                className="w-[240px] xs:w-[215px] md:w-[400px] lg:w-[500px] object-cover ease-in-out"
+              />
+            </div>
+            <div className="absolute z-10 top-36 left-1 xs:top-24 xs:left-6 md:left-[100px] md:top-48 lg:left-[155px] lg:top-60 xl:left-[260px] xl:top-[270px] 2xl:left-[540px] 2xl:top-72">
               <HeroLoaderCard />
-              {/* <Image
-              src="/images/robots/robot.webp"
-              alt="Main robot mascot"
-              width={200}
-              height={200}
-              className="w-[300px] sm:w-full object-contain"
-            />  */}
             </div>
           </div>
         </div>

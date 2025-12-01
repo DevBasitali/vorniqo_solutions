@@ -36,6 +36,7 @@ export default function ClipPathCard({ title, gifSrc, onClick }) {
                 height={2000}
                 className="object-cover"
                 alt={`${title} animation`}
+                unoptimized
               ></Image>
             </div>
           )}

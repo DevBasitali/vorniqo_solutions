@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import BrandingLogo from "../../../../public/images/servicesPageLogos/branding.webp";
+import BrandingLogo from "../../../../public/images/servicespagelogos/branding.webp";
 import ClipPathCard from "@/components/ui/ClipPathCard";
 
 export default function ServiceSection() {
@@ -8,17 +8,17 @@ export default function ServiceSection() {
     {
       id: 1,
       title: "Creative Graphics",
-      gifSrc: "/images/project_Images/1.webp",
+      gifSrc: "/images/animationfiles/creativegraphics.png",
     },
     {
       id: 2,
       title: "Brand Identity",
-      gifSrc: "/images/Animationfiles/Brandidentity.png",
+      gifSrc: "/images/animationfiles/Brandidentity.png",
     },
     {
       id: 3,
       title: "Design Excellence",
-      gifSrc: "/images/project_Images/1.webp",
+      gifSrc: "/images/animationfiles/designExcellence.png",
     },
   ];
 

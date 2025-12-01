@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ClientLogo from "../../../../public/images/servicesPageLogos/client.webp";
+import ClientLogo from "../../../../public/images/servicespagelogos/client.webp";
 import ClipPathCard from "@/components/ui/ClipPathCard";
 
 export default function ClientBusinessService() {
@@ -8,17 +8,18 @@ export default function ClientBusinessService() {
     {
       id: 1,
       title: "Client Management",
-      gifSrc: "/images/project_Images/1.webp",
+      gifSrc: "/images/animationfiles/clientmanagment.png",
     },
+    // heroProjects.png
     {
       id: 2,
       title: "Client Infrastructure",
-      gifSrc: "/images/Animationfiles/clientinfrastructure.png",
+      gifSrc: "/images/animationfiles/clientinfrastructure.png",
     },
     {
       id: 3,
       title: "Business Infrastructure",
-      gifSrc: "/images/project_Images/1.webp",
+      gifSrc: "/images/animationfiles/businnessinfrastructure.png",
     },
   ];
 
